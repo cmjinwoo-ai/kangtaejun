@@ -377,12 +377,12 @@
 <!-- ======== 탭 네비게이션 ======== -->
 <div class="tab-nav-wrap">
   <div class="tab-nav">
-    <button class="tab-btn active" onclick="showTab('home')">🏠 홈</button>
-    <button class="tab-btn" onclick="showTab('memoir')">📖 자서전</button>
-    <button class="tab-btn" onclick="showTab('audio')">🎵 강의 오디오</button>
-    <button class="tab-btn" onclick="showTab('video')">🎬 강의 영상</button>
-    <button class="tab-btn" onclick="showTab('resources')">📄 자료실</button>
-    <button class="tab-btn" onclick="showTab('author')">✍️ 저자 소개</button>
+    <button class="tab-btn active" onclick="showTab('home',this)">🏠 홈</button>
+    <button class="tab-btn" onclick="showTab('memoir',this)">📖 자서전</button>
+    <button class="tab-btn" onclick="showTab('audio',this)">🎵 강의 오디오</button>
+    <button class="tab-btn" onclick="showTab('video',this)">🎬 강의 영상</button>
+    <button class="tab-btn" onclick="showTab('resources',this)">📄 자료실</button>
+    <button class="tab-btn" onclick="showTab('author',this)">✍️ 저자 소개</button>
   </div>
 </div>
 
@@ -1009,24 +1009,7 @@
       </div>
 
       <!-- 썸네일 목록 -->
-      <div style="padding:1rem 1.5rem;background:#f9f7f3;border-top:1px solid #e8e4dc;display:flex;flex-wrap:wrap;gap:0.5rem;">
-        <script>
-          (function(){
-            var names=['슬라이드1','슬라이드2','슬라이드3','슬라이드4','슬라이드5',
-                       '슬라이드6','슬라이드7','슬라이드8','슬라이드9','슬라이드10',
-                       '슬라이드11','슬라이드12','슬라이드13','슬라이드14','슬라이드15'];
-            names.forEach(function(n,i){
-              document.write('<img src="자료실/blueprint/'+n+'.GIF" '
-                +'onclick="goSlide('+(i+1)+')" '
-                +'title="'+n+'" '
-                +'id="thumb-'+(i+1)+'" '
-                +'style="width:80px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;'
-                +'border:2px solid '+(i===0?'#7c3aed':'#ddd')+';opacity:'+(i===0?'1':'0.7')+'" '
-                +'>');
-            });
-          })();
-        </script>
-      </div>
+      <div id="thumb-container" style="padding:1rem 1.5rem;background:#f9f7f3;border-top:1px solid #e8e4dc;display:flex;flex-wrap:wrap;gap:0.5rem;"></div>
 
       <div style="padding:1rem 1.5rem;background:#f9f7f3;border-top:1px solid #e8e4dc;">
         <p style="font-size:0.82rem;color:#888;margin:0;">
@@ -1061,6 +1044,23 @@
     if (next > totalSlides) next = 1;
     goSlide(next);
   }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var container = document.getElementById('thumb-container');
+    if (!container) return;
+    var names = ['슬라이드1','슬라이드2','슬라이드3','슬라이드4','슬라이드5',
+                 '슬라이드6','슬라이드7','슬라이드8','슬라이드9','슬라이드10',
+                 '슬라이드11','슬라이드12','슬라이드13','슬라이드14','슬라이드15'];
+    names.forEach(function(n, i) {
+      var img = document.createElement('img');
+      img.src = '자료실/blueprint/' + n + '.GIF';
+      img.id = 'thumb-' + (i + 1);
+      img.title = n;
+      img.style.cssText = 'width:80px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;border:2px solid ' + (i === 0 ? '#7c3aed' : '#ddd') + ';opacity:' + (i === 0 ? '1' : '0.7');
+      (function(idx){ img.onclick = function(){ goSlide(idx); }; })(i + 1);
+      container.appendChild(img);
+    });
+  });
 </script>
 
 <!-- ======================================================== -->
@@ -1107,16 +1107,11 @@
 
 <!-- ======== JavaScript: 탭 전환 ======== -->
 <script>
-  function showTab(name) {
-    // 모든 탭 콘텐츠 숨기기
-    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-
-    // 선택한 탭 활성화
+  function showTab(name, el) {
+    document.querySelectorAll('.tab-content').forEach(function(e){ e.classList.remove('active'); });
+    document.querySelectorAll('.tab-btn').forEach(function(e){ e.classList.remove('active'); });
     document.getElementById('tab-' + name).classList.add('active');
-    event.currentTarget.classList.add('active');
-
-    // URL 해시 업데이트
+    if (el) el.classList.add('active');
     window.location.hash = name;
   }
 
