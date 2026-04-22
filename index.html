@@ -381,6 +381,7 @@
     <button class="tab-btn" onclick="showTab('memoir')">📖 자서전</button>
     <button class="tab-btn" onclick="showTab('audio')">🎵 강의 오디오</button>
     <button class="tab-btn" onclick="showTab('video')">🎬 강의 영상</button>
+    <button class="tab-btn" onclick="showTab('resources')">📄 자료실</button>
     <button class="tab-btn" onclick="showTab('author')">✍️ 저자 소개</button>
   </div>
 </div>
@@ -917,6 +918,101 @@
     </div>
   </div>
 </div>
+
+<!-- ======================================================== -->
+<!-- 탭 5: 자료실                                              -->
+<!-- ======================================================== -->
+<div id="tab-resources" class="tab-content">
+  <div class="media-wrap">
+    <div class="media-header">
+      <h2>📄 자료실</h2>
+      <p>성공의 지름길 — 강의 자료 및 연구 문서</p>
+    </div>
+
+    <!-- 슬라이드뷰어 카드 -->
+    <div style="background:#fff;border:1px solid #e8e4dc;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);margin-bottom:2rem;">
+      <div style="background:linear-gradient(135deg,#1a1a2e,#16213e);padding:1.5rem 2rem;color:#fff;">
+        <div style="font-size:0.72rem;letter-spacing:0.12em;color:#a78bfa;font-weight:700;margin-bottom:0.5rem;">DOCUMENT · 강의 자료</div>
+        <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.3rem;">The Superintelligence Blueprint</h3>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.65);">초지능 시대의 부와 전략 설계도 · 15 슬라이드</p>
+      </div>
+
+      <!-- 슬라이드 뷰어 -->
+      <div style="background:#0f0f1a;padding:1.5rem;text-align:center;">
+        <img id="slide-img" src="자료실/blueprint/슬라이드1.GIF"
+             style="max-width:100%;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.4);"
+             alt="슬라이드 1">
+      </div>
+
+      <!-- 컨트롤 -->
+      <div style="padding:1.2rem 1.5rem;background:#f9f7f3;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+        <button onclick="slideChange(-1)"
+                style="background:#1a1a2e;color:#fff;border:none;padding:0.6rem 1.4rem;border-radius:6px;font-size:0.9rem;cursor:pointer;font-family:inherit;">
+          ◀ 이전
+        </button>
+        <span id="slide-counter" style="font-size:0.9rem;color:#555;font-weight:600;flex:1;text-align:center;">
+          1 / 15
+        </span>
+        <button onclick="slideChange(1)"
+                style="background:#1a1a2e;color:#fff;border:none;padding:0.6rem 1.4rem;border-radius:6px;font-size:0.9rem;cursor:pointer;font-family:inherit;">
+          다음 ▶
+        </button>
+      </div>
+
+      <!-- 썸네일 목록 -->
+      <div style="padding:1rem 1.5rem;background:#f9f7f3;border-top:1px solid #e8e4dc;display:flex;flex-wrap:wrap;gap:0.5rem;">
+        <script>
+          (function(){
+            var names=['슬라이드1','슬라이드2','슬라이드3','슬라이드4','슬라이드5',
+                       '슬라이드6','슬라이드7','슬라이드8','슬라이드9','슬라이드10',
+                       '슬라이드11','슬라이드12','슬라이드13','슬라이드14','슬라이드15'];
+            names.forEach(function(n,i){
+              document.write('<img src="자료실/blueprint/'+n+'.GIF" '
+                +'onclick="goSlide('+(i+1)+')" '
+                +'title="'+n+'" '
+                +'id="thumb-'+(i+1)+'" '
+                +'style="width:80px;height:50px;object-fit:cover;border-radius:4px;cursor:pointer;'
+                +'border:2px solid '+(i===0?'#7c3aed':'#ddd')+';opacity:'+(i===0?'1':'0.7')+'" '
+                +'>');
+            });
+          })();
+        </script>
+      </div>
+
+      <div style="padding:1rem 1.5rem;background:#f9f7f3;border-top:1px solid #e8e4dc;">
+        <p style="font-size:0.82rem;color:#888;margin:0;">
+          💡 AI 시대의 초지능(Superintelligence) 전략과 부의 설계도. 강태준 저자의 핵심 연구 자료입니다.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  var curSlide = 1;
+  var totalSlides = 15;
+  var slideNames = ['슬라이드1','슬라이드2','슬라이드3','슬라이드4','슬라이드5',
+                    '슬라이드6','슬라이드7','슬라이드8','슬라이드9','슬라이드10',
+                    '슬라이드11','슬라이드12','슬라이드13','슬라이드14','슬라이드15'];
+
+  function goSlide(n) {
+    var prev = document.getElementById('thumb-' + curSlide);
+    if (prev) { prev.style.border='2px solid #ddd'; prev.style.opacity='0.7'; }
+    curSlide = n;
+    document.getElementById('slide-img').src = '자료실/blueprint/' + slideNames[curSlide-1] + '.GIF';
+    document.getElementById('slide-counter').textContent = curSlide + ' / ' + totalSlides;
+    var cur = document.getElementById('thumb-' + curSlide);
+    if (cur) { cur.style.border='2px solid #7c3aed'; cur.style.opacity='1'; cur.scrollIntoView({inline:'nearest',behavior:'smooth'}); }
+  }
+
+  function slideChange(dir) {
+    var next = curSlide + dir;
+    if (next < 1) next = totalSlides;
+    if (next > totalSlides) next = 1;
+    goSlide(next);
+  }
+</script>
 
 <!-- ======================================================== -->
 <!-- 탭 4: 저자 소개                                           -->
