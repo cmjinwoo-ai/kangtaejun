@@ -1,0 +1,18 @@
+# 자서전 원고 (개인 파일 - 업로드 제외)
+*.docx
+*.doc
+*.xlsx
+*.pdf
+*.epub
+*.py
+*.js
+*.log
+
+# 대용량 영상/오디오 (GitHub 100MB 제한)
+유튜브영상/
+노트북LM/
+
+# 시스템 파일
+Thumbs.db
+.DS_Store
+~$*

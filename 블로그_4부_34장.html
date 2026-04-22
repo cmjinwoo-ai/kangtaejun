@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>아들과의 대화 — 컴퓨터 조립에서 배운 논리와 설계의 기본 | 인생의 지름길</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Serif KR', 'Georgia', serif; background: #fafaf8; color: #2c2c2c; line-height: 1.9; }
+    header { background: #fff; border-bottom: 1px solid #e8e4dc; padding: 0 2rem; }
+    .header-inner { max-width: 760px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .logo { font-size: 1.1rem; font-weight: 700; color: #2c2c2c; text-decoration: none; letter-spacing: -0.02em; }
+    nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
+    nav a:hover { color: #2c2c2c; }
+    .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .category { display: inline-block; background: #eeedf5; color: #504080; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
+    h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
+    .subtitle { font-size: 1.05rem; color: #888; font-style: italic; margin-bottom: 2rem; }
+    .meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: #aaa; padding-bottom: 2rem; border-bottom: 1px solid #e8e4dc; margin-bottom: 2.5rem; }
+    .meta .avatar { width: 36px; height: 36px; border-radius: 50%; background: #2c2c2c; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
+    .post-body { font-size: 1.05rem; }
+    .post-body p { margin-bottom: 1.6rem; }
+    .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .speech-box { background: #f5f3f0; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2rem 0; border-left: 3px solid #8a7a60; }
+    .speech-box .speaker { font-size: 0.78rem; font-weight: 700; color: #8a7a60; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+    .speech-box p { color: #3a3020; margin: 0; }
+    .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
+    .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
+    .tag-row a:hover { background: #2c2c2c; color: #fff; }
+    .nav-posts { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e8e4dc; }
+    .nav-posts a { text-decoration: none; padding: 1rem; background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; font-size: 0.85rem; color: #555; transition: border-color 0.2s; }
+    .nav-posts a:hover { border-color: #2c2c2c; color: #2c2c2c; }
+    .nav-posts .label { font-size: 0.72rem; color: #bbb; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.4rem; }
+    footer { text-align: center; padding: 2.5rem; background: #2c2c2c; color: #888; font-size: 0.82rem; }
+  </style>
+</head>
+<body>
+<header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
+<div class="post-wrap">
+  <span class="category">제4부 · 전수</span>
+  <h1>아들과의 대화<br>컴퓨터 조립에서 배운 논리와 설계의 기본</h1>
+  <p class="subtitle">― 부품의 가격보다 중요한 것은 '호환성'과 '흐름'이다</p>
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+  <div class="post-body">
+    <p>어느 날 아들과 함께 컴퓨터를 직접 조립하기로 했다. 완제품을 사면 편하겠지만, 나는 아들이 기계의 밑바닥부터 이해하길 원했다. CPU, 메인보드, 그래픽카드가 제각각 흩어져 있을 때는 그저 비싼 부품 덩어리에 불과하다. 하지만 이것들이 하나의 '설계도' 아래 연결되는 순간, 강력한 연산 능력을 갖춘 시스템으로 탄생한다.</p>
+    <div class="highlight">
+      조립하는 내내 나는 아들에게 강조했다.<br><br>
+      "부품 하나하나가 비싼 게 중요한 게 아니야.<br>이 부품들이 서로 충돌하지 않고 얼마나 잘 어우러지는지(호환성),<br>그리고 내부의 열기가 어디로 빠져나가는지(흐름)가 핵심이란다."
+    </div>
+    <p>이것은 사업과도 똑같다. 뛰어난 직원 한 명, 비싼 장비 한 대가 사업을 성공시키는 게 아니다. 각 파트가 유기적으로 연결되어 막힘없이 돌아가는 '흐름'이 있어야 한다.</p>
+    <p>아들은 땀을 뻘뻘 흘리며 케이블을 정리하고 부품을 끼우면서, 비로소 무언가를 만든다는 것의 '논리적 구조'를 깨달았다.</p>
+    <p>전원을 켰을 때 팬이 힘차게 돌아가며 모니터에 불이 들어오는 순간, 아들의 눈빛이 달라졌다. 단순히 게임을 즐기는 '소비자'에서, 게임기를 만드는 '공급자'의 시각을 경험한 것이다.</p>
+    <div class="speech-box">
+      <div class="speaker">아들</div>
+      <p>"아빠, 이제 알 것 같아요. 설계가 잘 되어 있으면 결과는 무조건 따라온다는 걸요."</p>
+    </div>
+    <div class="question-box">
+      <div class="q-label">오늘의 질문</div>
+      <p>당신은 지금 비싼 부품(자원)을 모으는 데만 혈안이 되어 있는가,<br>아니면 그것들을 하나로 묶어줄 완벽한 '설계도'를 다듬고 있는가?</p>
+    </div>
+    <div class="tag-row"><a href="#">자서전</a><a href="#">자녀교육</a><a href="#">공급자시선</a><a href="#">시스템설계</a><a href="#">컴퓨터조립</a><a href="#">인생의지름길</a></div>
+  </div>
+  <div class="nav-posts">
+    <a href="블로그_4부_33장.html"><div class="label">이전 글</div>제33장: 복리의 지름길 — 내 생돈을 넣지 않는 재투자 시스템 설계</a>
+    <a href="블로그_4부_35장.html" style="text-align:right;"><div class="label">다음 글</div>제35장: 실패를 두려워하지 않는 자들만이 지름길을 소유한다</a>
+  </div>
+</div>
+<footer>© 2026 인생의 지름길을 설계하는 법 · 무단 전재 금지</footer>
+</body>
+</html>

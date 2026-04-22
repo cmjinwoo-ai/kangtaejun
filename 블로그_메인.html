@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>인생의 지름길을 설계하는 법 | 강태준 자서전</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Serif KR', 'Georgia', serif;
+      background: #fafaf8;
+      color: #2c2c2c;
+      line-height: 1.8;
+    }
+
+    /* ── 헤더 ── */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e8e4dc;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #1a1a1a;
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+    .logo span { color: #b8860b; }
+
+    /* ── 탭 네비게이션 ── */
+    .tab-nav {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid #e8e4dc;
+      background: #fff;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .tab-btn {
+      padding: 1rem 1.6rem;
+      font-size: 0.9rem;
+      font-family: 'Noto Serif KR', serif;
+      font-weight: 600;
+      color: #aaa;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      letter-spacing: -0.01em;
+    }
+    .tab-btn:hover { color: #2c2c2c; }
+    .tab-btn.active {
+      color: #1a1a1a;
+      border-bottom-color: #b8860b;
+    }
+    .tab-nav-wrap {
+      background: #fff;
+      border-bottom: 2px solid #e8e4dc;
+    }
+
+    /* ── 탭 콘텐츠 ── */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* ── 홈 탭 ── */
+    .home-hero {
+      background: linear-gradient(135deg, #1a1a1a 0%, #3d3227 100%);
+      color: #fff;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .home-hero .tag {
+      display: inline-block;
+      background: rgba(184,134,11,0.3);
+      color: #f0d080;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      padding: 0.35rem 1rem;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+    }
+    .home-hero h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.3;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.2rem;
+    }
+    .home-hero h1 em {
+      font-style: normal;
+      color: #f0d080;
+    }
+    .home-hero p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      line-height: 2;
+    }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold {
+      background: #b8860b;
+      color: #fff;
+      border: none;
+      padding: 0.85rem 2rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      font-family: 'Noto Serif KR', serif;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-gold:hover { background: #9a7009; }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.4);
+      padding: 0.85rem 2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-family: 'Noto Serif KR', serif;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .btn-outline:hover { border-color: #fff; }
+
+    .home-cards {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .info-card {
+      background: #fff;
+      border: 1px solid #e8e4dc;
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .info-card .num {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #b8860b;
+      letter-spacing: -0.04em;
+    }
+    .info-card .label { font-size: 0.9rem; color: #888; margin-top: 0.3rem; }
+
+    /* ── 자서전 탭 ── */
+    .memoir-wrap { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .memoir-header { margin-bottom: 3rem; }
+    .memoir-header h2 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+    .memoir-header p { color: #888; font-size: 0.9rem; }
+
+    .part-section { margin-bottom: 3rem; }
+    .part-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #b8860b;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #e8e4dc;
+    }
+    .chapter-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .chapter-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid #f0ede6;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s;
+      border-radius: 4px;
+    }
+    .chapter-item:hover { background: #f9f7f3; padding-left: 0.5rem; }
+    .chapter-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: #f0ede6;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #7a6a50;
+    }
+    .chapter-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #2c2c2c;
+      line-height: 1.5;
+      flex: 1;
+    }
+    .chapter-arrow {
+      color: #ccc;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    /* 특별 항목 (프롤로그/에필로그) */
+    .chapter-item.special .chapter-num {
+      background: #2c2c2c;
+      color: #f0d080;
+    }
+    .chapter-item.special .chapter-title { color: #1a1a1a; font-weight: 700; }
+
+    /* ── 유튜브/미디어 탭 ── */
+    .media-wrap { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .media-header { margin-bottom: 2.5rem; }
+    .media-header h2 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+    .media-header p { color: #888; font-size: 0.9rem; }
+
+    .media-card {
+      background: #fff;
+      border: 1px solid #e8e4dc;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    .media-card-header {
+      background: linear-gradient(135deg, #1a1a1a, #3d3227);
+      padding: 1.5rem 2rem;
+      color: #fff;
+    }
+    .media-card-header .media-type {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: #f0d080;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .media-card-header h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: -0.02em;
+    }
+    .media-card-header p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 0.4rem;
+    }
+    .media-player {
+      padding: 1.5rem 2rem;
+    }
+    video, audio {
+      width: 100%;
+      border-radius: 6px;
+      outline: none;
+    }
+    video { background: #000; max-height: 400px; }
+    .media-desc {
+      padding: 0 2rem 1.5rem;
+      font-size: 0.88rem;
+      color: #666;
+      line-height: 1.8;
+      border-top: 1px solid #f0ede6;
+      padding-top: 1rem;
+    }
+    .yt-notice {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-radius: 6px;
+      padding: 0.8rem 1rem;
+      font-size: 0.82rem;
+      color: #7a6a00;
+      margin-top: 0.8rem;
+    }
+
+    /* ── 저자 소개 탭 ── */
+    .author-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .author-profile {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+    }
+    .author-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2c2c2c, #b8860b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: #fff;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .author-info h2 { font-size: 1.6rem; font-weight: 900; margin-bottom: 0.3rem; }
+    .author-info .title { color: #b8860b; font-size: 0.9rem; font-weight: 700; margin-bottom: 1rem; }
+    .author-info p { color: #555; font-size: 0.95rem; line-height: 2; }
+    .author-career { margin-top: 2rem; }
+    .author-career h3 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; border-bottom: 1px solid #e8e4dc; padding-bottom: 0.5rem; }
+    .career-item { display: flex; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid #f5f3ef; font-size: 0.9rem; }
+    .career-year { color: #b8860b; font-weight: 700; flex-shrink: 0; width: 50px; }
+    .career-desc { color: #444; }
+
+    /* ── 반응형 ── */
+    @media (max-width: 600px) {
+      .header-inner { padding: 0 1rem; }
+      .logo { font-size: 0.95rem; }
+      .tab-btn { padding: 0.8rem 0.9rem; font-size: 0.82rem; }
+      .memoir-wrap, .media-wrap, .author-wrap { padding: 2rem 1rem 4rem; }
+      .author-profile { flex-direction: column; gap: 1.5rem; }
+      .home-hero { padding: 3rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ======== 헤더 ======== -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="블로그_메인.html">인생의 <em style="color:#b8860b;font-style:normal;">지름길</em>을 설계하는 법</a>
+  </div>
+</header>
+
+<!-- ======== 탭 네비게이션 ======== -->
+<div class="tab-nav-wrap">
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="showTab('home')">🏠 홈</button>
+    <button class="tab-btn" onclick="showTab('memoir')">📖 자서전</button>
+    <button class="tab-btn" onclick="showTab('media')">🎙️ 유튜브/강의</button>
+    <button class="tab-btn" onclick="showTab('author')">✍️ 저자 소개</button>
+  </div>
+</div>
+
+<!-- ======================================================== -->
+<!-- 탭 1: 홈                                                  -->
+<!-- ======================================================== -->
+<div id="tab-home" class="tab-content active">
+
+  <div class="home-hero">
+    <div class="tag">AUTOBIOGRAPHY · STRATEGY</div>
+    <h1>인생의 <em>지름길</em>을<br>설계하는 법</h1>
+    <p>
+      무자본으로 시작해 3,000평 부지를 따낸 남자.<br>
+      실패에서 배운 성공의 원칙과 부의 설계도를 공개합니다.
+    </p>
+    <div class="hero-btns">
+      <button class="btn-gold" onclick="showTab('memoir')">📖 자서전 읽기</button>
+      <button class="btn-outline" onclick="showTab('media')">🎙️ 강의 듣기</button>
+    </div>
+  </div>
+
+  <div class="home-cards">
+    <div class="info-card">
+      <div class="num">47</div>
+      <div class="label">총 편수 (프롤로그 · 45장 · 에필로그)</div>
+    </div>
+    <div class="info-card">
+      <div class="num">5</div>
+      <div class="label">부 (인생 설계 · 도전 · 교육 · 투자 · 미래)</div>
+    </div>
+    <div class="info-card">
+      <div class="num">9</div>
+      <div class="label">노트북LM 강의 콘텐츠 (영상 1 + 오디오 8)</div>
+    </div>
+  </div>
+
+  <!-- 최근 연재 미리보기 -->
+  <div style="max-width:900px;margin:0 auto 4rem;padding:0 2rem;">
+    <h3 style="font-size:1rem;font-weight:700;margin-bottom:1.2rem;letter-spacing:-0.02em;color:#1a1a1a;">
+      📌 추천 챕터
+    </h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;">
+      <a href="블로그_프롤로그.html" style="display:block;background:#fff;border:1px solid #e8e4dc;border-radius:8px;padding:1.5rem;text-decoration:none;color:inherit;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+        <span style="font-size:0.72rem;color:#b8860b;font-weight:700;letter-spacing:0.08em;">프롤로그</span>
+        <p style="font-weight:700;margin-top:0.4rem;line-height:1.5;font-size:0.95rem;">나는 왜 여기까지 왔는가</p>
+        <p style="font-size:0.82rem;color:#aaa;margin-top:0.5rem;">읽기 →</p>
+      </a>
+      <a href="블로그_2부_9장.html" style="display:block;background:#fff;border:1px solid #e8e4dc;border-radius:8px;padding:1.5rem;text-decoration:none;color:inherit;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+        <span style="font-size:0.72rem;color:#b8860b;font-weight:700;letter-spacing:0.08em;">2부 · 9장</span>
+        <p style="font-weight:700;margin-top:0.4rem;line-height:1.5;font-size:0.95rem;">3,000평 부지와 4대 크레인, 0원으로 시작한 마법</p>
+        <p style="font-size:0.82rem;color:#aaa;margin-top:0.5rem;">읽기 →</p>
+      </a>
+      <a href="블로그_5부_43장.html" style="display:block;background:#fff;border:1px solid #e8e4dc;border-radius:8px;padding:1.5rem;text-decoration:none;color:inherit;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+        <span style="font-size:0.72rem;color:#b8860b;font-weight:700;letter-spacing:0.08em;">5부 · 43장</span>
+        <p style="font-weight:700;margin-top:0.4rem;line-height:1.5;font-size:0.95rem;">AI 에이전트 시대, 스마트폰이 바꾼 세상 그 이상의 폭풍</p>
+        <p style="font-size:0.82rem;color:#aaa;margin-top:0.5rem;">읽기 →</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ======================================================== -->
+<!-- 탭 2: 자서전                                              -->
+<!-- ======================================================== -->
+<div id="tab-memoir" class="tab-content">
+  <div class="memoir-wrap">
+
+    <div class="memoir-header">
+      <h2>자서전 전체 목차</h2>
+      <p>프롤로그부터 에필로그까지 — 강태준의 인생 설계 47편</p>
+    </div>
+
+    <!-- 프롤로그 -->
+    <div class="part-section">
+      <div class="part-title">서문</div>
+      <div class="chapter-grid">
+        <a href="블로그_프롤로그.html" class="chapter-item special">
+          <div class="chapter-num">☆</div>
+          <div class="chapter-title">나는 왜 여기까지 왔는가</div>
+          <div class="chapter-arrow">→</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 1부 -->
+    <div class="part-section">
+      <div class="part-title">1부 · 설계자의 탄생</div>
+      <div class="chapter-grid">
+        <a href="블로그_1부_1장.html" class="chapter-item"><div class="chapter-num">1</div><div class="chapter-title">안정이라는 이름의 감옥을 탈출하다</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_1부_2장.html" class="chapter-item"><div class="chapter-num">2</div><div class="chapter-title">용산역 구름다리, 무자본 기획의 서막</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_1부_3장.html" class="chapter-item"><div class="chapter-num">3</div><div class="chapter-title">데이터는 거짓말을 하지 않는다</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_1부_4장.html" class="chapter-item"><div class="chapter-num">4</div><div class="chapter-title">유럽 배낭여행에서 배운 공급자의 시선</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_1부_5장.html" class="chapter-item"><div class="chapter-num">5</div><div class="chapter-title">소비자의 언어를 버리고 생산자의 언어를 장착하라</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_1부_6장.html" class="chapter-item"><div class="chapter-num">6</div><div class="chapter-title">도전과 설득은 숫자와 문서로 말해야 한다</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_1부_7장.html" class="chapter-item"><div class="chapter-num">7</div><div class="chapter-title">실행력, 나를 움직이는 가장 강력한 엔진</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_1부_8장.html" class="chapter-item"><div class="chapter-num">8</div><div class="chapter-title">수익을 투명하게 공개할 때 열리는 기회의 문</div><div class="chapter-arrow">→</div></a>
+      </div>
+    </div>
+
+    <!-- 2부 -->
+    <div class="part-section">
+      <div class="part-title">2부 · 0원으로 세운 제국</div>
+      <div class="chapter-grid">
+        <a href="블로그_2부_9장.html" class="chapter-item"><div class="chapter-num">9</div><div class="chapter-title">3,000평 부지와 4대 크레인, 0원으로 시작한 마법</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_2부_10장.html" class="chapter-item"><div class="chapter-num">10</div><div class="chapter-title">MOU 협약의 기술: 공공의 이익을 내 편으로 만들어라</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_2부_11장.html" class="chapter-item"><div class="chapter-num">11</div><div class="chapter-title">가접 후 본접: 일단 실행하고 현장에서 수정하라</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_2부_12장.html" class="chapter-item"><div class="chapter-num">12</div><div class="chapter-title">공매의 기술: 국방부와의 전쟁에서 승리하는 법</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_2부_13장.html" class="chapter-item"><div class="chapter-num">13</div><div class="chapter-title">입찰 무효를 뒤집은 행정소송, 위기를 자산으로 바꾸다</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_2부_14장.html" class="chapter-item"><div class="chapter-num">14</div><div class="chapter-title">접대 없는 비즈니스: 원칙이 가장 빠른 지름길이다</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_2부_15장.html" class="chapter-item"><div class="chapter-num">15</div><div class="chapter-title">공무원을 설득하는 유일한 무기, 법규와 데이터</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_2부_16장.html" class="chapter-item"><div class="chapter-num">16</div><div class="chapter-title">노가다 사장이 아니라 시스템 설계자가 되어라</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_2부_17장.html" class="chapter-item"><div class="chapter-num">17</div><div class="chapter-title">두산빌딩은 벽돌이 아니라 집념으로 세워졌다</div><div class="chapter-arrow">→</div></a>
+      </div>
+    </div>
+
+    <!-- 3부 -->
+    <div class="part-section">
+      <div class="part-title">3부 · 교육을 공장으로 만들다</div>
+      <div class="chapter-grid">
+        <a href="블로그_3부_18장.html" class="chapter-item"><div class="chapter-num">18</div><div class="chapter-title">학원은 교육기관이 아니라 정교한 공장이다</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_3부_19장.html" class="chapter-item"><div class="chapter-num">19</div><div class="chapter-title">시험장은 곧 자산이다: 민간시험장의 진입장벽 전략</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_3부_20장.html" class="chapter-item"><div class="chapter-num">20</div><div class="chapter-title">강사가 떠나도 멈추지 않는 매뉴얼의 힘</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_3부_21장.html" class="chapter-item"><div class="chapter-num">21</div><div class="chapter-title">과열된 시장에서의 생존: 보수교육이라는 구독형 지름길</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_3부_22장.html" class="chapter-item"><div class="chapter-num">22</div><div class="chapter-title">중고로 시작해도 철학은 신품보다 날카로워야 한다</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_3부_23장.html" class="chapter-item"><div class="chapter-num">23</div><div class="chapter-title">아끼는 습관이 조직의 체력을 만든다</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_3부_24장.html" class="chapter-item"><div class="chapter-num">24</div><div class="chapter-title">사장이 컴퓨터 수리와 용접을 직접 배워야 하는 이유</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_3부_25장.html" class="chapter-item"><div class="chapter-num">25</div><div class="chapter-title">소비자에서 공급자로, 시점을 전환하는 벤치마킹</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_3부_26장.html" class="chapter-item"><div class="chapter-num">26</div><div class="chapter-title">액자 하나, 꽃병 하나에 담긴 주인의 설계도를 읽어라</div><div class="chapter-arrow">→</div></a>
+      </div>
+    </div>
+
+    <!-- 4부 -->
+    <div class="part-section">
+      <div class="part-title">4부 · 다음 세대에게 전하는 부의 철학</div>
+      <div class="chapter-grid">
+        <a href="블로그_4부_27장.html" class="chapter-item"><div class="chapter-num">27</div><div class="chapter-title">박지성의 헌신 — 보이지 않는 곳을 장악하라</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_4부_28장.html" class="chapter-item"><div class="chapter-num">28</div><div class="chapter-title">손흥민의 결정력 — 기회가 오면 주저 없이 슈팅하라</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_4부_29장.html" class="chapter-item"><div class="chapter-num">29</div><div class="chapter-title">현장의 멀티플레이어가 시스템의 빈틈을 메운다</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_4부_30장.html" class="chapter-item"><div class="chapter-num">30</div><div class="chapter-title">아들에게 가르치는 부의 철학 — 비판보다 무서운 것은 무관심이다</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_4부_31장.html" class="chapter-item"><div class="chapter-num">31</div><div class="chapter-title">물고기 대신 최고의 낚싯대를 — 7,000만 원 비과세 증여 시스템</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_4부_32장.html" class="chapter-item"><div class="chapter-num">32</div><div class="chapter-title">3억 원의 경제적 갑옷 — 결혼과 출산 공제를 활용한 증여 설계</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_4부_33장.html" class="chapter-item"><div class="chapter-num">33</div><div class="chapter-title">복리의 지름길 — 내 생돈을 넣지 않는 재투자 시스템 설계</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_4부_34장.html" class="chapter-item"><div class="chapter-num">34</div><div class="chapter-title">아들과의 대화 — 컴퓨터 조립에서 배운 논리와 설계의 기본</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_4부_35장.html" class="chapter-item"><div class="chapter-num">35</div><div class="chapter-title">실패를 두려워하지 않는 자들만이 지름길을 소유한다</div><div class="chapter-arrow">→</div></a>
+      </div>
+    </div>
+
+    <!-- 5부 -->
+    <div class="part-section">
+      <div class="part-title">5부 · 미래를 설계하는 자의 전략</div>
+      <div class="chapter-grid">
+        <a href="블로그_5부_36장.html" class="chapter-item"><div class="chapter-num">36</div><div class="chapter-title">지금 나는 이순신 장군의 나이에 서 있다</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_5부_37장.html" class="chapter-item"><div class="chapter-num">37</div><div class="chapter-title">1,000% 수익률은 우연이 아니라 통제된 인내의 결과다</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_5부_38장.html" class="chapter-item"><div class="chapter-num">38</div><div class="chapter-title">프랜차이즈화의 핵심은 기술이 아니라 철학의 복제다</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_5부_39장.html" class="chapter-item"><div class="chapter-num">39</div><div class="chapter-title">글로벌 비전 — DGTTC, 한국형 교육 시스템을 수출하다</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_5부_40장.html" class="chapter-item"><div class="chapter-num">40</div><div class="chapter-title">쏘나그룹과의 MOU — 발로 뛰어 얻어낸 세계로의 발판</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_5부_41장.html" class="chapter-item"><div class="chapter-num">41</div><div class="chapter-title">기술 이전이 아닌 자립 기반을 전수하는 명분</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_5부_42장.html" class="chapter-item"><div class="chapter-num">42</div><div class="chapter-title">중장비 교육의 미래 — 변화하는 제도와 통계 속 전략</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_5부_43장.html" class="chapter-item"><div class="chapter-num">43</div><div class="chapter-title">AI 에이전트 시대 — 스마트폰이 바꾼 세상, 그 이상의 폭풍</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_5부_44장.html" class="chapter-item"><div class="chapter-num">44</div><div class="chapter-title">호기심과 도전 — 초지능 시대에 살아남는 유일한 종(種)</div><div class="chapter-arrow">→</div></a>
+        <a href="블로그_5부_45장.html" class="chapter-item"><div class="chapter-num">45</div><div class="chapter-title">다음 세대에게 전하는 마지막 실행 전략 (A to A)</div><div class="chapter-arrow">→</div></a>
+      </div>
+    </div>
+
+    <!-- 에필로그 -->
+    <div class="part-section">
+      <div class="part-title">결문</div>
+      <div class="chapter-grid">
+        <a href="블로그_에필로그.html" class="chapter-item special">
+          <div class="chapter-num">★</div>
+          <div class="chapter-title">이제 당신이 설계도를 그릴 차례다</div>
+          <div class="chapter-arrow">→</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ======================================================== -->
+<!-- 탭 3: 유튜브/강의                                         -->
+<!-- ======================================================== -->
+<div id="tab-media" class="tab-content">
+  <div class="media-wrap">
+
+    <div class="media-header">
+      <h2>강의 · 콘텐츠</h2>
+      <p>노트북LM으로 제작한 강의 오디오 및 영상 — 성공의 지름길 채널</p>
+    </div>
+
+    <!-- 섹션: 자서전 강의 -->
+    <h3 style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;color:#b8860b;margin-bottom:1.2rem;">AUTOBIOGRAPHY · 자서전 강의</h3>
+
+    <!-- 영상 1: mp4 -->
+    <div class="media-card">
+      <div class="media-card-header">
+        <div class="media-type">VIDEO · 강의 영상</div>
+        <h3>인생의 지름길을 설계하는 법</h3>
+        <p>강태준 자서전 핵심 전략 요약</p>
+      </div>
+      <div class="media-player">
+        <video controls preload="metadata">
+          <source src="노트북LM/인생의_지름길을_설계하는_법 (2).mp4" type="video/mp4">
+          브라우저가 영상 재생을 지원하지 않습니다.
+        </video>
+      </div>
+      <div class="media-desc">인생을 설계하는 사람만이 자신의 삶을 소유할 수 있습니다. 무자본으로 시작해 시스템을 구축하기까지의 핵심 전략을 담았습니다.</div>
+    </div>
+
+    <div class="media-card">
+      <div class="media-card-header">
+        <div class="media-type">AUDIO · 강의 오디오</div>
+        <h3>0원으로 코레일 땅 3천 평 따낸 전략</h3>
+        <p>국유지 활용 · 협상의 기술 · 무자본 창업</p>
+      </div>
+      <div class="media-player">
+        <audio controls preload="metadata">
+          <source src="노트북LM/0원으로_코레일_땅_3천_평_따낸_전략 (1).m4a" type="audio/mp4">
+          브라우저가 오디오 재생을 지원하지 않습니다.
+        </audio>
+      </div>
+      <div class="media-desc">단 한 푼도 없이 코레일 국유지 3,000평을 임대한 실전 협상 전략. 공공기관을 설득하는 유일한 언어, 법규와 데이터의 힘을 공개합니다.</div>
+    </div>
+
+    <div class="media-card">
+      <div class="media-card-header">
+        <div class="media-type">AUDIO · 강의 오디오</div>
+        <h3>무자본으로 부의 시스템 짓는 생산자의 뇌</h3>
+        <p>생산자 마인드셋 · 부의 시스템 설계 · 레버리지</p>
+      </div>
+      <div class="media-player">
+        <audio controls preload="metadata">
+          <source src="노트북LM/무자본으로_부의_시스템_짓는_생산자의_뇌 (1).m4a" type="audio/mp4">
+          브라우저가 오디오 재생을 지원하지 않습니다.
+        </audio>
+      </div>
+      <div class="media-desc">돈이 없어도 시스템은 만들 수 있습니다. 소비자의 뇌를 버리고 생산자의 뇌로 전환하는 순간, 부의 구조가 바뀝니다.</div>
+    </div>
+
+    <!-- 섹션: 성공 전략 강의 (카카오톡 수신) -->
+    <h3 style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;color:#b8860b;margin:2.5rem 0 1.2rem;padding-top:2rem;border-top:1px solid #e8e4dc;">STRATEGY · 성공 전략 강의</h3>
+
+    <div class="media-card">
+      <div class="media-card-header">
+        <div class="media-type">AUDIO · 강의 오디오</div>
+        <h3>국방부를 이긴 차가운 원칙의 힘</h3>
+        <p>공매 입찰 · 행정소송 승소 · 원칙으로 싸우는 법</p>
+      </div>
+      <div class="media-player">
+        <audio controls preload="metadata">
+          <source src="노트북LM/국방부를_이긴_차가운_원칙의_힘.m4a" type="audio/mp4">
+          브라우저가 오디오 재생을 지원하지 않습니다.
+        </audio>
+      </div>
+      <div class="media-desc">국방부 공매 입찰 무효를 행정소송으로 뒤집은 실전 사례. 원칙이 가장 강력한 무기임을 증명합니다.</div>
+    </div>
+
+    <div class="media-card">
+      <div class="media-card-header">
+        <div class="media-type">AUDIO · 강의 오디오</div>
+        <h3>수익 80%를 포기하고 빌린 용산역 3천 평</h3>
+        <p>무자본 부지 확보 · 공공기관 협상 · 기획의 기술</p>
+      </div>
+      <div class="media-player">
+        <audio controls preload="metadata">
+          <source src="노트북LM/수익_80_를_포기하고_빌린_용산역_3천_평.m4a" type="audio/mp4">
+          브라우저가 오디오 재생을 지원하지 않습니다.
+        </audio>
+      </div>
+      <div class="media-desc">수익의 80%를 포기하겠다는 역제안 하나로 용산역 3,000평을 확보한 역설의 협상 전략.</div>
+    </div>
+
+    <div class="media-card">
+      <div class="media-card-header">
+        <div class="media-type">AUDIO · 강의 오디오</div>
+        <h3>자녀에게 세금 없이 3억 2천 물려주는 법</h3>
+        <p>증여세 절세 · 비과세 활용 · 부의 이전 설계</p>
+      </div>
+      <div class="media-player">
+        <audio controls preload="metadata">
+          <source src="노트북LM/자녀에게_세금_없이_3억2천_물려주는_법.m4a" type="audio/mp4">
+          브라우저가 오디오 재생을 지원하지 않습니다.
+        </audio>
+      </div>
+      <div class="media-desc">결혼·출산 공제와 비과세 증여를 활용해 자녀에게 합법적으로 3억 2천만 원을 이전하는 실전 설계.</div>
+    </div>
+
+    <div class="media-card">
+      <div class="media-card-header">
+        <div class="media-type">AUDIO · 강의 오디오</div>
+        <h3>50대 무너지지 않는 삶의 시스템</h3>
+        <p>인생 후반전 설계 · 시스템 사고 · 지속 가능한 삶</p>
+      </div>
+      <div class="media-player">
+        <audio controls preload="metadata">
+          <source src="노트북LM/50대_무너지지_않는_삶의_시스템.m4a" type="audio/mp4">
+          브라우저가 오디오 재생을 지원하지 않습니다.
+        </audio>
+      </div>
+      <div class="media-desc">50대 이후에도 무너지지 않는 삶을 만드는 시스템 설계. 나이가 무기가 되는 인생 후반전 전략.</div>
+    </div>
+
+    <div class="media-card">
+      <div class="media-card-header">
+        <div class="media-type">AUDIO · 강의 오디오</div>
+        <h3>11만 킬로 50대의 G90 인생 드라이브</h3>
+        <p>50대 인생 · 경험이 자산 · 후회 없는 선택</p>
+      </div>
+      <div class="media-player">
+        <audio controls preload="metadata">
+          <source src="노트북LM/11만_킬로_50대의_G90_인생_드라이브.m4a" type="audio/mp4">
+          브라우저가 오디오 재생을 지원하지 않습니다.
+        </audio>
+      </div>
+      <div class="media-desc">11만 킬로를 달린 50대의 인생 드라이브. 경험이라는 자산이 가장 강력한 엔진임을 말합니다.</div>
+    </div>
+
+    <div class="media-card">
+      <div class="media-card-header">
+        <div class="media-type">AUDIO · 강의 오디오</div>
+        <h3>계좌를 짓누르는 삼성전자 52주의 늪</h3>
+        <p>주식 투자 · 인내의 기술 · 손실 관리 전략</p>
+      </div>
+      <div class="media-player">
+        <audio controls preload="metadata">
+          <source src="노트북LM/계좌를_짓누르는_삼성전자_52_의_늪.m4a" type="audio/mp4">
+          브라우저가 오디오 재생을 지원하지 않습니다.
+        </audio>
+      </div>
+      <div class="media-desc">삼성전자 52주 보유의 심리적 압박과 그것을 이겨내는 투자자의 원칙. 통제된 인내만이 수익을 만든다.</div>
+    </div>
+
+    <!-- 유튜브 채널 링크 -->
+    <div style="text-align:center;padding:2.5rem 0;border-top:2px solid #e8e4dc;margin-top:2rem;">
+      <p style="color:#888;font-size:0.9rem;margin-bottom:0.5rem;">강태준의 유튜브 채널</p>
+      <p style="color:#555;font-size:0.82rem;margin-bottom:1.2rem;">
+        ※ 새 채널 <strong>성공의 지름길</strong> 개설 후 이 링크가 자동 업데이트됩니다
+      </p>
+      <a href="https://www.youtube.com/@jinwoopark6666"
+         target="_blank"
+         style="display:inline-block;background:#ff0000;color:#fff;padding:0.85rem 2rem;border-radius:4px;text-decoration:none;font-weight:700;font-size:0.95rem;margin-right:0.5rem;">
+        ▶ 성공의 지름길 유튜브 채널
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ======================================================== -->
+<!-- 탭 4: 저자 소개                                           -->
+<!-- ======================================================== -->
+<div id="tab-author" class="tab-content">
+  <div class="author-wrap">
+
+    <div class="author-profile">
+      <div class="author-avatar">강</div>
+      <div class="author-info">
+        <h2>강태준</h2>
+        <div class="title">두산직업전문학교 대표 · 자서전 작가</div>
+        <p>
+          군 생활을 마치고 무자본으로 사업을 시작해,
+          코레일 국유지 3,000평 임대, 두산빌딩 건립,
+          국내 최초 민간 중장비 시험장 운영까지 이룬 현장 전문가입니다.<br><br>
+          "인생은 설계하는 사람의 것이다"라는 철학 아래
+          자서전과 성공 전략서를 통해 다음 세대에게 부의 지름길을 전합니다.
+        </p>
+      </div>
+    </div>
+
+    <div class="author-career">
+      <h3>주요 이력</h3>
+      <div class="career-item"><div class="career-year">현재</div><div class="career-desc">두산직업전문학교 대표</div></div>
+      <div class="career-item"><div class="career-year">현재</div><div class="career-desc">국내 민간 중장비 시험장 운영</div></div>
+      <div class="career-item"><div class="career-year">현재</div><div class="career-desc">쏘나그룹 MOU — 글로벌 교육 시스템 수출</div></div>
+      <div class="career-item"><div class="career-year">과거</div><div class="career-desc">코레일 국유지 3,000평 임대 (무자본 기획)</div></div>
+      <div class="career-item"><div class="career-year">과거</div><div class="career-desc">두산빌딩 건립 (집념의 프로젝트)</div></div>
+      <div class="career-item"><div class="career-year">과거</div><div class="career-desc">국방부 공매 입찰 행정소송 승소</div></div>
+    </div>
+
+    <div style="margin-top:3rem;background:#f0ede6;border-radius:8px;padding:2rem;text-align:center;">
+      <p style="font-size:1.1rem;font-weight:700;color:#1a1a1a;line-height:1.8;">
+        "인생은 설계하는 사람의 것이다.<br>
+        지름길은 운이 아니라 준비된 자의 선택이다."
+      </p>
+      <p style="color:#888;font-size:0.85rem;margin-top:0.8rem;">— 강태준</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ======== JavaScript: 탭 전환 ======== -->
+<script>
+  function showTab(name) {
+    // 모든 탭 콘텐츠 숨기기
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+
+    // 선택한 탭 활성화
+    document.getElementById('tab-' + name).classList.add('active');
+    event.currentTarget.classList.add('active');
+
+    // URL 해시 업데이트
+    window.location.hash = name;
+  }
+
+  // URL 해시로 탭 자동 활성화
+  window.addEventListener('load', function() {
+    const hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById('tab-' + hash)) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById('tab-' + hash).classList.add('active');
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        if (btn.getAttribute('onclick').includes("'" + hash + "'")) {
+          btn.classList.add('active');
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

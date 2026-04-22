@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>유럽 배낭여행에서 배운 '공급자의 시선' | 인생의 지름길</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Serif KR', 'Georgia', serif;
+      background: #fafaf8;
+      color: #2c2c2c;
+      line-height: 1.9;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e8e4dc;
+      padding: 0 2rem;
+    }
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .logo { font-size: 1.1rem; font-weight: 700; color: #2c2c2c; text-decoration: none; letter-spacing: -0.02em; }
+    nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
+    nav a:hover { color: #2c2c2c; }
+
+    .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+
+    .category {
+      display: inline-block;
+      background: #f0ede6;
+      color: #7a6a50;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 3px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+      color: #1a1a1a;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: #aaa;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e8e4dc;
+      margin-bottom: 2.5rem;
+    }
+
+    .meta .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #2c2c2c;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .diary-date {
+      font-size: 0.82rem;
+      color: #b0a090;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .post-body { font-size: 1.05rem; }
+    .post-body p { margin-bottom: 1.6rem; }
+
+    .post-body .highlight {
+      background: #fdf6e3;
+      border-left: 3px solid #d4a843;
+      padding: 1rem 1.25rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #5a4a2a;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .post-body .scene-box {
+      background: #f5f5f0;
+      border: 1px solid #dddbd4;
+      border-radius: 8px;
+      padding: 1.5rem 1.5rem 1.5rem 1.8rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #4a4535;
+    }
+    .scene-box .scene-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #a09070;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+      font-style: normal;
+    }
+
+    .post-body .question-box {
+      background: #f7f4ef;
+      border: 1px solid #e0d8cc;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    .question-box .q-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #a0907a;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .question-box p {
+      font-size: 1rem;
+      color: #4a3f30;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .chapter-divider {
+      text-align: center;
+      margin: 3rem 0;
+      color: #ccc;
+      font-size: 1.2rem;
+      letter-spacing: 0.5rem;
+    }
+
+    .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .tag-row a {
+      background: #f0ede6;
+      color: #7a6a50;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+    .tag-row a:hover { background: #2c2c2c; color: #fff; }
+
+    .nav-posts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e8e4dc;
+    }
+    .nav-posts a {
+      text-decoration: none;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid #e8e4dc;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: #555;
+      transition: border-color 0.2s;
+    }
+    .nav-posts a:hover { border-color: #2c2c2c; color: #2c2c2c; }
+    .nav-posts .label { font-size: 0.72rem; color: #bbb; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.4rem; }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem;
+      background: #2c2c2c;
+      color: #888;
+      font-size: 0.82rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a>
+    <nav>
+      <a href="블로그_메인.html">홈</a>
+      <a href="블로그_메인.html#memoir">연재 목록</a>
+      <a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a>
+      <a href="블로그_메인.html#author">저자 소개</a>
+    </nav>
+  </div>
+</header>
+
+<div class="post-wrap">
+
+  <span class="category">제1부 · 각성</span>
+
+  <h1>유럽 배낭여행에서 배운<br>'공급자의 시선'</h1>
+  <p class="subtitle">― 소비자의 감탄 뒤에 숨겨진 설계자의 의도를 읽어라</p>
+
+  <div class="meta">
+    <div class="avatar">진</div>
+    <span>저자 직접 연재</span>
+    <span>·</span>
+    <span>2026년 4월</span>
+    <span>·</span>
+    <span>5분 읽기</span>
+  </div>
+
+  <div class="post-body">
+
+    <div class="diary-date">장교 시절, 유럽 어딘가에서</div>
+
+    <p>
+      장교 시절, 나는 큰마음을 먹고 유럽 배낭여행을 떠났다.
+    </p>
+    <p>
+      남들은 에펠탑 앞에서 사진을 찍고 루브르 박물관의 예술품에 감탄할 때, 나의 시선은 전혀 다른 곳을 향해 있었다. 나는 도시의 <strong>시스템</strong>을 보았다.
+    </p>
+
+    <div class="scene-box">
+      <div class="scene-label">내 머릿속의 질문들</div>
+      "이 거대한 성당은 어떻게 수백 년을 버텼는가?"<br>
+      "관광객들이 자연스럽게 지갑을 열게 만드는 동선의 비밀은 무엇인가?"
+    </div>
+
+    <p>
+      파리의 노천카페에 앉아 있을 때였다. 사람들은 커피 맛과 분위기에 취해 있었지만, 내 눈에는 카페 주인이 배치한 테이블의 각도와 지나가는 행인들을 유혹하는 조명의 명도가 보였다. 그것은 단순한 인테리어가 아니라 철저히 계산된 <strong>'공급자의 설계'</strong>였다.
+    </p>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <p>
+      여행을 통해 내가 얻은 가장 큰 소득은 예술적 영감이 아니라 <strong>'시점의 대전환'</strong>이었다.
+    </p>
+
+    <div class="highlight">
+      언덕길을 걷는 소비자는 공급자가 만들어놓은 환상에 기꺼이 비용을 지불하지만,<br>
+      지름길을 달리는 공급자는 그 환상을 만드는 '공식'을 연구한다.
+    </div>
+
+    <p>
+      유럽의 오래된 건축물들은 나에게 <strong>'가접 후 본접'</strong>의 원리도 가르쳐주었다. 기초가 튼튼하지 않으면 화려한 장식은 짐이 될 뿐이다.
+    </p>
+    <p>
+      나는 한국으로 돌아오는 비행기 안에서 결심했다.
+    </p>
+
+    <div class="highlight">
+      인생이라는 여행지에서<br>
+      누군가 차려놓은 잔치에 손님으로 머물지 않겠다.<br>
+      내가 직접 잔치를 열고, 사람들을 초대하며,<br>
+      기꺼이 비용을 지불하게 만드는 '설계자의 삶'을 살겠다.
+    </div>
+
+    <p>
+      그 결심 하나가 귀국 후 나의 모든 행동을 바꿨다. 맛있는 식당에서 "맛있다"는 감탄 대신 원가 구조를 분석했고, 잘 되는 사업을 보면 그 속의 시스템을 해부했다. 세상을 보는 필터가 완전히 달라진 것이다.
+    </p>
+
+    <div class="question-box">
+      <div class="q-label">오늘의 질문</div>
+      <p>당신은 멋진 장소에 갔을 때 단순히 기분을 즐기는가,<br>
+      아니면 그곳의 주인이 당신의 마음을 움직이기 위해<br>어떤 장치를 해두었는지 분석하는가?</p>
+    </div>
+
+    <div class="tag-row">
+      <a href="#">자서전</a>
+      <a href="#">공급자의시선</a>
+      <a href="#">시점전환</a>
+      <a href="#">유럽여행</a>
+      <a href="#">가접후본접</a>
+      <a href="#">인생의지름길</a>
+    </div>
+
+  </div><!-- post-body -->
+
+  <div class="nav-posts">
+    <a href="블로그_1부_3장.html">
+      <div class="label">이전 글</div>
+      제3장: 데이터는 거짓말을 하지 않는다 — 18만 명의 지름길
+    </a>
+    <a href="블로그_1부_5장.html" style="text-align:right;">
+      <div class="label">다음 글</div>
+      제5장: 소비자의 언어를 버리고 생산자의 언어를 장착하라
+    </a>
+  </div>
+
+</div><!-- post-wrap -->
+
+<footer>
+  © 2026 인생의 지름길을 설계하는 법 · 무단 전재 금지
+</footer>
+
+</body>
+</html>

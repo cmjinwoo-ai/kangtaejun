@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>용산역 구름다리, 무자본 기획의 서막 | 인생의 지름길</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Serif KR', 'Georgia', serif;
+      background: #fafaf8;
+      color: #2c2c2c;
+      line-height: 1.9;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e8e4dc;
+      padding: 0 2rem;
+    }
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .logo { font-size: 1.1rem; font-weight: 700; color: #2c2c2c; text-decoration: none; letter-spacing: -0.02em; }
+    nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
+    nav a:hover { color: #2c2c2c; }
+
+    .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+
+    .category {
+      display: inline-block;
+      background: #f0ede6;
+      color: #7a6a50;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 3px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+      color: #1a1a1a;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: #aaa;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e8e4dc;
+      margin-bottom: 2.5rem;
+    }
+
+    .meta .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #2c2c2c;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .post-body { font-size: 1.05rem; }
+    .post-body p { margin-bottom: 1.6rem; }
+
+    .post-body .highlight {
+      background: #fdf6e3;
+      border-left: 3px solid #d4a843;
+      padding: 1rem 1.25rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #5a4a2a;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .post-body .question-box {
+      background: #f7f4ef;
+      border: 1px solid #e0d8cc;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    .question-box .q-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #a0907a;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .question-box p {
+      font-size: 1rem;
+      color: #4a3f30;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .chapter-divider {
+      text-align: center;
+      margin: 3rem 0;
+      color: #ccc;
+      font-size: 1.2rem;
+      letter-spacing: 0.5rem;
+    }
+
+    .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .tag-row a {
+      background: #f0ede6;
+      color: #7a6a50;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+    .tag-row a:hover { background: #2c2c2c; color: #fff; }
+
+    .nav-posts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e8e4dc;
+    }
+    .nav-posts a {
+      text-decoration: none;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid #e8e4dc;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: #555;
+      transition: border-color 0.2s;
+    }
+    .nav-posts a:hover { border-color: #2c2c2c; color: #2c2c2c; }
+    .nav-posts .label { font-size: 0.72rem; color: #bbb; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.4rem; }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem;
+      background: #2c2c2c;
+      color: #888;
+      font-size: 0.82rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a>
+    <nav>
+      <a href="블로그_메인.html">홈</a>
+      <a href="블로그_메인.html#memoir">연재 목록</a>
+      <a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a>
+      <a href="블로그_메인.html#author">저자 소개</a>
+    </nav>
+  </div>
+</header>
+
+<div class="post-wrap">
+
+  <span class="category">제1부 · 각성</span>
+
+  <h1>용산역 구름다리,<br>무자본 기획의 서막</h1>
+  <p class="subtitle">― "수익은 계산하는 것이 아니라, 이미 정해진 미래를 수확하는 것이다"</p>
+
+  <div class="meta">
+    <div class="avatar">진</div>
+    <span>저자 직접 연재</span>
+    <span>·</span>
+    <span>2026년 4월</span>
+    <span>·</span>
+    <span>8분 읽기</span>
+  </div>
+
+  <div class="post-body">
+
+    <p>
+      드라마 속 진도준이 분당의 황무지가 신도시가 될 것을 알고 베팅했듯,
+      나는 신탄진의 한 구석에서 대한민국의 미래 산업 지도를 보고 있었다.
+      당시 민간 천장크레인 시험장은 전국에 단 한 곳뿐이었다.
+      수요는 넘치는데 공급은 꽉 막힌 병목 현상.
+    </p>
+
+    <p>
+      나는 그 현장의 공식을 치밀하게 해체하고 분석했다.
+      <strong>'신탄진의 공식을 서울 용산으로 가져온다면?'</strong>
+      결과는 자명했다. 계산기조차 필요 없는 압도적인 승리였다.
+    </p>
+
+    <p>
+      특히 나에게는 남들이 보지 못하는 <strong>'미래의 결'</strong>이 보였다.
+      2008년부터 2011년 사이, 충남 당진을 중심으로 현대제철, 동부제철, 동국제강의
+      거대한 용광로가 불을 뿜기 시작했다.
+      제강 산업의 팽창은 곧 '천장크레인 기사'라는 전문 인력의 폭발적인 수요를 예고했다.
+    </p>
+
+    <div class="highlight">
+      "서울 용산역에 시험장을 유치하는 순간,<br>
+      이곳은 전국에서 수강생들이 몰려드는 부의 블랙홀이 될 것이다."
+    </div>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <p>
+      내 머릿속에는 이미 완벽한 작전 지도가 그려져 있었다.
+      군 시절, 수많은 부서 간의 협조 업무를 수행하며 단련된 나에게
+      코레일이라는 공공기관은 두려움의 대상이 아니었다.
+      오히려 내가 가장 잘 아는 <strong>'조직의 언어'</strong>를 사용하는 곳이었다.
+      지휘관에게 수없이 올렸던 작전 보고서의 경험을 살려,
+      나는 그들이 가장 원하는 양식과 답을 담은 사업 계획서를 완성했다.
+    </p>
+
+    <p>
+      그 계획서의 핵심은 파격적인 <strong>'8:2'</strong> 이익 분배였다.
+      나에게 돌아오는 수익은 단 20%. 코레일 담당자는 놀라며 물었다.
+    </p>
+
+    <div class="highlight">
+      "이 정도 수익으로 사업 운영이 가능하겠습니까?"<br><br>
+      "지금은 가접(假接)의 단계입니다.<br>
+      신뢰를 바탕으로 향후 과정을 확장하여 더 큰 그림을 그리겠습니다."
+    </div>
+
+    <p>
+      사람들은 내가 손해를 본다고 혀를 찼다.
+      하지만 나는 그 계약서의 행간에 숨겨진 <strong>'진짜 무기'</strong>를 쥐고 있었다.
+      80%를 내어주는 기준은 '매출'이 아니라,
+      나의 인건비와 운영비를 모두 공제한 <strong>'순수익'</strong>이었다.
+    </p>
+
+    <p>
+      이것은 나에게 엄청난 탄력성을 부여했다.
+      나는 사장이자 동시에 현장의 가장 유능한 실무자였다.
+      나의 인건비를 스스로 책정하고 운영비를 통제하며,
+      리스크가 전혀 없는 <strong>'무적의 요새'</strong>를 구축했다.
+    </p>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <p>
+      나는 화려한 PPT 대신, 발로 뛴 흔적이 가득한 문서 뭉치를 코레일 담당자 앞에 내밀었다.
+    </p>
+
+    <div class="highlight">
+      "이 부지는 지금 수익이 없는 유휴지입니다.<br>
+      하지만 제가 기획한 중장비 교육 및 국가자격시험 시스템을 도입하면,<br>
+      코레일은 공익적 명분과 안정적인 임대 수익이라는 두 마리 토끼를 잡을 수 있습니다."
+    </div>
+
+    <p>
+      담당자의 눈빛이 달라진 것은 내 열정 때문이 아니었다.
+      수익 구조를 숨기지 않고 투명하게 공개하고,
+      코레일이 질 수 있는 리스크를 내가 어떻게 상쇄할지 명확히 담은
+      <strong>'숫자의 논리'</strong> 때문이었다.
+      결국 자본금 0원으로 3,000평의 부지를 움직였다.
+    </p>
+
+    <p>
+      내 직장을 내가 직접 만들고, 내 월급을 내가 직접 결정하는 구조.
+      나는 고용된 오너가 아니라, 스스로 생태계를 만든 <strong>'창조적 사령관'</strong>이었다.
+    </p>
+
+    <p>
+      남들이 주식 차트를 보며 일희일비할 때,
+      나는 용산역 부지 위에서 돌아가는 크레인의 쇠사슬 소리를 들으며
+      돈이 복리로 쌓이는 소리를 들었다.
+      그것은 운이 좋아서가 아니었다.
+      미래의 수요를 미리 읽고, 남들이 불가능하다고 했던 입지에
+      나만의 깃발을 꽂은 <strong>'진도준식 안목'</strong>의 승리였다.
+    </p>
+
+    <div class="highlight">
+      "위기는 하수에게만 찾아온다.<br>
+      미래를 설계하는 자에게 위기는 수익을 극대화할 수 있는 가장 완벽한 변명일 뿐이다."
+    </div>
+
+    <div class="question-box">
+      <div class="q-label">💡 성공의 지름길을 위한 질문</div>
+      <p>당신은 기회가 오기만을 기다리고 있는가,<br>
+      아니면 상대방의 리스크를 없애줄 정교한 설계도를 직접 들고 찾아가고 있는가?</p>
+    </div>
+
+    <div class="tag-row">
+      <a href="#">자서전</a>
+      <a href="#">무자본창업</a>
+      <a href="#">진도준식안목</a>
+      <a href="#">8대2전략</a>
+      <a href="#">순수익전략</a>
+      <a href="#">인생의지름길</a>
+    </div>
+
+  </div><!-- post-body -->
+
+  <div class="nav-posts">
+    <a href="블로그_1부_1장.html">
+      <div class="label">이전 글</div>
+      제1장: 안정이라는 이름의 감옥을 탈출하다
+    </a>
+    <a href="블로그_1부_3장.html" style="text-align:right;">
+      <div class="label">다음 글</div>
+      제3장: 데이터는 거짓말을 하지 않는다
+    </a>
+  </div>
+
+</div><!-- post-wrap -->
+
+<footer>
+  © 2026 인생의 지름길을 설계하는 법 · 무단 전재 금지
+</footer>
+
+</body>
+</html>

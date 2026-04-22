@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>나는 왜 여기까지 왔는가 | 인생의 지름길</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Serif KR', 'Georgia', serif;
+      background: #fafaf8;
+      color: #2c2c2c;
+      line-height: 1.9;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e8e4dc;
+      padding: 0 2rem;
+    }
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .logo { font-size: 1.1rem; font-weight: 700; color: #2c2c2c; text-decoration: none; letter-spacing: -0.02em; }
+    nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
+    nav a:hover { color: #2c2c2c; }
+
+    .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+
+    .category {
+      display: inline-block;
+      background: #f0ede6;
+      color: #7a6a50;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 3px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+      color: #1a1a1a;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: #aaa;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e8e4dc;
+      margin-bottom: 2.5rem;
+    }
+
+    .meta .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #2c2c2c;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .post-body { font-size: 1.05rem; }
+
+    .post-body p { margin-bottom: 1.6rem; }
+
+    .post-body .highlight {
+      background: #fdf6e3;
+      border-left: 3px solid #d4a843;
+      padding: 1rem 1.25rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #5a4a2a;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .post-body .question-box {
+      background: #f7f4ef;
+      border: 1px solid #e0d8cc;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    .question-box .q-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #a0907a;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .question-box p {
+      font-size: 1rem;
+      color: #4a3f30;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .chapter-divider {
+      text-align: center;
+      margin: 3rem 0;
+      color: #ccc;
+      font-size: 1.2rem;
+      letter-spacing: 0.5rem;
+    }
+
+    .closing-line {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #1a1a1a;
+      text-align: center;
+      margin: 3rem 0 0;
+      letter-spacing: -0.02em;
+    }
+
+    .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .tag-row a {
+      background: #f0ede6;
+      color: #7a6a50;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+    .tag-row a:hover { background: #2c2c2c; color: #fff; }
+
+    .nav-posts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e8e4dc;
+    }
+    .nav-posts a {
+      text-decoration: none;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid #e8e4dc;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: #555;
+      transition: border-color 0.2s;
+    }
+    .nav-posts a:hover { border-color: #2c2c2c; color: #2c2c2c; }
+    .nav-posts .label { font-size: 0.72rem; color: #bbb; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.4rem; }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem;
+      background: #2c2c2c;
+      color: #888;
+      font-size: 0.82rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a>
+    <nav>
+      <a href="블로그_메인.html">홈</a>
+      <a href="블로그_메인.html#memoir">연재 목록</a>
+      <a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a>
+      <a href="블로그_메인.html#author">저자 소개</a>
+    </nav>
+  </div>
+</header>
+
+<div class="post-wrap">
+
+  <span class="category">프롤로그</span>
+
+  <h1>나는 왜 여기까지 왔는가</h1>
+  <p class="subtitle">― 설계하는 사람만이 자신의 인생을 갖는다</p>
+
+  <div class="meta">
+    <div class="avatar">진</div>
+    <span>저자 직접 연재</span>
+    <span>·</span>
+    <span>2026년 4월</span>
+    <span>·</span>
+    <span>5분 읽기</span>
+  </div>
+
+  <div class="post-body">
+
+    <p>
+      인생은 생각보다 빠르게 흘러간다.<br>
+      돌아보면, 어느 순간 이미 많은 시간이 지나 있었다.
+    </p>
+
+    <p>
+      나는 평범한 길을 걸어갈 수도 있었다.<br>
+      군에서 안정적인 삶을 이어가거나,<br>
+      정해진 시스템 안에서 주어진 역할을 수행하는 삶.
+    </p>
+
+    <p>
+      하지만 어느 순간 깨달았다.
+    </p>
+
+    <div class="highlight">
+      "이 길은 내가 선택한 길이 아니다."
+    </div>
+
+    <p>
+      그때부터 나는 질문을 바꾸기 시작했다.
+    </p>
+
+    <p>
+      '어떻게 하면 안정적으로 살 수 있을까?'가 아니라<br>
+      '어떻게 하면 내가 원하는 삶을 만들 수 있을까?'
+    </p>
+
+    <p>
+      이 질문 하나가 모든 것을 바꾸기 시작했다.
+    </p>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <p>
+      처음에는 아무것도 없었다.<br>
+      자본도 없었고, 확실한 계획도 없었다.
+    </p>
+
+    <p>
+      하지만 하나는 분명했다.
+    </p>
+
+    <div class="highlight">
+      "나는 실행할 수 있다."
+    </div>
+
+    <p>
+      나는 완벽한 준비를 기다리지 않았다.<br>
+      가접을 먼저 하고, 실행하면서 보완하는 방식을 선택했다.
+    </p>
+
+    <p>
+      누군가는 준비가 부족하다고 말했고,<br>
+      누군가는 무모하다고 말했다.
+    </p>
+
+    <p>
+      하지만 결과적으로, 그 선택이 나를 여기까지 이끌었다.
+    </p>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <p>
+      사업을 하면서 수많은 실패를 겪었다.<br>
+      문을 닫은 사업도 있었고, 손실을 감수해야 했던 선택도 있었다.
+    </p>
+
+    <p>
+      하지만 그때마다 나는 같은 방식으로 대응했다.
+    </p>
+
+    <div class="highlight">
+      문제를 감정으로 보지 않고 구조로 분석했다.<br><br>
+      왜 실패했는지<br>
+      어디에서 돈이 새고 있는지<br>
+      어떤 흐름을 놓쳤는지<br><br>
+      그리고 다시 설계했다.
+    </div>
+
+    <p>
+      나는 깨달았다.<br>
+      성공은 특별한 능력에서 오는 것이 아니라<br>
+      반복 가능한 구조에서 나온다는 것을.
+    </p>
+
+    <p>
+      한 번 성공하는 것은 어렵지 않다.<br>
+      하지만 계속해서 만들어내는 것은 완전히 다른 문제다.
+    </p>
+
+    <p>
+      그래서 나는 <strong>"붕어빵 틀"</strong>을 만들기 시작했다.
+    </p>
+
+    <div class="question-box">
+      <div class="q-label">내가 만들고자 한 것</div>
+      <p>누가 해도 같은 결과가 나오는 구조<br>
+      시스템으로 돌아가는 사업<br>
+      감정이 아닌 데이터로 움직이는 판단</p>
+    </div>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <p>
+      이 책은 나의 성공 이야기가 아니다.
+    </p>
+
+    <p>
+      오히려 수많은 시행착오와 선택의 기록이다.<br>
+      어떻게 실행했고, 어떻게 실패했고, 어떻게 다시 일어섰는지.<br>
+      그 과정 속에서 얻은 가장 현실적인 방법을 담았다.
+    </p>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <p>
+      이 책을 읽는 당신에게 한 가지 질문을 던지고 싶다.
+    </p>
+
+    <div class="question-box">
+      <div class="q-label">당신에게 묻는다</div>
+      <p>지금 당신의 삶은<br>
+      당신이 설계한 것인가,<br>
+      아니면 흘러온 것인가?</p>
+    </div>
+
+    <p>
+      이 질문에 답할 수 있다면, 이미 절반은 시작한 것이다.
+    </p>
+
+    <p>
+      나는 아직도 완성되지 않았다.<br>
+      지금도 계속 설계하고 있다.
+    </p>
+
+    <p class="closing-line">"인생은 설계하는 사람의 것이다."</p>
+
+    <div class="tag-row">
+      <a href="#">자서전</a>
+      <a href="#">프롤로그</a>
+      <a href="#">실행력</a>
+      <a href="#">인생의지름길</a>
+      <a href="#">창업</a>
+      <a href="#">자기설계</a>
+    </div>
+
+  </div><!-- post-body -->
+
+  <div class="nav-posts">
+    <a href="#" style="visibility:hidden;">
+      <div class="label">이전 글</div>
+      —
+    </a>
+    <a href="블로그_1부_1장.html" style="text-align:right;">
+      <div class="label">다음 글</div>
+      제1장: 안정이라는 이름의 감옥을 탈출하다
+    </a>
+  </div>
+
+</div><!-- post-wrap -->
+
+<footer>
+  © 2026 인생의 지름길을 설계하는 법 · 무단 전재 금지
+</footer>
+
+</body>
+</html>

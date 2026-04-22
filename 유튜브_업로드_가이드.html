@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>유튜브 업로드 가이드 — 성공의 지름길</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Malgun Gothic', sans-serif; background:#f5f5f5; color:#111; }
+
+    .top-bar {
+      background:#ff0000; color:#fff; padding:1.2rem 2rem;
+      display:flex; align-items:center; gap:1rem;
+    }
+    .top-bar h1 { font-size:1.2rem; font-weight:700; }
+    .top-bar p  { font-size:0.85rem; opacity:0.85; }
+
+    .how-to {
+      background:#fff3cd; border-left:5px solid #ff9800;
+      margin:2rem auto; max-width:900px; padding:1.5rem 2rem;
+      border-radius:0 8px 8px 0;
+    }
+    .how-to h2 { font-size:1rem; margin-bottom:0.8rem; color:#e65100; }
+    .how-to ol { padding-left:1.4rem; }
+    .how-to li { margin-bottom:0.5rem; font-size:0.92rem; line-height:1.7; }
+    .how-to a  { color:#1565c0; font-weight:700; }
+
+    .progress-bar {
+      max-width:900px; margin:0 auto 2rem;
+      display:flex; gap:0.5rem; padding:0 2rem;
+    }
+    .prog-step {
+      flex:1; text-align:center; padding:0.6rem;
+      border-radius:6px; font-size:0.78rem; font-weight:700;
+      background:#e0e0e0; color:#777;
+    }
+    .prog-step.done   { background:#4caf50; color:#fff; }
+    .prog-step.active { background:#ff0000; color:#fff; }
+
+    .video-card {
+      max-width:900px; margin:0 auto 2rem;
+      background:#fff; border-radius:12px;
+      box-shadow:0 2px 12px rgba(0,0,0,0.08);
+      overflow:hidden;
+    }
+    .card-header {
+      background:linear-gradient(135deg,#1a1a1a,#333);
+      color:#fff; padding:1.2rem 1.8rem;
+      display:flex; align-items:center; gap:1rem;
+    }
+    .order-badge {
+      width:44px; height:44px; border-radius:50%;
+      background:#ff0000; display:flex;
+      align-items:center; justify-content:center;
+      font-size:1.2rem; font-weight:900; flex-shrink:0;
+    }
+    .card-header h2 { font-size:1rem; line-height:1.5; }
+    .card-header p  { font-size:0.78rem; color:#aaa; margin-top:0.2rem; }
+
+    .card-body { padding:1.5rem 1.8rem; }
+
+    .field-label {
+      font-size:0.72rem; font-weight:700; letter-spacing:0.08em;
+      color:#ff0000; margin-bottom:0.4rem; margin-top:1.2rem;
+    }
+    .field-label:first-child { margin-top:0; }
+
+    .copy-box {
+      background:#f8f8f8; border:1px solid #ddd; border-radius:6px;
+      padding:0.9rem 1rem; font-size:0.9rem; line-height:1.7;
+      white-space:pre-wrap; cursor:pointer; position:relative;
+      transition:background 0.15s;
+    }
+    .copy-box:hover { background:#fff3e0; border-color:#ff9800; }
+    .copy-btn {
+      position:absolute; top:0.5rem; right:0.5rem;
+      background:#ff0000; color:#fff; border:none;
+      padding:0.25rem 0.7rem; border-radius:4px;
+      font-size:0.72rem; font-weight:700; cursor:pointer;
+    }
+    .copy-btn:hover { background:#cc0000; }
+
+    .tag-list {
+      display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:0.4rem;
+    }
+    .tag {
+      background:#e3f2fd; color:#1565c0; border-radius:20px;
+      padding:0.2rem 0.7rem; font-size:0.78rem;
+    }
+
+    .file-path {
+      background:#e8f5e9; border:1px solid #81c784;
+      border-radius:6px; padding:0.8rem 1rem;
+      font-family:monospace; font-size:0.88rem; color:#2e7d32;
+      margin-top:0.4rem;
+    }
+
+    .divider { border:none; border-top:1px solid #eee; margin:1.2rem 0; }
+
+    .done-section {
+      max-width:900px; margin:2rem auto 4rem;
+      background:#e8f5e9; border:2px solid #4caf50;
+      border-radius:12px; padding:2rem; text-align:center;
+    }
+    .done-section h2 { font-size:1.3rem; color:#2e7d32; margin-bottom:0.5rem; }
+    .done-section p  { color:#555; font-size:0.9rem; }
+    .yt-btn {
+      display:inline-block; background:#ff0000; color:#fff;
+      padding:0.85rem 2rem; border-radius:6px; text-decoration:none;
+      font-weight:700; margin-top:1.2rem; font-size:0.95rem;
+    }
+
+    .copied-msg {
+      display:none; position:fixed; bottom:2rem; left:50%;
+      transform:translateX(-50%);
+      background:#333; color:#fff; padding:0.7rem 1.5rem;
+      border-radius:30px; font-size:0.9rem; z-index:999;
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div>
+    <h1>▶ 성공의 지름길 — 유튜브 업로드 가이드</h1>
+    <p>이 페이지를 옆에 열어두고 순서대로 복사하여 붙여넣기만 하면 됩니다</p>
+  </div>
+</div>
+
+<!-- 사용법 -->
+<div class="how-to">
+  <h2>📋 업로드 방법 (코딩 없음 — 복사+붙여넣기만)</h2>
+  <ol>
+    <li><strong>유튜브 스튜디오</strong> 열기 → <a href="https://studio.youtube.com" target="_blank">studio.youtube.com</a> 접속</li>
+    <li>우측 상단 <strong>[ 만들기 → 동영상 업로드 ]</strong> 클릭</li>
+    <li>아래 순서대로 각 영상 파일 선택:<br>
+        <span style="background:#222;color:#fff;padding:0.1rem 0.5rem;border-radius:3px;font-family:monospace;font-size:0.85rem;">C:\Users\cmjin\OneDrive\바탕 화면\자서전폴더\유튜브영상\</span></li>
+    <li>제목·설명·태그를 아래에서 <strong>복사 버튼</strong> 눌러 붙여넣기</li>
+    <li>공개 설정: <strong>공개</strong> 선택 → <strong>게시</strong></li>
+    <li>9편 모두 반복</li>
+  </ol>
+</div>
+
+<!-- 진행 현황 -->
+<div class="progress-bar">
+  <div class="prog-step active">1편</div>
+  <div class="prog-step">2편</div>
+  <div class="prog-step">3편</div>
+  <div class="prog-step">4편</div>
+  <div class="prog-step">5편</div>
+  <div class="prog-step">6편</div>
+  <div class="prog-step">7편</div>
+  <div class="prog-step">8편</div>
+  <div class="prog-step">9편</div>
+</div>
+
+<!-- ===== 1편 ===== -->
+<div class="video-card">
+  <div class="card-header">
+    <div class="order-badge">1</div>
+    <div>
+      <h2>국방부를 이긴 60대 사장의 차가운 원칙</h2>
+      <p>공매 입찰 · 행정소송 승소 · 원칙의 힘</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="field-label">📁 업로드할 파일</div>
+    <div class="file-path">국방부를_이긴_차가운_원칙의_힘.mp4</div>
+
+    <div class="field-label">📌 제목 (복사해서 붙여넣기)</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>국방부를 이긴 60대 사장의 차가운 원칙 | 성공의 지름길</div>
+
+    <div class="field-label">📝 설명 (복사해서 붙여넣기)</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>입찰 무효 판정을 행정소송으로 뒤집고 국방부를 이긴 실전 스토리.
+
+접대도 로비도 없이 오직 법규와 원칙으로 싸운 사람의 이야기입니다.
+
+📌 핵심 내용
+- 공매 입찰 무효 대응법
+- 행정소송 승소 전략
+- 원칙이 가장 강한 무기인 이유
+
+강태준 자서전 '인생의 지름길을 설계하는 법' 발췌
+구독 & 좋아요는 큰 힘이 됩니다 🙏
+
+#성공의지름길 #강태준 #무자본창업 #자서전 #행정소송 #원칙 #성공전략 #인생지름길</div>
+
+    <div class="field-label">🏷️ 태그</div>
+    <div class="copy-box" onclick="copyText(this)" style="font-size:0.85rem;">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>성공의지름길,강태준,자서전,무자본창업,행정소송,원칙,성공전략,인생지름길,국방부,공매</div>
+  </div>
+</div>
+
+<!-- ===== 2편 ===== -->
+<div class="video-card">
+  <div class="card-header">
+    <div class="order-badge">2</div>
+    <div>
+      <h2>0원으로 코레일 국유지 3천 평 따낸 비밀</h2>
+      <p>국유지 활용 · 공공기관 협상 · 무자본 창업</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="field-label">📁 업로드할 파일</div>
+    <div class="file-path">0원으로_코레일_땅_3천_평_따낸_전략 (1).mp4</div>
+
+    <div class="field-label">📌 제목</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>0원으로 코레일 국유지 3천 평 따낸 비밀 | 성공의 지름길</div>
+
+    <div class="field-label">📝 설명</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>단 한 푼의 자본 없이 코레일 국유지 3,000평을 임대한 실전 협상 전략.
+
+공공기관을 설득하는 단 하나의 언어, 바로 법규와 데이터입니다.
+
+📌 핵심 내용
+- 국유지 활용 전략
+- 공공기관 협상의 기술
+- 무자본 사업 시작법
+
+강태준 자서전 '인생의 지름길을 설계하는 법' 발췌
+구독 & 좋아요는 큰 힘이 됩니다 🙏
+
+#무자본창업 #코레일 #국유지 #협상 #성공의지름길 #강태준 #창업전략 #공공기관</div>
+
+    <div class="field-label">🏷️ 태그</div>
+    <div class="copy-box" onclick="copyText(this)" style="font-size:0.85rem;">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>무자본창업,코레일,국유지,협상,성공의지름길,강태준,창업전략,공공기관,부동산</div>
+  </div>
+</div>
+
+<!-- ===== 3편 ===== -->
+<div class="video-card">
+  <div class="card-header">
+    <div class="order-badge">3</div>
+    <div>
+      <h2>자녀에게 세금 없이 3억 2천 물려주는 법</h2>
+      <p>증여세 절세 · 비과세 활용 · 합법 증여 설계</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="field-label">📁 업로드할 파일</div>
+    <div class="file-path">자녀에게_세금_없이_3억2천_물려주는_법.mp4</div>
+
+    <div class="field-label">📌 제목</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>자녀에게 세금 한 푼 없이 3억 2천 물려주는 법 (합법) | 성공의 지름길</div>
+
+    <div class="field-label">📝 설명</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>결혼·출산 공제와 비과세 증여를 활용해 자녀에게 합법적으로 3억 2천만 원을 이전하는 방법.
+
+절세는 탈세가 아닙니다. 법이 허락한 최대한을 활용하는 것이 진짜 부의 설계입니다.
+
+📌 핵심 내용
+- 비과세 증여 한도 활용법
+- 결혼·출산 공제 전략
+- 3억 2천 증여 설계 플랜
+
+강태준 자서전 '인생의 지름길을 설계하는 법' 발췌
+구독 & 좋아요는 큰 힘이 됩니다 🙏
+
+#증여세절세 #비과세 #자녀증여 #상속 #재테크 #성공의지름길 #강태준 #절세전략</div>
+
+    <div class="field-label">🏷️ 태그</div>
+    <div class="copy-box" onclick="copyText(this)" style="font-size:0.85rem;">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>증여세절세,비과세,자녀증여,상속,재테크,성공의지름길,강태준,절세전략,증여</div>
+  </div>
+</div>
+
+<!-- ===== 4편 ===== -->
+<div class="video-card">
+  <div class="card-header">
+    <div class="order-badge">4</div>
+    <div>
+      <h2>인생의 지름길을 설계하는 법 — 강태준 자서전</h2>
+      <p>자서전 강의 · 인생 설계 · 성공 프레임</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="field-label">📁 업로드할 파일</div>
+    <div class="file-path">인생의_지름길을_설계하는_법 (2).mp4</div>
+
+    <div class="field-label">📌 제목</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>인생의 지름길을 설계하는 법 — 강태준 자서전 강의 | 성공의 지름길</div>
+
+    <div class="field-label">📝 설명</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>설계하는 사람만이 자신의 인생을 소유할 수 있습니다.
+
+무자본으로 시작해 3,000평 부지를 확보하고 두산직업전문학교를 세운 강태준의 이야기.
+
+📌 핵심 내용
+- 인생 설계의 핵심 프레임
+- 실패에서 배운 성공의 원칙
+- 지금 당장 실행하는 법
+
+강태준 자서전 '인생의 지름길을 설계하는 법'
+구독 & 좋아요는 큰 힘이 됩니다 🙏
+
+#인생지름길 #강태준 #자서전 #성공전략 #인생설계 #성공의지름길 #자기계발</div>
+
+    <div class="field-label">🏷️ 태그</div>
+    <div class="copy-box" onclick="copyText(this)" style="font-size:0.85rem;">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>인생지름길,강태준,자서전,성공전략,인생설계,성공의지름길,자기계발,두산직업전문학교</div>
+  </div>
+</div>
+
+<!-- ===== 5편 ===== -->
+<div class="video-card">
+  <div class="card-header">
+    <div class="order-badge">5</div>
+    <div>
+      <h2>수익 80% 포기로 용산역 3천 평 얻은 역설의 협상</h2>
+      <p>역발상 협상 · 무자본 부지 확보 · 기획의 기술</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="field-label">📁 업로드할 파일</div>
+    <div class="file-path">수익_80_를_포기하고_빌린_용산역_3천_평.mp4</div>
+
+    <div class="field-label">📌 제목</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>수익 80% 포기로 용산역 3천 평 얻은 역설의 협상 | 성공의 지름길</div>
+
+    <div class="field-label">📝 설명</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>역설처럼 보이지만 이것이 진짜 협상입니다.
+수익의 80%를 포기하겠다는 제안 하나로 용산역 3,000평을 확보했습니다.
+
+📌 핵심 내용
+- 역발상 협상 전략
+- 공공기관 임대 확보법
+- 무자본 부지 기획
+
+강태준 자서전 '인생의 지름길을 설계하는 법' 발췌
+구독 & 좋아요는 큰 힘이 됩니다 🙏
+
+#협상전략 #역발상 #무자본 #부동산 #강태준 #성공의지름길 #창업 #용산역</div>
+
+    <div class="field-label">🏷️ 태그</div>
+    <div class="copy-box" onclick="copyText(this)" style="font-size:0.85rem;">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>협상전략,역발상,무자본,부동산,강태준,성공의지름길,창업,용산역</div>
+  </div>
+</div>
+
+<!-- ===== 6편 ===== -->
+<div class="video-card">
+  <div class="card-header">
+    <div class="order-badge">6</div>
+    <div>
+      <h2>돈 없이 시작한 사람이 부자 되는 뇌 구조</h2>
+      <p>생산자 마인드 · 무자본 레버리지 · 부의 시스템</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="field-label">📁 업로드할 파일</div>
+    <div class="file-path">무자본으로_부의_시스템_짓는_생산자의_뇌 (1).mp4</div>
+
+    <div class="field-label">📌 제목</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>돈 없이 시작한 사람이 부자 되는 뇌 구조 | 성공의 지름길</div>
+
+    <div class="field-label">📝 설명</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>소비자의 뇌로는 절대 부자가 될 수 없습니다.
+생산자의 뇌로 전환하는 순간, 세상이 다르게 보입니다.
+
+📌 핵심 내용
+- 소비자 vs 생산자 마인드
+- 무자본 레버리지 전략
+- 부의 시스템 설계법
+
+강태준 자서전 '인생의 지름길을 설계하는 법' 발췌
+구독 & 좋아요는 큰 힘이 됩니다 🙏
+
+#생산자마인드 #무자본 #부의시스템 #강태준 #성공의지름길 #재테크 #자기계발</div>
+
+    <div class="field-label">🏷️ 태그</div>
+    <div class="copy-box" onclick="copyText(this)" style="font-size:0.85rem;">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>생산자마인드,무자본,부의시스템,강태준,성공의지름길,재테크,자기계발</div>
+  </div>
+</div>
+
+<!-- ===== 7편 ===== -->
+<div class="video-card">
+  <div class="card-header">
+    <div class="order-badge">7</div>
+    <div>
+      <h2>50대에 무너지지 않는 삶의 시스템</h2>
+      <p>인생 후반전 · 시스템 사고 · 50대 전략</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="field-label">📁 업로드할 파일</div>
+    <div class="file-path">50대_무너지지_않는_삶의_시스템.mp4</div>
+
+    <div class="field-label">📌 제목</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>50대에 무너지지 않는 삶의 시스템 5가지 | 성공의 지름길</div>
+
+    <div class="field-label">📝 설명</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>50대는 끝이 아닙니다. 진짜 설계는 지금부터 시작입니다.
+
+나이가 약점이 되지 않고 강점이 되는 시스템을 만드는 방법.
+
+📌 핵심 내용
+- 인생 후반전 설계법
+- 시스템으로 돌아가는 삶
+- 50대의 강점을 활용하는 전략
+
+강태준 자서전 '인생의 지름길을 설계하는 법' 발췌
+구독 & 좋아요는 큰 힘이 됩니다 🙏
+
+#50대 #인생후반전 #시스템 #강태준 #성공의지름길 #중년 #자기계발 #인생설계</div>
+
+    <div class="field-label">🏷️ 태그</div>
+    <div class="copy-box" onclick="copyText(this)" style="font-size:0.85rem;">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>50대,인생후반전,시스템,강태준,성공의지름길,중년,자기계발,인생설계</div>
+  </div>
+</div>
+
+<!-- ===== 8편 ===== -->
+<div class="video-card">
+  <div class="card-header">
+    <div class="order-badge">8</div>
+    <div>
+      <h2>11만 킬로 탄 G90으로 배운 인생의 진짜 가치</h2>
+      <p>경험이 자산 · 50대 감성 · 후회 없는 선택</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="field-label">📁 업로드할 파일</div>
+    <div class="file-path">11만_킬로_50대의_G90_인생_드라이브.mp4</div>
+
+    <div class="field-label">📌 제목</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>11만 킬로 탄 G90으로 배운 인생의 진짜 가치 | 성공의 지름길</div>
+
+    <div class="field-label">📝 설명</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>11만 킬로를 달린 G90이 말해주는 것은 자동차 이야기가 아닙니다.
+경험과 시간이 쌓일수록 빛나는 인생의 진짜 가치에 대한 이야기입니다.
+
+📌 핵심 내용
+- 경험이 자산이 되는 순간
+- 50대가 가진 진짜 강점
+- 후회 없는 선택의 기준
+
+강태준 자서전 '인생의 지름길을 설계하는 법' 발췌
+구독 & 좋아요는 큰 힘이 됩니다 🙏
+
+#G90 #50대 #인생 #경험 #강태준 #성공의지름길 #가치관 #감성 #제네시스</div>
+
+    <div class="field-label">🏷️ 태그</div>
+    <div class="copy-box" onclick="copyText(this)" style="font-size:0.85rem;">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>G90,50대,인생,경험,강태준,성공의지름길,가치관,감성,제네시스</div>
+  </div>
+</div>
+
+<!-- ===== 9편 ===== -->
+<div class="video-card">
+  <div class="card-header">
+    <div class="order-badge">9</div>
+    <div>
+      <h2>삼성전자 52주를 버텨낸 투자자의 심리</h2>
+      <p>장기 투자 · 손실 심리 · 통제된 인내</p>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="field-label">📁 업로드할 파일</div>
+    <div class="file-path">계좌를_짓누르는_삼성전자_52_의_늪.mp4</div>
+
+    <div class="field-label">📌 제목</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>삼성전자 52주를 버텨낸 투자자의 심리 | 성공의 지름길</div>
+
+    <div class="field-label">📝 설명</div>
+    <div class="copy-box" onclick="copyText(this)">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>계좌가 녹아내려도 버티는 투자자와 못 버티는 투자자의 차이는 무엇인가?
+
+통제된 인내만이 진짜 수익을 만듭니다.
+
+📌 핵심 내용
+- 장기 투자 심리 관리법
+- 삼성전자 52주 보유 실전기
+- 손실을 버티는 원칙
+
+강태준 자서전 '인생의 지름길을 설계하는 법' 발췌
+구독 & 좋아요는 큰 힘이 됩니다 🙏
+
+#삼성전자 #주식투자 #장기투자 #인내 #강태준 #성공의지름길 #재테크 #투자심리</div>
+
+    <div class="field-label">🏷️ 태그</div>
+    <div class="copy-box" onclick="copyText(this)" style="font-size:0.85rem;">
+      <button class="copy-btn" onclick="copyText(this.parentElement)">복사</button>삼성전자,주식투자,장기투자,인내,강태준,성공의지름길,재테크,투자심리</div>
+  </div>
+</div>
+
+<!-- 완료 -->
+<div class="done-section">
+  <h2>🎉 9편 업로드 완료!</h2>
+  <p>채널에서 확인하세요. 구독자가 늘어나면 수익화 신청이 가능합니다.</p>
+  <a href="https://www.youtube.com/@jinwoopark6666" target="_blank" class="yt-btn">▶ 내 채널 확인하기</a>
+</div>
+
+<div class="copied-msg" id="copiedMsg">복사되었습니다!</div>
+
+<script>
+function copyText(el) {
+  // 버튼 텍스트 제외하고 복사
+  const btn = el.querySelector('.copy-btn');
+  const text = el.innerText.replace(btn ? btn.innerText : '', '').trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const msg = document.getElementById('copiedMsg');
+    msg.style.display = 'block';
+    setTimeout(() => msg.style.display = 'none', 1500);
+  });
+}
+</script>
+</body>
+</html>

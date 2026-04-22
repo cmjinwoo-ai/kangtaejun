@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>성공의 지름길 — 유튜브 수익화 전략</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Malgun Gothic', sans-serif; background:#0f0f0f; color:#fff; line-height:1.8; }
+
+    .hero {
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a0a00 50%, #0f0f0f 100%);
+      border-bottom: 1px solid #ff0000;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .yt-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: #ff0000; color: #fff; padding: 0.4rem 1rem;
+      border-radius: 20px; font-size: 0.82rem; font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 { font-size: clamp(2rem,6vw,3.5rem); font-weight: 900; letter-spacing: -0.04em; margin-bottom: 0.8rem; }
+    .hero h1 span { color: #ff6b00; }
+    .hero p { color: #aaa; font-size: 1rem; max-width: 600px; margin: 0 auto; }
+
+    .wrap { max-width: 900px; margin: 0 auto; padding: 0 2rem 6rem; }
+
+    /* 섹션 */
+    .section { margin-top: 4rem; }
+    .section-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+      color: #ff6b00; margin-bottom: 0.8rem;
+    }
+    .section h2 { font-size: 1.6rem; font-weight: 900; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+
+    /* 카드 */
+    .card {
+      background: #1a1a1a; border: 1px solid #333; border-radius: 10px;
+      padding: 1.8rem; margin-bottom: 1rem;
+    }
+    .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; color: #fff; }
+    .card p { font-size: 0.9rem; color: #aaa; line-height: 1.8; }
+    .card.highlight { border-color: #ff6b00; }
+    .card.highlight h3 { color: #ff6b00; }
+
+    /* 단계 */
+    .step-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .step-card {
+      background: #1a1a1a; border: 1px solid #333; border-radius: 10px;
+      padding: 1.5rem; text-align: center; position: relative;
+    }
+    .step-num {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: #ff0000; color: #fff; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; margin: 0 auto 1rem;
+    }
+    .step-card h3 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .step-card p { font-size: 0.8rem; color: #888; }
+    .step-card .target { font-size: 1.3rem; font-weight: 900; color: #ff6b00; margin: 0.5rem 0; }
+
+    /* 타임라인 */
+    .timeline { border-left: 2px solid #ff0000; padding-left: 2rem; }
+    .tl-item { position: relative; margin-bottom: 2.5rem; }
+    .tl-dot {
+      position: absolute; left: -2.6rem; top: 0.2rem;
+      width: 16px; height: 16px; border-radius: 50%;
+      background: #ff0000; border: 3px solid #0f0f0f;
+    }
+    .tl-period { font-size: 0.78rem; color: #ff6b00; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+    .tl-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .tl-desc { font-size: 0.88rem; color: #999; }
+    .tl-goal {
+      display: inline-block; background: #1a0a00; border: 1px solid #ff6b00;
+      color: #ff6b00; font-size: 0.78rem; font-weight: 700;
+      padding: 0.2rem 0.8rem; border-radius: 20px; margin-top: 0.5rem;
+    }
+
+    /* 콘텐츠 테이블 */
+    table { width: 100%; border-collapse: collapse; }
+    th { background: #1a1a1a; color: #ff6b00; font-size: 0.82rem; padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid #333; }
+    td { padding: 0.8rem 1rem; font-size: 0.88rem; color: #ccc; border-bottom: 1px solid #222; vertical-align: top; }
+    tr:hover td { background: #1a1a1a; }
+    .badge {
+      display: inline-block; padding: 0.15rem 0.6rem;
+      border-radius: 10px; font-size: 0.72rem; font-weight: 700;
+    }
+    .badge-red { background: #ff0000; color: #fff; }
+    .badge-orange { background: #ff6b00; color: #fff; }
+    .badge-green { background: #00b894; color: #fff; }
+    .badge-blue { background: #0984e3; color: #fff; }
+
+    /* 수익 계산 */
+    .revenue-box {
+      background: linear-gradient(135deg, #1a0a00, #1a1a00);
+      border: 1px solid #ff6b00; border-radius: 10px;
+      padding: 2rem; margin-bottom: 1rem;
+    }
+    .revenue-box h3 { font-size: 0.85rem; color: #ff6b00; margin-bottom: 1rem; letter-spacing: 0.05em; }
+    .rev-row { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,107,0,0.2); font-size: 0.9rem; }
+    .rev-row:last-child { border-bottom: none; font-weight: 700; font-size: 1rem; color: #ff6b00; }
+    .rev-val { color: #fff; font-weight: 700; }
+
+    /* SEO 키워드 */
+    .keyword-cloud { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .kw {
+      background: #1a1a1a; border: 1px solid #333; border-radius: 20px;
+      padding: 0.35rem 0.9rem; font-size: 0.82rem; color: #ccc;
+    }
+    .kw.hot { border-color: #ff0000; color: #ff6b00; }
+
+    /* 체크리스트 */
+    .checklist { list-style: none; }
+    .checklist li { display: flex; align-items: flex-start; gap: 0.8rem; padding: 0.6rem 0; border-bottom: 1px solid #222; font-size: 0.9rem; color: #ccc; }
+    .checklist li::before { content: '□'; color: #ff6b00; font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+    .checklist li.done::before { content: '■'; color: #00b894; }
+
+    @media (max-width: 600px) {
+      .step-grid { grid-template-columns: 1fr 1fr; }
+      .hero { padding: 3rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 히어로 -->
+<div class="hero">
+  <div class="yt-badge">▶ YouTube 채널 전략서</div>
+  <h1>성공의 <span>지름길</span></h1>
+  <p>강태준의 자서전 · 성공 전략 · 투자 인사이트<br>
+  유튜브 채널 개설부터 월 수익화까지 완전 로드맵</p>
+</div>
+
+<div class="wrap">
+
+  <!-- ===== 수익화 조건 ===== -->
+  <div class="section">
+    <div class="section-label">STEP 01 · 수익화 조건 (유튜브 파트너 프로그램)</div>
+    <h2>이것을 달성하면 광고 수익이 시작된다</h2>
+    <div class="step-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>구독자</h3>
+        <div class="target">1,000명</div>
+        <p>채널 개설 후<br>목표 기간: 3~6개월</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>시청 시간</h3>
+        <div class="target">4,000시간</div>
+        <p>최근 12개월<br>오디오 강의가 유리</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>AdSense 연결</h3>
+        <div class="target">구글 계정</div>
+        <p>기존 구글 계정으로<br>자동 연결 가능</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h3>정책 준수</h3>
+        <div class="target">위반 0건</div>
+        <p>저작권·커뮤니티<br>가이드라인 준수</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 수익화 타임라인 ===== -->
+  <div class="section">
+    <div class="section-label">STEP 02 · 단계별 로드맵</div>
+    <h2>6개월 수익화 타임라인</h2>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-period">1개월차 · 기반 구축</div>
+        <div class="tl-title">채널 세팅 + 첫 9편 업로드</div>
+        <div class="tl-desc">
+          채널 아트, 소개문, 썸네일 템플릿 제작<br>
+          보유 노트북LM 오디오 9편 즉시 업로드<br>
+          제목·설명·태그 SEO 최적화 적용
+        </div>
+        <span class="tl-goal">목표: 구독자 100명 · 영상 9편</span>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-period">2~3개월차 · 콘텐츠 확장</div>
+        <div class="tl-title">자서전 챕터 → 영상 시리즈화</div>
+        <div class="tl-desc">
+          45장 챕터를 10분 이내 요약 오디오로 제작<br>
+          주 2~3편 업로드 (노트북LM 활용)<br>
+          댓글 소통, 커뮤니티 탭 활용
+        </div>
+        <span class="tl-goal">목표: 구독자 500명 · 누적 40편</span>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-period">4~5개월차 · 바이럴 도전</div>
+        <div class="tl-title">유튜브 쇼츠 + 핵심 클립 제작</div>
+        <div class="tl-desc">
+          오디오 강의의 핵심 1분 클립 → 쇼츠로 변환<br>
+          "0원으로 3천 평" 같은 자극적 제목 활용<br>
+          네이버 블로그 · 카카오 연동으로 유입 확대
+        </div>
+        <span class="tl-goal">목표: 구독자 1,000명 달성</span>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-period">6개월차 · 수익화 신청</div>
+        <div class="tl-title">유튜브 파트너 프로그램 신청</div>
+        <div class="tl-desc">
+          구독자 1,000명 + 시청시간 4,000시간 달성<br>
+          YouTube Studio → 수익 창출 → 신청<br>
+          AdSense 계정 연결 → 광고 수익 시작
+        </div>
+        <span class="tl-goal">광고 수익 월 10~50만원 시작</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== 콘텐츠 전략 ===== -->
+  <div class="section">
+    <div class="section-label">STEP 03 · 콘텐츠 전략</div>
+    <h2>업로드할 콘텐츠 분류표</h2>
+    <table>
+      <tr>
+        <th>카테고리</th>
+        <th>주제</th>
+        <th>형식</th>
+        <th>우선순위</th>
+      </tr>
+      <tr>
+        <td>자서전 강의</td>
+        <td>인생의 지름길을 설계하는 법 (45장)</td>
+        <td><span class="badge badge-red">오디오</span></td>
+        <td>★★★ 즉시</td>
+      </tr>
+      <tr>
+        <td>무자본 창업</td>
+        <td>0원으로 코레일 3천 평 / 용산역 3천 평 전략</td>
+        <td><span class="badge badge-red">오디오</span></td>
+        <td>★★★ 즉시</td>
+      </tr>
+      <tr>
+        <td>부의 설계</td>
+        <td>자녀 3억 증여 / 복리 재투자 시스템</td>
+        <td><span class="badge badge-red">오디오</span></td>
+        <td>★★★ 즉시</td>
+      </tr>
+      <tr>
+        <td>실전 협상</td>
+        <td>국방부 행정소송 / 공무원 설득 전략</td>
+        <td><span class="badge badge-orange">강의</span></td>
+        <td>★★☆ 2개월</td>
+      </tr>
+      <tr>
+        <td>50대 전략</td>
+        <td>무너지지 않는 인생 후반전 시스템</td>
+        <td><span class="badge badge-orange">강의</span></td>
+        <td>★★☆ 2개월</td>
+      </tr>
+      <tr>
+        <td>주식·투자</td>
+        <td>삼성전자 52주 / 1,000% 수익의 원칙</td>
+        <td><span class="badge badge-blue">분석</span></td>
+        <td>★★☆ 3개월</td>
+      </tr>
+      <tr>
+        <td>글로벌 교육</td>
+        <td>DGTTC / 한국형 교육 수출 전략</td>
+        <td><span class="badge badge-green">인터뷰</span></td>
+        <td>★☆☆ 5개월</td>
+      </tr>
+      <tr>
+        <td>유튜브 쇼츠</td>
+        <td>핵심 명언 · 1분 전략 클립</td>
+        <td><span class="badge badge-red">쇼츠</span></td>
+        <td>★★★ 매주</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ===== SEO 전략 ===== -->
+  <div class="section">
+    <div class="section-label">STEP 04 · SEO 최적화</div>
+    <h2>검색에 잡히는 제목·태그 전략</h2>
+
+    <div class="card highlight">
+      <h3>제목 공식 (CTR 극대화)</h3>
+      <p>
+        <strong style="color:#ff6b00;">숫자 + 감정자극 + 구체성</strong><br><br>
+        ✅ "0원으로 국유지 3천 평 따낸 50대 사장의 협상 비밀"<br>
+        ✅ "자녀에게 세금 한 푼 없이 3억 2천 물려주는 법 (합법)"<br>
+        ✅ "국방부를 이긴 60대 자영업자의 차가운 원칙"<br>
+        ✅ "군인 연금 포기하고 설계한 인생 지름길 — 후회 없다"
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:1rem;">
+      <h3>핵심 SEO 키워드 (반드시 태그에 포함)</h3>
+      <div class="keyword-cloud" style="margin-top:0.8rem;">
+        <span class="kw hot">#무자본창업</span>
+        <span class="kw hot">#50대성공</span>
+        <span class="kw hot">#인생지름길</span>
+        <span class="kw hot">#자서전</span>
+        <span class="kw hot">#증여세절세</span>
+        <span class="kw">#강태준</span>
+        <span class="kw">#성공전략</span>
+        <span class="kw">#부동산무자본</span>
+        <span class="kw">#국유지임대</span>
+        <span class="kw">#행정소송</span>
+        <span class="kw">#자기계발</span>
+        <span class="kw">#두산직업전문학교</span>
+        <span class="kw">#중장비교육</span>
+        <span class="kw">#재테크</span>
+        <span class="kw">#노트북LM</span>
+        <span class="kw">#AI강의</span>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:1rem;">
+      <h3>썸네일 공식</h3>
+      <p>
+        배경: <strong>진한 색 (검정·남색)</strong> + 텍스트 2줄 (흰색·주황)<br>
+        폰트: 굵고 큰 제목 + 강조 숫자 (예: <strong style="color:#ff6b00;">3천 평 / 3억 / 0원</strong>)<br>
+        사진: 저자 얼굴 또는 장소 이미지<br>
+        크기: 1280×720px (16:9)
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== 수익 구조 ===== -->
+  <div class="section">
+    <div class="section-label">STEP 05 · 수익 구조</div>
+    <h2>유튜브를 넘어선 다중 수익 설계</h2>
+
+    <div class="revenue-box">
+      <h3>광고 수익 예상 (수익화 달성 후)</h3>
+      <div class="rev-row"><span>월 조회수 10만 (소규모 채널)</span><span class="rev-val">월 15~30만원</span></div>
+      <div class="rev-row"><span>월 조회수 50만 (중형 채널)</span><span class="rev-val">월 70~150만원</span></div>
+      <div class="rev-row"><span>월 조회수 100만 (안정 채널)</span><span class="rev-val">월 150~300만원</span></div>
+      <div class="rev-row"><span>예상 RPM (한국어 교육·재테크 채널)</span><span class="rev-val">₩1,500~3,000/1천뷰</span></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+      <div class="card">
+        <h3>① 유튜브 광고</h3>
+        <p>YPP 가입 후 영상에 자동 광고<br>RPM: 교육·재테크 채널 높음</p>
+      </div>
+      <div class="card">
+        <h3>② 자서전 전자책</h3>
+        <p>영상에서 자서전 전자책(PDF/EPUB) 판매<br>목표: 권당 9,900~19,900원</p>
+      </div>
+      <div class="card">
+        <h3>③ 온라인 강의</h3>
+        <p>클래스101·탈잉 입점<br>"무자본 창업" "증여 설계" 강의 판매</p>
+      </div>
+      <div class="card">
+        <h3>④ 컨설팅</h3>
+        <p>구독자 대상 1:1 창업·투자 컨설팅<br>시간당 5~10만원 서비스</p>
+      </div>
+      <div class="card">
+        <h3>⑤ 채널 멤버십</h3>
+        <p>월 3,900~9,900원 멤버십<br>비공개 영상·자료 제공</p>
+      </div>
+      <div class="card">
+        <h3>⑥ 네이버 블로그 연동</h3>
+        <p>유튜브 영상 → 블로그 포스팅<br>검색 유입 → 채널 구독 전환</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 즉시 실행 체크리스트 ===== -->
+  <div class="section">
+    <div class="section-label">ACTION · 즉시 실행 목록</div>
+    <h2>지금 당장 해야 할 것</h2>
+    <ul class="checklist">
+      <li>유튜브 채널 "성공의 지름길" 개설 (youtube.com → 채널 만들기)</li>
+      <li>채널 소개 작성: "무자본으로 시작한 60대 사장의 성공 전략 · 자서전 · 투자 인사이트"</li>
+      <li>채널 아트 업로드 (배경 이미지, 프로필 사진)</li>
+      <li>기존 오디오 9편 즉시 업로드 (노트북LM 파일)</li>
+      <li>각 영상 제목·설명·태그 SEO 최적화 적용</li>
+      <li>블로그 메인 페이지 유튜브 채널 링크 연결</li>
+      <li>첫 영상 업로드 후 지인·카카오톡으로 공유</li>
+      <li>주 2~3편 업로드 스케줄 수립</li>
+      <li>유튜브 쇼츠 1분 클립 주 1편 제작</li>
+      <li>구독자 1,000명 달성 후 YPP 신청</li>
+    </ul>
+  </div>
+
+  <!-- ===== 업로드 순서 ===== -->
+  <div class="section">
+    <div class="section-label">UPLOAD ORDER · 첫 9편 업로드 순서</div>
+    <h2>이 순서로 올려야 채널이 빠르게 성장한다</h2>
+    <table>
+      <tr><th>#</th><th>파일명</th><th>추천 제목</th><th>이유</th></tr>
+      <tr>
+        <td>1st</td>
+        <td>국방부를_이긴_차가운_원칙의_힘</td>
+        <td>"국방부를 이긴 60대 사장의 차가운 원칙"</td>
+        <td>자극적, 공유 유발</td>
+      </tr>
+      <tr>
+        <td>2nd</td>
+        <td>0원으로_코레일_땅_3천_평_따낸_전략</td>
+        <td>"0원으로 코레일 국유지 3천 평 따낸 비밀"</td>
+        <td>조회수 폭발형 주제</td>
+      </tr>
+      <tr>
+        <td>3rd</td>
+        <td>자녀에게_세금_없이_3억2천_물려주는_법</td>
+        <td>"자녀에게 세금 한 푼 없이 3억 2천 물려주는 법"</td>
+        <td>검색 수요 최고</td>
+      </tr>
+      <tr>
+        <td>4th</td>
+        <td>인생의_지름길을_설계하는_법 (영상)</td>
+        <td>"인생의 지름길을 설계하는 법 — 강태준 자서전"</td>
+        <td>채널 정체성 확립</td>
+      </tr>
+      <tr>
+        <td>5th</td>
+        <td>수익_80%_포기하고_빌린_용산역_3천_평</td>
+        <td>"수익 포기로 3천 평 얻은 역설의 협상 전략"</td>
+        <td>역발상, 관심 유발</td>
+      </tr>
+      <tr>
+        <td>6th</td>
+        <td>무자본으로_부의_시스템_짓는_생산자의_뇌</td>
+        <td>"돈 없이 시작한 사람이 부자 되는 뇌 구조"</td>
+        <td>자기계발 검색층</td>
+      </tr>
+      <tr>
+        <td>7th</td>
+        <td>50대_무너지지_않는_삶의_시스템</td>
+        <td>"50대에 무너지지 않는 삶의 시스템 5가지"</td>
+        <td>50대 타겟, 공유</td>
+      </tr>
+      <tr>
+        <td>8th</td>
+        <td>11만_킬로_50대의_G90_인생_드라이브</td>
+        <td>"11만 킬로 탄 G90으로 배운 인생의 진짜 가치"</td>
+        <td>감성·공감형</td>
+      </tr>
+      <tr>
+        <td>9th</td>
+        <td>계좌를_짓누르는_삼성전자_52주의_늪</td>
+        <td>"삼성전자 52주를 버텨낸 투자자의 심리"</td>
+        <td>주식 관심층 유입</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="background:#1a1a00;border:1px solid #ff6b00;border-radius:10px;padding:2rem;margin-top:3rem;text-align:center;">
+    <p style="font-size:1.1rem;font-weight:700;color:#ff6b00;margin-bottom:0.5rem;">
+      핵심 원칙
+    </p>
+    <p style="color:#ccc;line-height:2;">
+      "첫 영상이 완벽할 필요 없다. 일단 9편을 올려라.<br>
+      유튜브 알고리즘은 꾸준히 올리는 채널을 밀어준다.<br>
+      강태준의 이야기는 이미 충분히 강력하다."
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
