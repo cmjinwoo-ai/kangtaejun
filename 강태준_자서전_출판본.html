@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>강태준 자서전 — 불가능은 없다</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Serif KR', 'Batang', 'Georgia', serif;
+      background: #f8f6f1;
+      color: #1a1a1a;
+      line-height: 2.0;
+    }
+
+    /* ── 표지 ── */
+    .cover {
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(160deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('강태준 자서전표지002.jpg') center/cover no-repeat;
+      opacity: 0.15;
+    }
+    .cover-inner { position: relative; z-index: 1; text-align: center; max-width: 700px; }
+    .cover-label {
+      font-size: 0.8rem; letter-spacing: 0.3em; color: #c8a96e;
+      text-transform: uppercase; margin-bottom: 2rem;
+    }
+    .cover-title {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .cover-subtitle {
+      font-size: 1.1rem;
+      color: #c8a96e;
+      letter-spacing: 0.05em;
+      margin-bottom: 3rem;
+      font-style: italic;
+    }
+    .cover-author {
+      font-size: 1.3rem;
+      color: #e8e0d0;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+    }
+    .cover-divider {
+      width: 60px; height: 2px;
+      background: #c8a96e;
+      margin: 1.5rem auto;
+    }
+    .cover-year { font-size: 0.85rem; color: #8090a0; letter-spacing: 0.2em; }
+
+    /* ── 본문 래퍼 ── */
+    .book-wrap {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+      background: #fffef9;
+      box-shadow: 0 0 60px rgba(0,0,0,0.08);
+    }
+
+    /* ── 목차 ── */
+    .toc-section {
+      padding: 5rem 0 4rem;
+      border-bottom: 1px solid #e0d8c8;
+    }
+    .section-label {
+      font-size: 0.72rem; letter-spacing: 0.25em;
+      color: #9a8870; text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    .toc-title {
+      font-size: 1.8rem; font-weight: 700;
+      color: #1a1a1a; margin-bottom: 2.5rem;
+      letter-spacing: -0.02em;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px dotted #e0d8c8;
+      font-size: 0.95rem;
+      color: #3a3028;
+    }
+    .toc-list li:last-child { border-bottom: none; }
+    .toc-num { color: #9a8870; font-size: 0.8rem; min-width: 36px; }
+    .toc-list a { text-decoration: none; color: inherit; }
+    .toc-list a:hover { color: #c8a96e; }
+
+    /* ── 챕터 ── */
+    .chapter {
+      padding: 5rem 0 4rem;
+      border-bottom: 1px solid #e8e0d0;
+    }
+    .chapter:last-of-type { border-bottom: none; }
+    .chapter-num {
+      font-size: 0.72rem; letter-spacing: 0.25em;
+      color: #9a8870; text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .chapter-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -0.03em;
+      color: #1a1a1a;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid #c8a96e;
+    }
+    .chapter-body { font-size: 1.05rem; color: #2a2018; }
+    .chapter-body p {
+      margin-bottom: 1.8rem;
+      text-align: justify;
+      word-break: keep-all;
+    }
+    .chapter-body p:first-child::first-letter {
+      font-size: 3.2rem;
+      font-weight: 900;
+      float: left;
+      line-height: 0.8;
+      margin-right: 0.1em;
+      margin-top: 0.15em;
+      color: #c8a96e;
+    }
+
+    /* ── 인용구 ── */
+    .quote {
+      background: #f5f0e8;
+      border-left: 3px solid #c8a96e;
+      padding: 1.25rem 1.75rem;
+      margin: 2.5rem 0;
+      font-style: italic;
+      color: #5a4a30;
+      border-radius: 0 6px 6px 0;
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+
+    /* ── 서문 특별 스타일 ── */
+    .preface {
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid #e8e0d0;
+      text-align: center;
+    }
+    .preface-title {
+      font-size: 1.5rem; font-weight: 700;
+      color: #1a1a1a; margin-bottom: 2rem;
+      letter-spacing: 0.05em;
+    }
+    .preface-body {
+      max-width: 580px; margin: 0 auto;
+      font-size: 1rem; color: #3a3028;
+      line-height: 2.0;
+    }
+
+    /* ── 감사의 말 ── */
+    .thanks {
+      padding: 5rem 0 6rem;
+      background: #fffef9;
+    }
+    .thanks-title {
+      font-size: 1.8rem; font-weight: 800;
+      color: #1a1a1a; margin-bottom: 2.5rem;
+      letter-spacing: -0.02em;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #c8a96e;
+    }
+    .thanks-body { font-size: 1rem; color: #2a2018; line-height: 2.1; }
+    .thanks-body p { margin-bottom: 1.6rem; text-align: justify; }
+    .thanks-sign {
+      margin-top: 3rem;
+      text-align: right;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── 뒷표지 ── */
+    .back-cover {
+      background: #1a1a2e;
+      color: #e8e0d0;
+      padding: 5rem 3rem;
+      text-align: center;
+    }
+    .back-cover .bc-quote {
+      font-size: 1.15rem;
+      font-style: italic;
+      color: #c8a96e;
+      max-width: 500px;
+      margin: 0 auto 3rem;
+      line-height: 1.9;
+    }
+    .back-cover .bc-author { font-size: 0.9rem; color: #8090a0; letter-spacing: 0.1em; }
+    .back-cover .bc-divider { width: 40px; height: 1px; background: #c8a96e; margin: 2rem auto; }
+
+    @media (max-width: 600px) {
+      .book-wrap { padding: 0 1.25rem; }
+      .chapter-body p:first-child::first-letter { font-size: 2.2rem; }
+    }
+
+    @media print {
+      .cover { page-break-after: always; min-height: auto; padding: 8rem 2rem; }
+      .chapter { page-break-before: always; }
+      body { background: white; }
+      .book-wrap { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ 표지 ══ -->
+<div class="cover">
+  <div class="cover-inner">
+    <div class="cover-label">자 서 전</div>
+    <h1 class="cover-title">강태준</h1>
+    <div class="cover-divider"></div>
+    <p class="cover-subtitle">"불가능은 없다" — 도전이 만든 나의 인생</p>
+    <div class="cover-author">강 태 준 지음</div>
+    <div class="cover-divider"></div>
+    <div class="cover-year">2026</div>
+  </div>
+</div>
+
+<!-- ══ 본문 ══ -->
+<div class="book-wrap">
+
+  <!-- 서문 -->
+  <div class="preface" id="preface">
+    <div class="section-label">서 문</div>
+    <h2 class="preface-title">저자의 말</h2>
+    <div class="preface-body">
+      <p>저는 강태준입니다. 이 자서전은 저의 인생을 돌아보며 그 여정에서의 경험과 배움을 나누고자 합니다. 실패와 성공을 통해 얻은 교훈, 그리고 그 과정에서 만난 사람들과의 소중한 인연이 저를 오늘의 자리로 이끌어 주었습니다.</p>
+      <p>이 책이 독자 여러분에게 영감을 줄 수 있기를 바랍니다.</p>
+    </div>
+  </div>
+
+  <!-- 목차 -->
+  <div class="toc-section" id="toc">
+    <div class="section-label">목 차</div>
+    <h2 class="toc-title">차례</h2>
+    <ul class="toc-list">
+      <li><span class="toc-num">서문</span><a href="#preface">저자의 말</a></li>
+      <li><span class="toc-num">제1장</span><a href="#ch1">나의 어린 시절</a></li>
+      <li><span class="toc-num">제2장</span><a href="#ch2">군 복무와 리더십의 시작</a></li>
+      <li><span class="toc-num">제3장</span><a href="#ch3">유럽 배낭 여행의 의미</a></li>
+      <li><span class="toc-num">제4장</span><a href="#ch4">사업의 첫걸음 – 교육 사업의 출발</a></li>
+      <li><span class="toc-num">제5장</span><a href="#ch5">도전과 기회 – 현대 정주영 회장의 정신</a></li>
+      <li><span class="toc-num">제6장</span><a href="#ch6">힘든 시기의 극복</a></li>
+      <li><span class="toc-num">제7장</span><a href="#ch7">성공의 의미와 재정적 독립</a></li>
+      <li><span class="toc-num">제8장</span><a href="#ch8">미래를 향한 비전</a></li>
+      <li><span class="toc-num">제9장</span><a href="#ch9">교육의 가치와 비전</a></li>
+      <li><span class="toc-num">제10장</span><a href="#ch10">꿈을 향한 끝없는 여정</a></li>
+      <li><span class="toc-num">감사의 말</span><a href="#thanks">감사의 말</a></li>
+    </ul>
+  </div>
+
+  <!-- 제1장 -->
+  <div class="chapter" id="ch1">
+    <div class="chapter-num">제 1 장</div>
+    <h2 class="chapter-title">나의 어린 시절</h2>
+    <div class="chapter-body">
+      <p>서울에서 태어나고 자란 저는 다양한 문화적 배경을 접하며 성장했습니다. 어릴 적, 부모님의 영향으로 저는 항상 배우는 것을 즐겼습니다. 학교에서 친구들과의 놀이뿐만 아니라 책을 읽는 것을 좋아했으며, 이러한 호기심은 제 사고의 폭을 넓혀 주었습니다. 특히, 아버지와 함께한 주말의 농장 경험은 자연과의 연결고리를 느끼게 해 주었고, 나중에 기업을 운영하는 데 있어 환경의 중요성을 인식하는 계기가 되었습니다.</p>
+      <div class="quote">
+        "불가능은 없다." — 현대그룹 창업자 정주영 회장의 이 한마디는 어린 시절 제 마음속에 깊이 새겨진 신념이었습니다.
+      </div>
+      <p>어린 시절의 저에게는 우상과도 같은 인물이 있었습니다. 바로 현대 정주영 회장입니다. 그의 성공 스토리는 저에게 큰 영감을 주었고, '불가능은 없다'는 신념을 심어주었습니다. 이러한 가치는 제 인생의 많은 결정에 영향을 미쳤고, 특히 사업을 시작할 때 큰 동력이 되었습니다.</p>
+    </div>
+  </div>
+
+  <!-- 제2장 -->
+  <div class="chapter" id="ch2">
+    <div class="chapter-num">제 2 장</div>
+    <h2 class="chapter-title">군 복무와 리더십의 시작</h2>
+    <div class="chapter-body">
+      <p>군 복무는 제 인생의 중요한 전환점이었습니다. ROTC 장교로서의 훈련은 체력뿐만 아니라 정신적인 강인함을 요구했습니다. 동료들과 함께하며 임무를 수행하고, 위기 상황에서도 냉정함을 유지하는 법을 배웠습니다.</p>
+      <p>저는 항상 리더의 역할을 중요하게 생각해 왔습니다. 이 시기에 저를 따르는 후배들과의 관계 속에서 신뢰와 책임감을 배웠고, 이는 나중에 기업을 운영할 때 팀원과의 관계를 구축하는 데 큰 도움이 되었습니다.</p>
+      <div class="quote">
+        군 복무 경험은 단순한 군인으로서의 경험이 아니라, 진정한 리더십이 무엇인지 깨닫게 해준 귀중한 시간이었습니다.
+      </div>
+    </div>
+  </div>
+
+  <!-- 제3장 -->
+  <div class="chapter" id="ch3">
+    <div class="chapter-num">제 3 장</div>
+    <h2 class="chapter-title">유럽 배낭 여행의 의미</h2>
+    <div class="chapter-body">
+      <p>군 복무를 마친 후, 저는 유럽으로의 배낭 여행을 결심했습니다. 이 여행은 저에게 많은 것을 가르쳐 주었습니다. 여러 나라의 문화와 사람들을 만나며 글로벌 감각을 키울 수 있었고, 다른 사람들의 삶의 방식을 이해하는 기회를 가졌습니다.</p>
+      <div class="quote">
+        프랑스에서 만난 한 예술가는 저에게 "예술이란 결국 인생의 한 표현"이라고 말해주었습니다. 이 말은 제 마음속에 깊이 새겨졌고, 이후 사업에서도 창의성과 혁신의 중요성을 인식하게 해주었습니다.
+      </div>
+      <p>여행 중의 소중한 경험들은 제 인생의 다양한 선택에 영향을 미쳤고, 나중에 사업을 시작할 때의 기본 마인드를 형성하는 데 기여했습니다. 소비자로서 세상을 바라보는 시선이 아니라, 공급자로서 세상을 설계하는 시선을 처음으로 갖게 된 여정이었습니다.</p>
+    </div>
+  </div>
+
+  <!-- 제4장 -->
+  <div class="chapter" id="ch4">
+    <div class="chapter-num">제 4 장</div>
+    <h2 class="chapter-title">사업의 첫걸음 — 교육 사업의 출발</h2>
+    <div class="chapter-body">
+      <p>유럽 여행에서 얻은 경험은 저에게 중장비 교육 사업을 시작할 결심을 하게 했습니다. 저는 제 열정과 비전을 실현하기 위해 필요한 모든 것을 준비했습니다. 그러나 자본이 부족했던 시기에, 현대 정주영 회장의 정신을 본받아 적극적으로 도전하는 자세가 중요하다는 것을 깨달았습니다.</p>
+      <p>첫 번째 목표는 Yongsan KORAIL과의 협상이었습니다. 제가 직접 나서서 MOU를 체결하고 3,000평의 훈련 장소와 4개의 천장 크레인을 확보하는 데 성공했습니다. 이 경험은 저에게 큰 자신감을 주었고, 끊임없이 도전해야만 기회를 만들 수 있다는 교훈을 다시 한 번 각인시켰습니다.</p>
+      <div class="quote">
+        초기에는 어려움이 많았지만, 결국 학생들의 높은 참여율을 보이며 저의 비전이 현실로 이루어졌습니다. 무자본(無資本)으로 시작해 3,000평 부지를 손에 넣은 것은 도전 정신이 만들어낸 기적이었습니다.
+      </div>
+    </div>
+  </div>
+
+  <!-- 제5장 -->
+  <div class="chapter" id="ch5">
+    <div class="chapter-num">제 5 장</div>
+    <h2 class="chapter-title">도전과 기회 — 현대 정주영 회장의 정신</h2>
+    <div class="chapter-body">
+      <p>사업 초기에는 인맥에 의존하기보다는 현대 정주영 회장의 도전정신을 본받아 스스로 길을 개척했습니다. 저는 업계의 전문가들과의 네트워킹을 통해 정보를 얻고, 경쟁업체와의 차별화를 위해 끊임없이 학습했습니다. 특히, 다양한 교육 방식을 도입하여 학생들이 실질적인 기술을 익힐 수 있도록 노력했습니다.</p>
+      <p>이러한 노력은 2015년의 큰 성과로 이어졌습니다. 정부와 협력하여 국비 지원 교육 프로그램을 도입하면서 더 많은 학생들이 교육에 참여할 수 있게 되었습니다. 이 과정에서 저는 단순히 교육기관을 운영하는 것이 아니라, 인재 양성의 중요한 역할을 수행하고 있다는 자부심을 느끼게 되었습니다.</p>
+    </div>
+  </div>
+
+  <!-- 제6장 -->
+  <div class="chapter" id="ch6">
+    <div class="chapter-num">제 6 장</div>
+    <h2 class="chapter-title">힘든 시기의 극복</h2>
+    <div class="chapter-body">
+      <p>사업을 운영하면서 여러 어려움과 실패를 겪었습니다. 특히 재정적인 어려움이 클 때는 고민과 불안이 많았습니다. 자본의 부족으로 인한 위험한 상황에 처할 때, 저는 주변의 지인들과 동료들에게 조언을 구하고, 그들의 경험을 통해 해법을 찾았습니다.</p>
+      <div class="quote">
+        인생은 언제나 순탄하지 않다는 것을 깨달았고, 그럴 때일수록 함께하는 사람들의 소중함을 다시 한 번 느꼈습니다. 끈기와 인내, 그리고 신뢰를 바탕으로 동료들과 함께 어려움을 극복한 경험은 저의 리더십을 더욱 강하게 만들었습니다.
+      </div>
+    </div>
+  </div>
+
+  <!-- 제7장 -->
+  <div class="chapter" id="ch7">
+    <div class="chapter-num">제 7 장</div>
+    <h2 class="chapter-title">성공의 의미와 재정적 독립</h2>
+    <div class="chapter-body">
+      <p>안정적인 재정적 독립을 이루었다는 것은 저에게 큰 의미가 있었습니다. 이는 단순한 경제적 성취를 넘어, 제가 이루고자 하는 목표에 한 걸음 더 가까워졌음을 의미합니다. 저는 이제 제 교육 사업을 통해 수많은 학생들에게 꿈을 현실로 이룰 수 있는 기회를 제공하고 있습니다.</p>
+      <p>성공한 사업가로서의 저의 모습을 독자들이 느낄 수 있도록 노력하며, 그 과정에서 쌓은 지혜와 경험을 나누고자 합니다. 또한, 저의 성공은 혼자 이룬 것이 아니라 많은 사람들의 도움과 지지가 있었음을 잊지 않겠습니다.</p>
+    </div>
+  </div>
+
+  <!-- 제8장 -->
+  <div class="chapter" id="ch8">
+    <div class="chapter-num">제 8 장</div>
+    <h2 class="chapter-title">미래를 향한 비전</h2>
+    <div class="chapter-body">
+      <p>현재에 안주하지 않고 미래를 바라보며 끊임없이 발전해 나가고자 합니다. 제 교육 사업을 더 확장하고, 글로벌 시장으로 나아가는 것이 저의 비전입니다. 특히, 기술의 발전과 함께 변화하는 교육 환경에 적응하기 위해 최신 기술을 활용한 교육 프로그램을 개발하고 있습니다.</p>
+      <div class="quote">
+        제 꿈은 단순히 학생들에게 기술을 가르치는 것이 아니라, 그들이 자신의 꿈을 실현할 수 있도록 도와주는 것입니다.
+      </div>
+      <p>저는 이들이 미래의 중장비 전문가로 성장할 수 있도록 지속적인 지원을 아끼지 않을 것입니다.</p>
+    </div>
+  </div>
+
+  <!-- 제9장 -->
+  <div class="chapter" id="ch9">
+    <div class="chapter-num">제 9 장</div>
+    <h2 class="chapter-title">교육의 가치와 비전</h2>
+    <div class="chapter-body">
+      <p>제가 중장비 교육 사업을 운영하면서 가장 중요하게 생각하는 것은 교육의 가치입니다. 단순한 기술 교육을 넘어, 학생들이 인생에서 마주치는 여러 문제를 해결하는 데 필요한 사고력과 문제 해결 능력을 키우는 것이 제 목표입니다.</p>
+      <p>최근에는 현장 경험을 중요시하여, 이론과 실습이 조화롭게 이루어지는 커리큘럼을 도입했습니다. 학생들이 실제 작업 환경에서 필요한 기술을 익히고, 실무 경험을 쌓는 것이 중요하다고 생각합니다. 이를 통해 학생들은 졸업 후 취업 경쟁력을 갖출 수 있으며, 저희 교육 기관의 명성을 더욱 높일 수 있습니다.</p>
+      <div class="quote">
+        저는 교육이 세상을 변화시킬 수 있는 강력한 도구라는 믿음을 가지고 있으며, 이를 실현하기 위해 끊임없이 배우고 성장하는 자세를 유지하겠습니다.
+      </div>
+    </div>
+  </div>
+
+  <!-- 제10장 -->
+  <div class="chapter" id="ch10">
+    <div class="chapter-num">제 10 장</div>
+    <h2 class="chapter-title">꿈을 향한 끝없는 여정</h2>
+    <div class="chapter-body">
+      <p>제가 이 여정을 시작한 지 수년이 지났고, 이제는 저만의 교육 사업이 안정적인 기반을 다지게 되었습니다. 그러나 이 여정은 결코 끝나지 않았습니다. 제가 이루고자 하는 목표는 계속해서 확장되고 있습니다.</p>
+      <p>앞으로도 중장비 분야의 최신 기술과 트렌드를 반영한 교육 프로그램을 개발하고, 더 많은 인재를 양성하는 데 최선을 다할 것입니다. 또한, 제 교육 사업을 통해 사회에 기여하고, 지역사회의 발전에도 힘쓰고자 합니다.</p>
+      <div class="quote">
+        결국, 저의 꿈은 단순히 사업의 성공이 아니라, 사람들의 삶에 긍정적인 변화를 가져오는 것입니다. 많은 사람들이 꿈을 이루고, 자신의 역량을 발휘할 수 있는 세상을 만들기 위해 끊임없이 노력할 것입니다.
+      </div>
+      <p>이 자서전의 마지막 페이지를 넘기며, 저의 이야기가 여러분에게 작은 영감이 되었기를 진심으로 바랍니다. 우리가 처한 현실 속에서 도전하는 것이 얼마나 중요한지를 잊지 않고, 앞으로도 계속해서 나아가길 희망합니다.</p>
+    </div>
+  </div>
+
+  <!-- 감사의 말 -->
+  <div class="thanks" id="thanks">
+    <div class="section-label">감 사 의 말</div>
+    <h2 class="thanks-title">감사의 말</h2>
+    <div class="thanks-body">
+      <p>이 자서전을 집필하면서 많은 분들에게 감사의 마음을 전하고 싶습니다.</p>
+      <p>먼저, 저의 인생 여정에서 끊임없이 격려해 주신 가족에게 깊은 감사의 말씀을 드립니다. 아내와 아들, 그리고 저의 부모님께서 보여주신 무한한 사랑과 지지가 없었다면 지금의 저도 없었을 것입니다. 여러분의 믿음이 저에게 큰 힘이 되었습니다.</p>
+      <p>또한, 군 복무 시절 저와 함께한 동료들에게도 감사의 말을 전하고 싶습니다. 그들과의 경험은 저에게 리더십과 팀워크의 소중함을 가르쳐 주었고, 이는 이후의 사업에도 큰 영향을 미쳤습니다.</p>
+      <p>특히, Yongsan KORAIL의 관계자분들과의 협상에서 도움을 주신 분들, 그리고 굴착기와 지게차 교육에 대한 열정을 함께 나누었던 동료 교수님들께도 진심으로 감사드립니다. 여러분의 지식과 경험은 제 교육 사업의 기반이 되었고, 함께 성장할 수 있는 기회를 주셨습니다.</p>
+      <p>마지막으로, 저의 자서전을 읽어주시는 독자 여러분께도 감사드립니다. 여러분의 관심과 응원이 제 이야기가 더 많은 이들에게 전해질 수 있도록 하는 원동력이 됩니다. 이 책이 여러분에게 영감을 주고, 도전의 기회를 만들 수 있기를 바랍니다.</p>
+      <div class="thanks-sign">강 태 준</div>
+    </div>
+  </div>
+
+</div><!-- /book-wrap -->
+
+<!-- 뒷표지 -->
+<div class="back-cover">
+  <div class="bc-quote">
+    "불가능은 없다. 도전하는 자에게 세상은 언제나 길을 내어준다."
+  </div>
+  <div class="bc-divider"></div>
+  <div class="bc-author">강태준 자서전 · 2026</div>
+</div>
+
+</body>
+</html>

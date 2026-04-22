@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">2</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">1cfbbe92-93b4-4b7b-9da5-f48f27aae090</dc:identifier>
+        <dc:title>인생의 지름길을 설계하는 법 — 강태준 자서전</dc:title>
+        <dc:creator opf:file-as="강태준" opf:role="aut">강태준</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (9.7.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2026-04-15T00:00:00+00:00</dc:date>
+        <dc:language>kor</dc:language>
+        <meta name="calibre:timestamp" content="2026-04-20T11:57:08.540000+00:00"/>
+        <meta name="calibre:title_sort" content="인생의 지름길을 설계하는 법 — 강태준 자서전"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="표지" href="인생의 지름길을 설계하는 법 — 강태준 자서전 - 강태준.jpg"/>
+    </guide>
+</package>
