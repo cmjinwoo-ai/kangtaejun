@@ -21,13 +21,21 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
-    .principle-box { background: #1a1a1a; color: #f0ede6; border-radius: 10px; padding: 2rem; margin: 2.5rem 0; text-align: center; }
-    .principle-box .p-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; color: #d4a843; text-transform: uppercase; margin-bottom: 0.75rem; }
-    .principle-box .p-title { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
-    .principle-box .p-desc { font-size: 0.9rem; color: #aaa; font-style: italic; }
+    .principle-box { background: #f8f4fe; border: 1px solid #d8c8ee; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; text-align: center; }
+    .principle-box .p-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: #7a5a9a; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .principle-box .p-title { font-size: 1.4rem; font-weight: 800; color: #3a1a5a; margin-bottom: 0.5rem; }
+    .principle-box .p-desc { font-size: 0.92rem; color: #5a4a7a; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
@@ -66,7 +74,7 @@
     <span>·</span>
     <span>2026년 4월</span>
     <span>·</span>
-    <span>5분 읽기</span>
+    <span>6분 읽기</span>
   </div>
 
   <div class="post-body">
@@ -80,12 +88,12 @@
 
     <div class="principle-box">
       <div class="p-label">나의 경영 철학</div>
-      <div class="p-title">가접 후 본접</div>
+      <div class="p-title">가접(假接) 후 본접(本接)</div>
       <div class="p-desc">건축에서 뼈대를 임시로 고정한 뒤 살피고 완전히 용접하듯,<br>인생도 일단 부딪혀보고 수정하며 완성해가는 것이다</div>
     </div>
 
     <p>
-      용산역 구름다리 위에서 부지를 점찍었을 때, 나에게 완벽한 예산이나 장비는 없었다. 하지만 나는 '이곳은 된다'는 확신이 서자마자 담당자를 찾아갔다.
+      용산역 구름다리 위에서 부지를 점찍었을 때, 나에게 완벽한 예산이나 장비는 없었다. 하지만 나는 '이곳은 된다'는 확신이 서자마자 담당자를 찾아갔다. KORAIL 관계자를 처음 만나던 날, 나는 손에 땀을 쥐었다. 하지만 군 시절 지휘관에게 작전 보고를 올리던 기억이 나를 움직였다.
     </p>
 
     <div class="highlight">
@@ -96,15 +104,38 @@
     <div class="chapter-divider">· · ·</div>
 
     <p>
-      리스크를 계산하느라 시간을 허비하기보다, 현장에서 발생하는 문제를 즉각적으로 해결하며 시스템을 다듬어 나가는 것이 성공의 지름길로 가는 가장 빠른 방법이다.
+      전역 직후 나는 하루도 쉬지 않았다. 하루는 시장 조사, 다음 날은 관련 기관 방문, 그다음 날은 사업 계획서 작성. 계획이 완성되기를 기다리지 않았다. 60%의 완성도로 움직이며 나머지를 현장에서 채워나갔다.
     </p>
+
     <p>
+      리스크를 계산하느라 시간을 허비하기보다, 현장에서 발생하는 문제를 즉각적으로 해결하며 시스템을 다듬어 나가는 것이 성공의 지름길로 가는 가장 빠른 방법이다.
       파도는 해변에서 잠재울 수 없다. 바다 위에서, 항해하면서 잠재워야 한다.
     </p>
 
     <div class="highlight">
       일단 닻을 올리고 항해를 시작하라.<br>
-      파도는 바다 위에서 잠재우면 된다.
+      파도는 바다 위에서 잠재우면 된다.<br><br>
+      무자본보다 무행동이 더 위험하다.<br>
+      가진 게 적어도, 시작하는 순간 강해진다.
+    </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>처음부터 완벽할 필요는 없다. 중요한 것은 지금 당장 실행하는 것이다.</li>
+        <li>실행하지 않으면 아무 일도 일어나지 않는다는 단순한 진리를 가슴에 새겨라.</li>
+        <li>가접(임시 실행)에서 배운 것이 본접(완성된 시스템)을 단단하게 만든다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">실행력을 높이는 3가지 방법</div>
+      <ol>
+        <li>오늘 할 수 있는 가장 작은 실행 하나를 정하고 반드시 오늘 완료하라.</li>
+        <li>100%가 아닌 60~70%의 준비로도 시작할 수 있다는 것을 인정하라.</li>
+        <li>결심한 날의 첫 행동을 기록하라. 그 기록이 흔들릴 때의 닻이 된다.</li>
+        <li>실패를 '가접의 데이터'로 받아들이면 두려움이 줄어든다.</li>
+      </ol>
     </div>
 
     <div class="question-box">
