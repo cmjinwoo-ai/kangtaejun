@@ -6,195 +6,43 @@
   <title>유럽 배낭여행에서 배운 '공급자의 시선' | 인생의 지름길</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Noto Serif KR', 'Georgia', serif;
-      background: #fafaf8;
-      color: #2c2c2c;
-      line-height: 1.9;
-    }
-
-    header {
-      background: #fff;
-      border-bottom: 1px solid #e8e4dc;
-      padding: 0 2rem;
-    }
-    .header-inner {
-      max-width: 760px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-    }
+    body { font-family: 'Noto Serif KR', 'Georgia', serif; background: #fafaf8; color: #2c2c2c; line-height: 1.9; }
+    header { background: #fff; border-bottom: 1px solid #e8e4dc; padding: 0 2rem; }
+    .header-inner { max-width: 760px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
     .logo { font-size: 1.1rem; font-weight: 700; color: #2c2c2c; text-decoration: none; letter-spacing: -0.02em; }
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
-
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
-
-    .category {
-      display: inline-block;
-      background: #f0ede6;
-      color: #7a6a50;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.8rem;
-      border-radius: 3px;
-      margin-bottom: 1.5rem;
-    }
-
-    h1 {
-      font-size: 2rem;
-      font-weight: 800;
-      line-height: 1.35;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.5rem;
-      color: #1a1a1a;
-    }
-
-    .subtitle {
-      font-size: 1.05rem;
-      color: #888;
-      font-style: italic;
-      margin-bottom: 2rem;
-    }
-
-    .meta {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.85rem;
-      color: #aaa;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid #e8e4dc;
-      margin-bottom: 2.5rem;
-    }
-
-    .meta .avatar {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: #2c2c2c;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.85rem;
-    }
-
-    .diary-date {
-      font-size: 0.82rem;
-      color: #b0a090;
-      font-style: italic;
-      margin-bottom: 1.5rem;
-      letter-spacing: 0.02em;
-    }
-
+    .category { display: inline-block; background: #f0ede6; color: #7a6a50; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
+    h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
+    .subtitle { font-size: 1.05rem; color: #888; font-style: italic; margin-bottom: 2rem; }
+    .meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: #aaa; padding-bottom: 2rem; border-bottom: 1px solid #e8e4dc; margin-bottom: 2.5rem; }
+    .meta .avatar { width: 36px; height: 36px; border-radius: 50%; background: #2c2c2c; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
-
-    .post-body .highlight {
-      background: #fdf6e3;
-      border-left: 3px solid #d4a843;
-      padding: 1rem 1.25rem;
-      margin: 2rem 0;
-      font-style: italic;
-      color: #5a4a2a;
-      border-radius: 0 4px 4px 0;
-    }
-
-    .post-body .scene-box {
-      background: #f5f5f0;
-      border: 1px solid #dddbd4;
-      border-radius: 8px;
-      padding: 1.5rem 1.5rem 1.5rem 1.8rem;
-      margin: 2rem 0;
-      font-style: italic;
-      color: #4a4535;
-    }
-    .scene-box .scene-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: #a09070;
-      text-transform: uppercase;
-      margin-bottom: 0.6rem;
-      font-style: normal;
-    }
-
-    .post-body .question-box {
-      background: #f7f4ef;
-      border: 1px solid #e0d8cc;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin: 2.5rem 0;
-    }
-    .question-box .q-label {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: #a0907a;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-    .question-box p {
-      font-size: 1rem;
-      color: #4a3f30;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    .chapter-divider {
-      text-align: center;
-      margin: 3rem 0;
-      color: #ccc;
-      font-size: 1.2rem;
-      letter-spacing: 0.5rem;
-    }
-
+    .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .scene-box { background: #f8f5f0; border: 1px solid #e8d8c0; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .scene-box .scene-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: #a08050; text-transform: uppercase; margin-bottom: 0.6rem; }
+    .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
+    .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .tag-row a {
-      background: #f0ede6;
-      color: #7a6a50;
-      padding: 0.3rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      text-decoration: none;
-    }
+    .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
-
-    .nav-posts {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid #e8e4dc;
-    }
-    .nav-posts a {
-      text-decoration: none;
-      padding: 1rem;
-      background: #fff;
-      border: 1px solid #e8e4dc;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      color: #555;
-      transition: border-color 0.2s;
-    }
+    .nav-posts { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e8e4dc; }
+    .nav-posts a { text-decoration: none; padding: 1rem; background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; font-size: 0.85rem; color: #555; transition: border-color 0.2s; }
     .nav-posts a:hover { border-color: #2c2c2c; color: #2c2c2c; }
     .nav-posts .label { font-size: 0.72rem; color: #bbb; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.4rem; }
-
-    footer {
-      text-align: center;
-      padding: 2.5rem;
-      background: #2c2c2c;
-      color: #888;
-      font-size: 0.82rem;
-    }
+    footer { text-align: center; padding: 2.5rem; background: #2c2c2c; color: #888; font-size: 0.82rem; }
   </style>
 </head>
 <body>
@@ -224,46 +72,47 @@
     <span>·</span>
     <span>2026년 4월</span>
     <span>·</span>
-    <span>5분 읽기</span>
+    <span>6분 읽기</span>
   </div>
 
   <div class="post-body">
 
-    <div class="diary-date">장교 시절, 유럽 어딘가에서</div>
-
     <p>
-      장교 시절, 나는 큰마음을 먹고 유럽 배낭여행을 떠났다.
+      군 전역 후, 나는 단순한 휴식을 위해 유럽으로 떠난 게 아니었다.
+      <strong>"선진국의 시스템과 사람들을 직접 보고, 듣고, 체험하고 오겠다."</strong>
+      나는 스펀지처럼 흡수하겠다는 각오로 떠났다. 단순히 '떠나는 자유'가 아닌 '배우는 자유'를 얻기 위한 도전이었다.
     </p>
+
     <p>
       남들은 에펠탑 앞에서 사진을 찍고 루브르 박물관의 예술품에 감탄할 때, 나의 시선은 전혀 다른 곳을 향해 있었다. 나는 도시의 <strong>시스템</strong>을 보았다.
     </p>
 
     <div class="scene-box">
-      <div class="scene-label">내 머릿속의 질문들</div>
-      "이 거대한 성당은 어떻게 수백 년을 버텼는가?"<br>
-      "관광객들이 자연스럽게 지갑을 열게 만드는 동선의 비밀은 무엇인가?"
+      <div class="scene-label">유럽 현장에서 만난 사람들</div>
+      프라하의 빈티지 카페를 운영하는 청년, 파리 거리의 예술가,<br>
+      로마의 노천시장 상인, 암스테르담의 게스트하우스 주인.<br>
+      이들과 나눈 대화는 단순한 관광을 넘어 비즈니스와 인간관계의 통찰을 주었다.
     </div>
 
     <p>
       파리의 노천카페에 앉아 있을 때였다. 사람들은 커피 맛과 분위기에 취해 있었지만, 내 눈에는 카페 주인이 배치한 테이블의 각도와 지나가는 행인들을 유혹하는 조명의 명도가 보였다. 그것은 단순한 인테리어가 아니라 철저히 계산된 <strong>'공급자의 설계'</strong>였다.
     </p>
 
-    <div class="chapter-divider">· · ·</div>
-
-    <p>
-      여행을 통해 내가 얻은 가장 큰 소득은 예술적 영감이 아니라 <strong>'시점의 대전환'</strong>이었다.
-    </p>
-
     <div class="highlight">
+      "이 거대한 성당은 어떻게 수백 년을 버텼는가?"<br>
+      "관광객들이 자연스럽게 지갑을 열게 만드는 동선의 비밀은 무엇인가?"<br><br>
       언덕길을 걷는 소비자는 공급자가 만들어놓은 환상에 기꺼이 비용을 지불하지만,<br>
       지름길을 달리는 공급자는 그 환상을 만드는 '공식'을 연구한다.
     </div>
 
+    <div class="chapter-divider">· · ·</div>
+
     <p>
-      유럽의 오래된 건축물들은 나에게 <strong>'가접 후 본접'</strong>의 원리도 가르쳐주었다. 기초가 튼튼하지 않으면 화려한 장식은 짐이 될 뿐이다.
+      프랑크푸르트 공항에 내렸을 때, 나를 처음 맞이한 건 전혀 다른 피부색, 머리색, 눈동자였다. 낯설었지만 두렵진 않았다. 오히려 외국어에 대한 두려움, 문화에 대한 거리감을 하나하나 허물기 시작했다. 길을 묻고, 표를 끊고, 현지 카페에서 주문하며 나는 <strong>'사람은 어디서나 다르지 않다'</strong>는 사실을 체감했다.
     </p>
+
     <p>
-      나는 한국으로 돌아오는 비행기 안에서 결심했다.
+      여행을 통해 내가 얻은 가장 큰 소득은 예술적 영감이 아니라 <strong>'시점의 대전환'</strong>이었다. 나는 한국으로 돌아오는 비행기 안에서 결심했다.
     </p>
 
     <div class="highlight">
@@ -274,8 +123,31 @@
     </div>
 
     <p>
-      그 결심 하나가 귀국 후 나의 모든 행동을 바꿨다. 맛있는 식당에서 "맛있다"는 감탄 대신 원가 구조를 분석했고, 잘 되는 사업을 보면 그 속의 시스템을 해부했다. 세상을 보는 필터가 완전히 달라진 것이다.
+      그 결심은 귀국 직후 바로 현실로 이어졌다. 나는 유럽에서 배운 당당한 태도와 실행력으로 KORAIL 국유지를 민간과 공동 운영하는 MOU 체결이라는, 불가능해 보이던 기적을 현실로 만들었다.
     </p>
+
+    <div class="highlight">
+      "외국인과도 당당히 대화했는데,<br>왜 우리나라 공무원과 못 하겠는가."
+    </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>지식보다 중요한 건 '실행'이라는 용기다. 배운 것은 반드시 써야 자산이 된다.</li>
+        <li>낯선 환경에서 두려움을 이기는 연습이 협상 테이블에서의 배짱을 만든다.</li>
+        <li>소비자로 여행하지 말고, 공급자로 관찰하라. 같은 장면에서 다른 미래를 본다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">실행 포인트 — 공급자의 시선 훈련법</div>
+      <ol>
+        <li>맛집, 카페, 성공한 가게를 갈 때마다 "주인은 왜 이렇게 배치했는가?"를 먼저 물어라.</li>
+        <li>유럽이 아니어도 좋다. 국내 성공 사례를 관광하듯 방문하고 시스템을 분석하라.</li>
+        <li>낯선 상황에서 먼저 말을 걸고 질문을 던지는 연습을 하라. 두려움은 반복으로 사라진다.</li>
+        <li>여행이나 출장 중에 배운 것을 즉시 현업에 적용할 하나의 아이디어로 정리하라.</li>
+      </ol>
+    </div>
 
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
@@ -288,16 +160,16 @@
       <a href="#">공급자의시선</a>
       <a href="#">시점전환</a>
       <a href="#">유럽여행</a>
-      <a href="#">가접후본접</a>
+      <a href="#">실행력</a>
       <a href="#">인생의지름길</a>
     </div>
 
-  </div><!-- post-body -->
+  </div>
 
   <div class="nav-posts">
     <a href="블로그_1부_3장.html">
       <div class="label">이전 글</div>
-      제3장: 데이터는 거짓말을 하지 않는다 — 18만 명의 지름길
+      제3장: 데이터는 거짓말을 하지 않는다
     </a>
     <a href="블로그_1부_5장.html" style="text-align:right;">
       <div class="label">다음 글</div>
@@ -305,11 +177,8 @@
     </a>
   </div>
 
-</div><!-- post-wrap -->
+</div>
 
-<footer>
-  © 2026 인생의 지름길을 설계하는 법 · 무단 전재 금지
-</footer>
-
+<footer>© 2026 인생의 지름길을 설계하는 법 · 무단 전재 금지</footer>
 </body>
 </html>
