@@ -6,191 +6,46 @@
   <title>데이터는 거짓말을 하지 않는다 | 인생의 지름길</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Noto Serif KR', 'Georgia', serif;
-      background: #fafaf8;
-      color: #2c2c2c;
-      line-height: 1.9;
-    }
-
-    header {
-      background: #fff;
-      border-bottom: 1px solid #e8e4dc;
-      padding: 0 2rem;
-    }
-    .header-inner {
-      max-width: 760px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-    }
+    body { font-family: 'Noto Serif KR', 'Georgia', serif; background: #fafaf8; color: #2c2c2c; line-height: 1.9; }
+    header { background: #fff; border-bottom: 1px solid #e8e4dc; padding: 0 2rem; }
+    .header-inner { max-width: 760px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
     .logo { font-size: 1.1rem; font-weight: 700; color: #2c2c2c; text-decoration: none; letter-spacing: -0.02em; }
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
-
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
-
-    .category {
-      display: inline-block;
-      background: #f0ede6;
-      color: #7a6a50;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.8rem;
-      border-radius: 3px;
-      margin-bottom: 1.5rem;
-    }
-
-    h1 {
-      font-size: 2rem;
-      font-weight: 800;
-      line-height: 1.35;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.5rem;
-      color: #1a1a1a;
-    }
-
-    .subtitle {
-      font-size: 1.05rem;
-      color: #888;
-      font-style: italic;
-      margin-bottom: 2rem;
-    }
-
-    .meta {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.85rem;
-      color: #aaa;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid #e8e4dc;
-      margin-bottom: 2.5rem;
-    }
-
-    .meta .avatar {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: #2c2c2c;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.85rem;
-    }
-
+    .category { display: inline-block; background: #f0ede6; color: #7a6a50; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
+    h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
+    .subtitle { font-size: 1.05rem; color: #888; font-style: italic; margin-bottom: 2rem; }
+    .meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: #aaa; padding-bottom: 2rem; border-bottom: 1px solid #e8e4dc; margin-bottom: 2.5rem; }
+    .meta .avatar { width: 36px; height: 36px; border-radius: 50%; background: #2c2c2c; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
-
-    .post-body .highlight {
-      background: #fdf6e3;
-      border-left: 3px solid #d4a843;
-      padding: 1rem 1.25rem;
-      margin: 2rem 0;
-      font-style: italic;
-      color: #5a4a2a;
-      border-radius: 0 4px 4px 0;
-    }
-
-    .post-body .stat-box {
-      background: #f0f4fa;
-      border: 1px solid #ccd8ee;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin: 2rem 0;
-    }
-    .stat-box .stat-label {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: #5a72a0;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-    .stat-box .stat-item {
-      font-size: 1rem;
-      color: #2c3a55;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-    }
+    .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .stat-box { background: #f0f4fa; border: 1px solid #ccd8ee; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .stat-box .stat-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #5a72a0; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .stat-box .stat-item { font-size: 1rem; color: #2c3a55; font-weight: 600; margin-bottom: 0.4rem; }
     .stat-box .stat-item:last-child { margin-bottom: 0; }
-
-    .post-body .question-box {
-      background: #f7f4ef;
-      border: 1px solid #e0d8cc;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin: 2.5rem 0;
-    }
-    .question-box .q-label {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: #a0907a;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-    .question-box p {
-      font-size: 1rem;
-      color: #4a3f30;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    .chapter-divider {
-      text-align: center;
-      margin: 3rem 0;
-      color: #ccc;
-      font-size: 1.2rem;
-      letter-spacing: 0.5rem;
-    }
-
+    .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
+    .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
+    .story-scene { background: #fafafe; border-left: 3px solid #8a8ad8; padding: 1rem 1.25rem; margin: 2rem 0; border-radius: 0 4px 4px 0; font-style: italic; color: #3a3a60; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .tag-row a {
-      background: #f0ede6;
-      color: #7a6a50;
-      padding: 0.3rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      text-decoration: none;
-    }
+    .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
-
-    .nav-posts {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid #e8e4dc;
-    }
-    .nav-posts a {
-      text-decoration: none;
-      padding: 1rem;
-      background: #fff;
-      border: 1px solid #e8e4dc;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      color: #555;
-      transition: border-color 0.2s;
-    }
+    .nav-posts { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e8e4dc; }
+    .nav-posts a { text-decoration: none; padding: 1rem; background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; font-size: 0.85rem; color: #555; transition: border-color 0.2s; }
     .nav-posts a:hover { border-color: #2c2c2c; color: #2c2c2c; }
     .nav-posts .label { font-size: 0.72rem; color: #bbb; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.4rem; }
-
-    footer {
-      text-align: center;
-      padding: 2.5rem;
-      background: #2c2c2c;
-      color: #888;
-      font-size: 0.82rem;
-    }
+    footer { text-align: center; padding: 2.5rem; background: #2c2c2c; color: #888; font-size: 0.82rem; }
   </style>
 </head>
 <body>
@@ -220,10 +75,16 @@
     <span>·</span>
     <span>2026년 4월</span>
     <span>·</span>
-    <span>5분 읽기</span>
+    <span>7분 읽기</span>
   </div>
 
   <div class="post-body">
+
+    <div class="story-scene">
+      2009년 겨울, 나는 서울 남부고용지원센터에서 열린 '실업자 계좌제 설명회'에 앉아 있었다.<br>
+      마이크를 잡은 강사는 현대지역전문학교의 박 부장님이었다.<br>
+      그분은 단순한 제도 설명이 아닌, 실제 성공 사례를 데이터 기반으로 제시했다.
+    </div>
 
     <p>
       성공은 운의 영역이 아니라 통계의 영역이다.
@@ -236,10 +97,10 @@
     </p>
 
     <div class="stat-box">
-      <div class="stat-label">시장 데이터</div>
+      <div class="stat-label">시장 데이터 — 아무도 부정할 수 없는 숫자들</div>
       <div class="stat-item">지게차운전기능사 연간 응시자 — 18만 명 (국가기술자격 중 압도적 1위)</div>
       <div class="stat-item">전국 등록 지게차 보유 대수 — 17만 4천 대</div>
-      <div class="stat-item">법적 의무 보수교육 주기 — 3년마다 1회</div>
+      <div class="stat-item">법적 의무 보수교육 주기 — 3년마다 1회 (반복 수요 보장)</div>
     </div>
 
     <p>
@@ -257,9 +118,20 @@
     <div class="chapter-divider">· · ·</div>
 
     <p>
-      남들이 자격증 학원을 차릴 때, 나는 보수교육 인프라를 선제적으로 구축했다.
+      2009년 겨울 설명회가 끝난 뒤, 나는 박 부장님을 직접 찾아가 정중히 말했다.
     </p>
+
+    <div class="highlight">
+      "제가 교육기관을 운영하고 있는데, 오늘 강의가 정말 인상 깊었습니다.<br>
+      혹시 추후에 시간이 되신다면, 저에게 계좌제 시스템에 대해 더 배울 수 있을까요?"
+    </div>
+
     <p>
+      그분은 흔쾌히 승낙했고, 나는 그분을 내 인생의 두 번째 스승으로 받아들였다. 나는 즉시 학원 구조를 계좌제에 맞춰 전면 개편했다.
+    </p>
+
+    <p>
+      남들이 자격증 학원을 차릴 때, 나는 보수교육 인프라를 선제적으로 구축했다.
       경쟁자들은 눈앞의 수강생만 보았다. 나는 그 수강생이 3년 뒤 다시 돌아오는 구조를 보았다. 같은 시장을 보면서 완전히 다른 그림을 그린 것이다.
     </p>
 
@@ -271,10 +143,27 @@
 
     <p>
       2024년 현재, 시장 과열로 폐업하는 기관들이 속출할 때도 우리 기관이 여전히 <strong>1% 우수 교육기관</strong>으로 건재한 비결은 바로 이 데이터 기반의 선점 전략에 있다.
-    </p>
-    <p>
       감이 아니라 숫자로. 열정이 아니라 구조로. 그것이 내가 시장에서 살아남은 방식이다.
     </p>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>정부 제도를 보는 눈이 '혜택'이 아닌 '시스템'이어야 한다.</li>
+        <li>제도를 활용하는 사람은 많지만, 제도를 설계자처럼 해석하는 사람은 드물다.</li>
+        <li>제도의 흐름보다 본질을 먼저 이해하면, 파도 위에서 가장 멀리 나아갈 수 있다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">실행 포인트 — 데이터 기반 시장 분석법</div>
+      <ol>
+        <li>당신이 진입하려는 시장에서 연간 응시자 수, 의무 자격 대상, 법적 주기를 먼저 조사하라.</li>
+        <li>일회성 수요와 반복 수요를 구분하라. 반복 수요가 있는 곳이 진짜 기회다.</li>
+        <li>정부 지원 제도를 소비자가 아닌 공급자의 눈으로 분석하라.</li>
+        <li>현장의 불편(시험장이 멀다, 교육 후 시험을 딴 곳에서 본다)에서 수요 공백을 찾아라.</li>
+      </ol>
+    </div>
 
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
@@ -286,17 +175,17 @@
       <a href="#">자서전</a>
       <a href="#">데이터경영</a>
       <a href="#">중장비교육</a>
-      <a href="#">보수교육</a>
-      <a href="#">시장선점</a>
+      <a href="#">구독형시스템</a>
+      <a href="#">계좌제전략</a>
       <a href="#">인생의지름길</a>
     </div>
 
   </div><!-- post-body -->
 
   <div class="nav-posts">
-    <a href="블로그_1부_1장.html">
+    <a href="블로그_1부_2장.html">
       <div class="label">이전 글</div>
-      제1장: 안정이라는 이름의 감옥을 탈출하다
+      제2장: 용산역 구름다리, 무자본 기획의 서막
     </a>
     <a href="블로그_1부_4장.html" style="text-align:right;">
       <div class="label">다음 글</div>
