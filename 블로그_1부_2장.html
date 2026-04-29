@@ -6,170 +6,45 @@
   <title>용산역 구름다리, 무자본 기획의 서막 | 인생의 지름길</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Noto Serif KR', 'Georgia', serif;
-      background: #fafaf8;
-      color: #2c2c2c;
-      line-height: 1.9;
-    }
-
-    header {
-      background: #fff;
-      border-bottom: 1px solid #e8e4dc;
-      padding: 0 2rem;
-    }
-    .header-inner {
-      max-width: 760px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-    }
+    body { font-family: 'Noto Serif KR', 'Georgia', serif; background: #fafaf8; color: #2c2c2c; line-height: 1.9; }
+    header { background: #fff; border-bottom: 1px solid #e8e4dc; padding: 0 2rem; }
+    .header-inner { max-width: 760px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
     .logo { font-size: 1.1rem; font-weight: 700; color: #2c2c2c; text-decoration: none; letter-spacing: -0.02em; }
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
-
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
-
-    .category {
-      display: inline-block;
-      background: #f0ede6;
-      color: #7a6a50;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.8rem;
-      border-radius: 3px;
-      margin-bottom: 1.5rem;
-    }
-
-    h1 {
-      font-size: 2rem;
-      font-weight: 800;
-      line-height: 1.35;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.5rem;
-      color: #1a1a1a;
-    }
-
-    .subtitle {
-      font-size: 1.05rem;
-      color: #888;
-      font-style: italic;
-      margin-bottom: 2rem;
-    }
-
-    .meta {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.85rem;
-      color: #aaa;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid #e8e4dc;
-      margin-bottom: 2.5rem;
-    }
-
-    .meta .avatar {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: #2c2c2c;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.85rem;
-    }
-
+    .category { display: inline-block; background: #f0ede6; color: #7a6a50; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
+    h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
+    .subtitle { font-size: 1.05rem; color: #888; font-style: italic; margin-bottom: 2rem; }
+    .meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: #aaa; padding-bottom: 2rem; border-bottom: 1px solid #e8e4dc; margin-bottom: 2.5rem; }
+    .meta .avatar { width: 36px; height: 36px; border-radius: 50%; background: #2c2c2c; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
-
-    .post-body .highlight {
-      background: #fdf6e3;
-      border-left: 3px solid #d4a843;
-      padding: 1rem 1.25rem;
-      margin: 2rem 0;
-      font-style: italic;
-      color: #5a4a2a;
-      border-radius: 0 4px 4px 0;
-    }
-
-    .post-body .question-box {
-      background: #f7f4ef;
-      border: 1px solid #e0d8cc;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin: 2.5rem 0;
-    }
-
-    .question-box .q-label {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: #a0907a;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-
-    .question-box p {
-      font-size: 1rem;
-      color: #4a3f30;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    .chapter-divider {
-      text-align: center;
-      margin: 3rem 0;
-      color: #ccc;
-      font-size: 1.2rem;
-      letter-spacing: 0.5rem;
-    }
-
+    .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
+    .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
+    .dialogue-box { background: #f8f8fc; border: 1px solid #d0d0e8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .dialogue-box .d-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: #5050a0; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .dialogue-box .d-line { margin-bottom: 0.6rem; font-size: 0.97rem; }
+    .dialogue-box .d-line .speaker { font-weight: 700; color: #3a3080; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .tag-row a {
-      background: #f0ede6;
-      color: #7a6a50;
-      padding: 0.3rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      text-decoration: none;
-    }
+    .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
-
-    .nav-posts {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid #e8e4dc;
-    }
-    .nav-posts a {
-      text-decoration: none;
-      padding: 1rem;
-      background: #fff;
-      border: 1px solid #e8e4dc;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      color: #555;
-      transition: border-color 0.2s;
-    }
+    .nav-posts { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e8e4dc; }
+    .nav-posts a { text-decoration: none; padding: 1rem; background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; font-size: 0.85rem; color: #555; transition: border-color 0.2s; }
     .nav-posts a:hover { border-color: #2c2c2c; color: #2c2c2c; }
     .nav-posts .label { font-size: 0.72rem; color: #bbb; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.4rem; }
-
-    footer {
-      text-align: center;
-      padding: 2.5rem;
-      background: #2c2c2c;
-      color: #888;
-      font-size: 0.82rem;
-    }
+    footer { text-align: center; padding: 2.5rem; background: #2c2c2c; color: #888; font-size: 0.82rem; }
   </style>
 </head>
 <body>
@@ -199,7 +74,7 @@
     <span>·</span>
     <span>2026년 4월</span>
     <span>·</span>
-    <span>8분 읽기</span>
+    <span>9분 읽기</span>
   </div>
 
   <div class="post-body">
@@ -233,36 +108,23 @@
 
     <p>
       내 머릿속에는 이미 완벽한 작전 지도가 그려져 있었다.
-      군 시절, 수많은 부서 간의 협조 업무를 수행하며 단련된 나에게
-      코레일이라는 공공기관은 두려움의 대상이 아니었다.
-      오히려 내가 가장 잘 아는 <strong>'조직의 언어'</strong>를 사용하는 곳이었다.
-      지휘관에게 수없이 올렸던 작전 보고서의 경험을 살려,
-      나는 그들이 가장 원하는 양식과 답을 담은 사업 계획서를 완성했다.
+      자본은 없었지만 군 시절 수없이 올렸던 작전 보고서의 경험을 살려,
+      나는 KORAIL이 가장 원하는 형식과 답을 담은 사업 계획서를 완성했다.
     </p>
 
     <p>
-      그 계획서의 핵심은 파격적인 <strong>'8:2'</strong> 이익 분배였다.
-      나에게 돌아오는 수익은 단 20%. 코레일 담당자는 놀라며 물었다.
+      그 계획서의 핵심은 파격적인 <strong>'투명한 수익 공개'</strong>였다.
+      경쟁자들은 수익 구조를 감췄지만, 나는 반대로 모든 것을 열었다.
     </p>
 
-    <div class="highlight">
-      "이 정도 수익으로 사업 운영이 가능하겠습니까?"<br><br>
-      "지금은 가접(假接)의 단계입니다.<br>
-      신뢰를 바탕으로 향후 과정을 확장하여 더 큰 그림을 그리겠습니다."
+    <div class="dialogue-box">
+      <div class="d-label">KORAIL 담당 차장과의 협상 자리</div>
+      <div class="d-line"><span class="speaker">나:</span> "저는 수익을 감추지 않겠습니다. 이게 제 예상 수익 구조입니다. 그리고… 함께 하시죠."</div>
+      <div class="d-line"><span class="speaker">차장:</span> (긴 침묵 후) "당신이 유일하게 구체적으로 밝힌 사람입니다. 그 용기에 저희도 투자하겠습니다. 공동 운영으로 MOU 진행해봅시다."</div>
     </div>
 
     <p>
-      사람들은 내가 손해를 본다고 혀를 찼다.
-      하지만 나는 그 계약서의 행간에 숨겨진 <strong>'진짜 무기'</strong>를 쥐고 있었다.
-      80%를 내어주는 기준은 '매출'이 아니라,
-      나의 인건비와 운영비를 모두 공제한 <strong>'순수익'</strong>이었다.
-    </p>
-
-    <p>
-      이것은 나에게 엄청난 탄력성을 부여했다.
-      나는 사장이자 동시에 현장의 가장 유능한 실무자였다.
-      나의 인건비를 스스로 책정하고 운영비를 통제하며,
-      리스크가 전혀 없는 <strong>'무적의 요새'</strong>를 구축했다.
+      그것이 3,000평의 부지와 4대의 천장크레인을 <strong>무자본으로 확보</strong>하게 된 결정적인 순간이었다.
     </p>
 
     <div class="chapter-divider">· · ·</div>
@@ -290,18 +152,24 @@
       나는 고용된 오너가 아니라, 스스로 생태계를 만든 <strong>'창조적 사령관'</strong>이었다.
     </p>
 
-    <p>
-      남들이 주식 차트를 보며 일희일비할 때,
-      나는 용산역 부지 위에서 돌아가는 크레인의 쇠사슬 소리를 들으며
-      돈이 복리로 쌓이는 소리를 들었다.
-      그것은 운이 좋아서가 아니었다.
-      미래의 수요를 미리 읽고, 남들이 불가능하다고 했던 입지에
-      나만의 깃발을 꽂은 <strong>'진도준식 안목'</strong>의 승리였다.
-    </p>
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>믿음은 말이 아니라 투명한 정보와 구체적인 실행 계획에서 생긴다.</li>
+        <li>자본이 없던 시절, 내가 내세울 수 있던 유일한 무기는 성실하게 준비된 문서 하나였다.</li>
+        <li>기회는 '이 사람이면 가능하겠다'는 신뢰에서 온다. 신뢰는 투명함에서 온다.</li>
+      </ul>
+    </div>
 
-    <div class="highlight">
-      "위기는 하수에게만 찾아온다.<br>
-      미래를 설계하는 자에게 위기는 수익을 극대화할 수 있는 가장 완벽한 변명일 뿐이다."
+    <div class="exec-tips">
+      <div class="et-label">설득력 있는 사업계획서 5원칙</div>
+      <ol>
+        <li>사업계획서는 이해를 위한 문서가 아니라, 믿음을 위한 문서다.</li>
+        <li>예상 수익과 비용을 숨기지 말고 오픈하라. 투명함이 곧 무기다.</li>
+        <li>상대방이 생각할 리스크에 먼저 대안을 제시하라.</li>
+        <li>PPT보다 간결한 5~10장짜리 숫자 중심 문서가 더 효과적이다.</li>
+        <li>가능하다면 함께할 수 있는 제안 모델을 제시하라 (공동 운영, 수익 분배 등).</li>
+      </ol>
     </div>
 
     <div class="question-box">
@@ -313,9 +181,9 @@
     <div class="tag-row">
       <a href="#">자서전</a>
       <a href="#">무자본창업</a>
-      <a href="#">진도준식안목</a>
       <a href="#">8대2전략</a>
-      <a href="#">순수익전략</a>
+      <a href="#">투명협상</a>
+      <a href="#">사업계획서</a>
       <a href="#">인생의지름길</a>
     </div>
 
