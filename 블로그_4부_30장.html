@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #eeedf5; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #504080; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; color: #2c2c2c; }
     .category { display: inline-block; background: #eeedf5; color: #504080; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -21,12 +24,25 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
-    .speech-box { background: #f5f3f0; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2rem 0; border-left: 3px solid #8a7a60; }
+    .speech-box { background: #f5f3f0; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-left: 3px solid #8a7a60; }
     .speech-box .speaker { font-size: 0.78rem; font-weight: 700; color: #8a7a60; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
     .speech-box p { color: #3a3020; margin: 0; font-style: normal; }
+    .lesson-box { background: #f0edf8; border: 1px solid #c8b8e8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .lesson-box .lb-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #504080; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .lesson-box ul { padding-left: 1.2rem; margin: 0; }
+    .lesson-box ul li { font-size: 0.97rem; color: #2a1a4a; margin-bottom: 0.5rem; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -40,30 +56,72 @@
 <body>
 <header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제4부 · 전수</div>
+    <div class="pb-title">박지성과 손흥민에게 배우는 멀티의 힘</div>
+  </div>
   <span class="category">제4부 · 전수</span>
-    <div class="chapter-num">제 30장</div>
-<h1>아들에게 가르치는 부의 철학<br>비판보다 무서운 것은 무관심이다</h1>
+  <div class="chapter-num">제 30장</div>
+  <h1>아들에게 가르치는 부의 철학<br>비판보다 무서운 것은 무관심이다</h1>
   <p class="subtitle">― 냉소적인 구경꾼이 될 것인가, 상처투성이 선수가 될 것인가</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
   <div class="post-body">
     <p>내 아들은 가끔 인터넷에서 성공한 사람들을 비판하거나 자기계발서의 내용을 깎아내리는 영상들을 보곤 한다.</p>
+
     <div class="speech-box">
       <div class="speaker">아들</div>
       <p>"아빠, 이런 건 다 사기래요. 운 좋게 돈 번 사람들이 잘난 척하는 거래요."</p>
     </div>
+
     <p>아들의 냉소적인 반응을 보며 나는 따끔하게 일침을 놓는다.</p>
+
     <div class="speech-box">
       <div class="speaker">아버지</div>
       <p>"아들아, 비판하는 사람들은 언제나 관중석에 앉아 있단다. 그들은 경기장에서 구르는 선수의 땀 냄새와 고통을 절대 알지 못해. 남을 비판하는 데 네 소중한 에너지를 쓰지 마라. 그것보다 훨씬 무서운 건 네 인생에 대한 '무관심'이다."</p>
     </div>
+
     <div class="highlight">
       비판은 쉽다.<br>타인의 노력을 '운'으로 치부해버리면 내 무능력이 정당화되기 때문이다.<br><br>
       성공의 지름길을 걷는 사람들은 비판할 시간에 상대의 전략을 분석한다.
     </div>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <div class="lesson-box">
+      <div class="lb-label">아버지가 아들에게 전수하는 부의 철학 5가지</div>
+      <ul>
+        <li><strong>비판 대신 분석</strong> — 성공한 사람의 방식을 깎아내리기 전에, 그가 어떻게 그 성공을 만들었는지를 먼저 배워라</li>
+        <li><strong>실행 우선주의</strong> — "저 책이 사기 같다면 직접 그 방식대로 해보고 증명해라. 해보지도 않은 비판은 독이다"</li>
+        <li><strong>무관심의 위험성</strong> — 타인을 비판하는 것보다 자신의 인생에 무관심한 것이 훨씬 더 치명적이다</li>
+        <li><strong>관중석 vs 경기장</strong> — 깨끗한 옷을 입고 관중석에 앉아 있는 구경꾼은 아무것도 이루지 못한다</li>
+        <li><strong>실패 유니폼의 가치</strong> — 흙탕물 묻은 유니폼은 씻으면 그만이지만, 단 한 번도 경기장에 나서지 않은 삶은 영원히 공백으로 남는다</li>
+      </ul>
+    </div>
+
     <p>나는 아들에게 말한다. "저 책이 사기 같아 보인다면, 직접 그 방식대로 해보고 증명해라. 해보지도 않고 입으로만 떠드는 비판은 네 영혼을 갉아먹는 독이다."</p>
+
     <div class="highlight">
       실패해서 흙탕물이 묻은 유니폼은 씻어내면 그만이지만,<br>구경꾼의 깨끗한 옷은 아무런 역사를 만들지 못한다.
     </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>비판 에너지를 실행 에너지로 전환하라 — 같은 시간에 비판하는 사람과 분석하는 사람의 10년 후는 완전히 다르다.</li>
+        <li>자신의 인생에 무관심하지 마라 — 가장 무서운 실패는 도전하지 않아 아무 이야기가 없는 인생이다.</li>
+        <li>경기장에 서는 용기가 부를 만든다 — 성공의 지름길은 관중석이 아니라 경기장에 있다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">비판 에너지를 실행력으로 전환하는 3단계</div>
+      <ol>
+        <li>오늘 당신이 비판한 것 하나를 찾아라 — 그 비판의 대상에서 배울 수 있는 전략이 무엇인지를 분석하라.</li>
+        <li>실행하지 않은 아이디어 리스트를 만들어라 — 그 리스트가 길수록 당신은 지금 관중석에 앉아 있는 것이다.</li>
+        <li>자녀와 함께 성공 사례를 분석하라 — 비판 대신 분석하는 습관은 어릴 때 훈련되어야 평생 자산이 된다.</li>
+      </ol>
+    </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
       <p>당신은 오늘 누군가의 성공을 비판하며 시간을 보냈는가,<br>아니면 당신의 인생을 바꿀 단 한 번의 실행에 집중했는가?</p>
