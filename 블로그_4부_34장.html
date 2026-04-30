@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #eeedf5; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #504080; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; color: #2c2c2c; }
     .category { display: inline-block; background: #eeedf5; color: #504080; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -24,9 +27,23 @@
     .speech-box { background: #f5f3f0; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2rem 0; border-left: 3px solid #8a7a60; }
     .speech-box .speaker { font-size: 0.78rem; font-weight: 700; color: #8a7a60; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
     .speech-box p { color: #3a3020; margin: 0; }
+    .analogy-box { background: #f0edf8; border: 1px solid #c8b8e8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; overflow-x: auto; }
+    .analogy-box .an-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #504080; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .analogy-box table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .analogy-box th { background: #504080; color: #fff; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.82rem; }
+    .analogy-box td { border-bottom: 1px solid #e8e4f0; padding: 0.5rem 0.75rem; color: #2a1a4a; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -38,26 +55,66 @@
   </style>
 </head>
 <body>
-<header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
+<header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제4부 · 전수</div>
+    <div class="pb-title">박지성과 손흥민에게 배우는 멀티의 힘</div>
+  </div>
   <span class="category">제4부 · 전수</span>
-    <div class="chapter-num">제 34장</div>
-<h1>아들과의 대화<br>컴퓨터 조립에서 배운 논리와 설계의 기본</h1>
+  <div class="chapter-num">제 34장</div>
+  <h1>아들과의 대화<br>컴퓨터 조립에서 배운 논리와 설계의 기본</h1>
   <p class="subtitle">― 부품의 가격보다 중요한 것은 '호환성'과 '흐름'이다</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
   <div class="post-body">
     <p>어느 날 아들과 함께 컴퓨터를 직접 조립하기로 했다. 완제품을 사면 편하겠지만, 나는 아들이 기계의 밑바닥부터 이해하길 원했다. CPU, 메인보드, 그래픽카드가 제각각 흩어져 있을 때는 그저 비싼 부품 덩어리에 불과하다. 하지만 이것들이 하나의 '설계도' 아래 연결되는 순간, 강력한 연산 능력을 갖춘 시스템으로 탄생한다.</p>
+
     <div class="highlight">
       조립하는 내내 나는 아들에게 강조했다.<br><br>
       "부품 하나하나가 비싼 게 중요한 게 아니야.<br>이 부품들이 서로 충돌하지 않고 얼마나 잘 어우러지는지(호환성),<br>그리고 내부의 열기가 어디로 빠져나가는지(흐름)가 핵심이란다."
     </div>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <div class="analogy-box">
+      <div class="an-label">컴퓨터 부품 ↔ 사업 구성 요소 비교</div>
+      <table>
+        <tr><th>컴퓨터 부품</th><th>역할</th><th>사업 대응 요소</th></tr>
+        <tr><td>CPU</td><td>모든 연산을 지시하는 핵심 두뇌</td><td>사장의 판단력과 의사결정</td></tr>
+        <tr><td>메인보드</td><td>모든 부품을 연결하는 허브</td><td>조직 구조와 내부 커뮤니케이션 체계</td></tr>
+        <tr><td>RAM</td><td>처리 속도를 결정하는 작업 메모리</td><td>직원의 실무 역량과 처리 속도</td></tr>
+        <tr><td>전원 공급기(PSU)</td><td>안정적인 에너지 공급</td><td>현금 흐름 — 모든 부품이 전원 없이 작동 불가</td></tr>
+        <tr><td>쿨러/방열판</td><td>과열 방지, 안정적 작동 유지</td><td>비상금·여유 자금 — 위기 시 조직이 녹아내리지 않도록</td></tr>
+      </table>
+    </div>
+
     <p>이것은 사업과도 똑같다. 뛰어난 직원 한 명, 비싼 장비 한 대가 사업을 성공시키는 게 아니다. 각 파트가 유기적으로 연결되어 막힘없이 돌아가는 '흐름'이 있어야 한다.</p>
-    <p>아들은 땀을 뻘뻘 흘리며 케이블을 정리하고 부품을 끼우면서, 비로소 무언가를 만든다는 것의 '논리적 구조'를 깨달았다.</p>
-    <p>전원을 켰을 때 팬이 힘차게 돌아가며 모니터에 불이 들어오는 순간, 아들의 눈빛이 달라졌다. 단순히 게임을 즐기는 '소비자'에서, 게임기를 만드는 '공급자'의 시각을 경험한 것이다.</p>
+
+    <p>아들은 땀을 뻘뻘 흘리며 케이블을 정리하고 부품을 끼우면서, 비로소 무언가를 만든다는 것의 '논리적 구조'를 깨달았다. 전원을 켰을 때 팬이 힘차게 돌아가며 모니터에 불이 들어오는 순간, 아들의 눈빛이 달라졌다. 단순히 게임을 즐기는 '소비자'에서, 게임기를 만드는 '공급자'의 시각을 경험한 것이다.</p>
+
     <div class="speech-box">
       <div class="speaker">아들</div>
       <p>"아빠, 이제 알 것 같아요. 설계가 잘 되어 있으면 결과는 무조건 따라온다는 걸요."</p>
     </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>비싼 부품보다 호환성이 중요하다 — 사업도 탁월한 개인보다 시스템의 흐름이 성과를 결정한다.</li>
+        <li>직접 만들어봐야 원리가 보인다 — 소비자가 아닌 공급자의 시각은 체험을 통해서만 열린다.</li>
+        <li>설계가 완성되면 결과는 따라온다 — 아들이 조립한 컴퓨터처럼, 잘 설계된 사업은 저절로 돌아간다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">자녀와 함께하는 '설계 사고' 훈련 3단계</div>
+      <ol>
+        <li>자녀와 함께 무언가를 직접 만들어라 — 컴퓨터 조립, 가구 제작, 요리 등 과정이 있는 모든 활동이 설계 교육이 된다.</li>
+        <li>만드는 과정에서 "왜 이렇게 설계됐을까?"를 함께 물어라 — 소비자가 아닌 공급자 시각이 열리는 핵심 질문이다.</li>
+        <li>실패가 생기면 원인을 함께 분석하라 — 조립 오류, 연결 실수를 찾아내는 과정이 문제 해결 능력을 키운다.</li>
+      </ol>
+    </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
       <p>당신은 지금 비싼 부품(자원)을 모으는 데만 혈안이 되어 있는가,<br>아니면 그것들을 하나로 묶어줄 완벽한 '설계도'를 다듬고 있는가?</p>
