@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #2c2c2c; color: #f0ede6; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #6dbf7a; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; }
     .category { display: inline-block; background: #edf5ee; color: #3a7050; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -21,9 +24,22 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .bench-box { background: #f0f5f0; border: 1px solid #b8d8b8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .bench-box .b-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #3a7050; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .bench-box ul { padding-left: 1.2rem; margin: 0; }
+    .bench-box ul li { font-size: 0.97rem; color: #2a4a2a; margin-bottom: 0.5rem; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -37,29 +53,76 @@
 <body>
 <header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제3부 · 운용</div>
+    <div class="pb-title">1% 우수 교육기관의 시스템 경영</div>
+  </div>
+
   <span class="category">제3부 · 운용</span>
-    <div class="chapter-num">제 25장</div>
-<h1>소비자에서 공급자로,<br>시점을 전환하는 벤치마킹</h1>
+  <div class="chapter-num">제 25장</div>
+  <h1>소비자에서 공급자로,<br>시점을 전환하는 벤치마킹</h1>
   <p class="subtitle">― 남들이 '와우' 할 때, 나는 '왜'라고 물었다</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
+
   <div class="post-body">
     <p>유럽 여행이나 평소 맛집 탐방을 갈 때, 나는 입을 즐겁게 하기보다 뇌를 가동시킨다. 사람들은 화려한 장식과 맛있는 음식에 취해 "여기 진짜 좋다!"라며 소비의 즐거움을 만끽한다.</p>
+
     <p>하지만 나는 그 즐거움 뒤에 숨겨진 '공식'을 찾기 위해 시력을 집중한다.</p>
+
     <div class="highlight">
       "이 가게는 왜 입구에 이 소품을 두었을까?"<br>
       "종업원의 응대 방식이 왜 이 타이밍에 이루어지는가?"<br><br>
-      내가 하는 벤치마킹은 단순히 예쁜 것을 베껴오는 것이 아니다.<br>그 장소에 흐르는 '공급자의 설계'를 훔치는 일이다.
+      내가 하는 벤치마킹은 단순히 예쁜 것을 베껴오는 것이 아니다.<br>
+      그 장소에 흐르는 '공급자의 설계'를 훔치는 일이다.
     </div>
+
     <p>학원을 운영하며 내가 도입한 수많은 시스템도 사실은 식당, 호텔, 심지어 길거리의 작은 상점들에서 영감을 얻은 것이다. 고객이 문을 열고 들어와 자격증을 따고 나갈 때까지의 동선은, 가장 잘 나가는 백화점의 동선 설계를 교육 현장에 맞게 변형한 결과물이다.</p>
-    <div class="highlight">
-      성공하고 싶다면 감탄하는 습관을 분석하는 습관으로 바꿔라.<br>세상 모든 잘되는 곳은 거대한 교과서다.
+
+    <div class="chapter-divider">· · ·</div>
+
+    <div class="bench-box">
+      <div class="b-label">벤치마킹 → 교육 현장 적용 사례</div>
+      <ul>
+        <li><strong>백화점 입구 설계</strong> → 학원 1층 상담 공간 — 처음 들어오는 수강생의 시선을 어디로 유도할지 동선 설계</li>
+        <li><strong>호텔 체크인 프로세스</strong> → 수강생 등록 절차 — 복잡한 서류 작업을 최소화하고 첫 5분을 따뜻한 안내로 시작</li>
+        <li><strong>패스트푸드 주문 시스템</strong> → 과정 선택 안내판 — 수강생이 스스로 과정을 선택할 수 있도록 메뉴판식 안내물 제작</li>
+        <li><strong>병원 대기실</strong> → 시험 대기 공간 — 긴장을 낮추는 조명·온도·음악으로 합격률 향상</li>
+        <li><strong>공항 동선</strong> → 장비 교장 이동 루트 — 수강생들이 장비 사이를 이동할 때 사고 없이 흐르도록 동선 표시</li>
+      </ul>
     </div>
+
+    <div class="highlight">
+      성공하고 싶다면 감탄하는 습관을 분석하는 습관으로 바꿔라.<br>
+      세상 모든 잘되는 곳은 거대한 교과서다.
+    </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>벤치마킹은 업종을 가리지 않는다 — 식당의 운영 방식이 학원을 바꾸고, 호텔의 서비스가 교육 현장을 바꾼다.</li>
+        <li>소비자 시점이 아닌 공급자 시점으로 보는 습관이 사업가와 직장인을 가른다.</li>
+        <li>좋은 인상이 어떻게 만들어졌는지를 분석하면 그것을 내 사업에 이식할 수 있다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">공급자 시점 벤치마킹 3단계</div>
+      <ol>
+        <li>다음 번 외식·쇼핑·여행에서 "이 공간의 주인이라면 어떻게 설계했을까?"를 생각하며 다녀라 — 뇌의 시점이 달라진다.</li>
+        <li>분석한 내용을 메모하라 — 순간의 인사이트는 사라진다. 사진과 메모로 기록하면 나중에 구체적인 아이디어가 된다.</li>
+        <li>내 사업의 고객 동선을 그려보라 — 고객이 처음 연락하는 순간부터 수료 후 재방문까지, 각 접점에서 무엇을 느끼는지 설계하라.</li>
+      </ol>
+    </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
       <p>당신은 오늘 방문한 곳에서 단순히 '좋다'고 느꼈는가,<br>아니면 그곳 주인이 당신을 '좋게 만들기 위해' 깔아놓은 장치를 발견했는가?</p>
     </div>
+
     <div class="tag-row"><a href="#">자서전</a><a href="#">벤치마킹</a><a href="#">공급자시선</a><a href="#">분석습관</a><a href="#">동선설계</a><a href="#">인생의지름길</a></div>
   </div>
+
   <div class="nav-posts">
     <a href="블로그_3부_24장.html"><div class="label">이전 글</div>제24장: 사장이 컴퓨터 수리와 용접을 직접 배워야 하는 이유</a>
     <a href="블로그_3부_26장.html" style="text-align:right;"><div class="label">다음 글</div>제26장: 액자 하나, 꽃병 하나에 담긴 주인의 설계도를 읽어라</a>
