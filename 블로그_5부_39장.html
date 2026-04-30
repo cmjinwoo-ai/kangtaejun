@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #f5ede8; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #803020; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; color: #2c2c2c; }
     .category { display: inline-block; background: #f5ede8; color: #803020; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -21,9 +24,23 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .global-box { background: #fff5f0; border: 1px solid #e8c8b8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; overflow-x: auto; }
+    .global-box .gb-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #803020; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .global-box table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .global-box th { background: #803020; color: #fff; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.82rem; }
+    .global-box td { border-bottom: 1px solid #f0e0d8; padding: 0.5rem 0.75rem; color: #4a2010; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -37,19 +54,57 @@
 <body>
 <header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제5부 · 확장</div>
+    <div class="pb-title">새로운 영토를 향한 위대한 항해</div>
+  </div>
   <span class="category">제5부 · 확장</span>
-    <div class="chapter-num">제 39장</div>
-<h1>글로벌 비전<br>DGTTC, 한국형 교육 시스템을 수출하다</h1>
+  <div class="chapter-num">제 39장</div>
+  <h1>글로벌 비전<br>DGTTC, 한국형 교육 시스템을 수출하다</h1>
   <p class="subtitle">― 언어가 달라도 '기술의 언어'는 통한다</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
   <div class="post-body">
     <p>국내에서 1% 우수 교육기관의 반열에 올랐을 때, 나는 다시 한번 정체된 '안정'의 궤도를 이탈하기로 했다. 나의 시선은 동남아시아의 심장, 베트남으로 향했다. 사람들은 "이미 한국 시장도 큰데 왜 사서 고생이냐"고 물었지만, 내 머릿속엔 <strong>DGTTC(Doosan Global Technical Training Center)</strong>라는 원대한 설계도가 그려져 있었다.</p>
     <div class="highlight">
       나는 남의 손을 빌리지 않았다.<br>브로커나 컨설팅 업체를 통하는 순간,<br>현장의 생생한 감각은 죽고 서류상의 숫자만 남기 때문이다.<br><br>
       나는 직접 비행기에 몸을 실었다.
     </div>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <div class="global-box">
+      <div class="gb-label">DGTTC 해외 진출 현장 검증 5개 항목</div>
+      <table>
+        <tr><th>검증 항목</th><th>확인 내용</th><th>현지에서 발견한 것</th></tr>
+        <tr><td>시장 규모</td><td>건설 현장 수, 중장비 수요 통계</td><td>베트남 인프라 투자 급증 — 교육 수요 폭발 예상</td></tr>
+        <tr><td>노동력 현황</td><td>현지 기술자 수준, 교육 인프라 공백</td><td>자격증 체계 미비, 숙련공 절대 부족</td></tr>
+        <tr><td>경쟁 현황</td><td>기존 교육 업체 수, 품질 수준</td><td>실습 중심 교육기관 거의 없음 — 선점 가능</td></tr>
+        <tr><td>법규·제도</td><td>외국인 교육사업 진출 조건, 자격증 인정 체계</td><td>정부 직업훈련 지원 정책 적극 확대 중</td></tr>
+        <tr><td>현지 파트너</td><td>신뢰할 수 있는 로컬 파트너 존재 여부</td><td>쏘나(SONA)그룹 — 정부 연계 직업학교 운영 체계 보유</td></tr>
+      </table>
+    </div>
+
     <p>베트남의 찌는 듯한 더위 속에서 낯선 거리를 걷고, 현지 노동자들의 눈빛을 확인하며 그들에게 진짜 필요한 것이 무엇인지 파헤쳤다.</p>
     <p>내가 전수하고자 한 것은 단순한 중장비 조작법이 아니었다. 대한민국을 일으킨 '근면함'과 '정교한 기술 시스템', 즉 한국형 교육의 핵심 가치를 수출하고 싶었다. 내가 직접 기계를 다루고 설계도를 펼쳐 보일 때 그들의 눈빛이 변하는 것을 보았다. 기술의 언어는 전 세계 공용어였다.</p>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>보고서가 아닌 발로 뛰어라 — 현장에서만 보이는 정보가 진짜 기회다. 컨설팅 업체의 리포트에는 현지 노동자의 눈빛이 담기지 않는다.</li>
+        <li>한국형 교육 시스템은 수출 가능한 자산이다 — 철저한 안전 교육, 높은 합격률, 실습 중심 커리큘럼은 개발도상국이 가장 필요로 하는 것이다.</li>
+        <li>선점하는 자가 시장을 소유한다 — 경쟁자가 없을 때 들어가야 표준을 만들 수 있다. 시장이 성숙된 후에 들어가면 따라가기도 바쁘다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">해외 시장 직접 검증 3단계</div>
+      <ol>
+        <li>첫 방문은 관찰자로 가라 — 명함도 넣지 말고 현지 시장, 직업학교, 건설 현장을 눈과 발로 먼저 파악하라. 섣부른 제안보다 정확한 관찰이 먼저다.</li>
+        <li>현지인이 말하는 '불편함'을 수집하라 — "지금 가장 힘든 게 뭔가요?"라는 질문 하나가 최고의 시장 조사다. 그 불편함이 당신의 솔루션이 된다.</li>
+        <li>작은 파일럿 프로젝트로 신뢰를 먼저 쌓아라 — 대규모 계약보다 소규모 성공 사례 하나가 현지에서 당신의 가장 강력한 영업 도구가 된다.</li>
+      </ol>
+    </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
       <p>당신은 남이 만들어준 보고서로 세상을 보는가,<br>아니면 당신의 발로 직접 현장을 밟으며 기회를 포착하는가?</p>
