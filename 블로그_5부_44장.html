@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #f5ede8; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #803020; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; color: #2c2c2c; }
     .category { display: inline-block; background: #f5ede8; color: #803020; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -21,9 +24,23 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .adaptor-box { background: #fff5f0; border: 1px solid #e8c8b8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; overflow-x: auto; }
+    .adaptor-box .ab-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #803020; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .adaptor-box table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .adaptor-box th { background: #803020; color: #fff; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.82rem; }
+    .adaptor-box td { border-bottom: 1px solid #f0e0d8; padding: 0.5rem 0.75rem; color: #4a2010; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -37,22 +54,60 @@
 <body>
 <header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제5부 · 확장</div>
+    <div class="pb-title">새로운 영토를 향한 위대한 항해</div>
+  </div>
   <span class="category">제5부 · 확장</span>
-    <div class="chapter-num">제 44장</div>
-<h1>호기심과 도전<br>초지능 시대에 살아남는 유일한 종(種)</h1>
+  <div class="chapter-num">제 44장</div>
+  <h1>호기심과 도전<br>초지능 시대에 살아남는 유일한 종(種)</h1>
   <p class="subtitle">― 공급자의 삶이 주는 진정한 자유란 무엇인가</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
   <div class="post-body">
     <p>많은 이들이 묻는다. "AI가 모든 것을 대신해 주면 인간은 무엇을 합니까?" 나의 대답은 명확하다. 인간은 <strong>'호기심'</strong>을 갖고 <strong>'도전'</strong>하며, 시스템을 <strong>'설계'</strong>하는 존재로 남아야 한다.</p>
     <div class="highlight">
       진정한 자유는 아무것도 안 하는 게 아니라,<br>내가 만든 시스템이 AI와 결합해 스스로 돌아가게 만들고<br>나는 더 가치 있는 곳에 내 시간을 쓰는 것이다.
     </div>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <div class="adaptor-box">
+      <div class="ab-label">초지능 시대 생존자 vs 도태자 — 결정적 차이</div>
+      <table>
+        <tr><th>행동 패턴</th><th>도태자</th><th>생존자 (얼리 어댑터)</th></tr>
+        <tr><td>새 기술을 만날 때</td><td>"이게 될까?" 의심하며 관망</td><td>"이걸로 무엇을 더 편하게 만들 수 있을까?" 즉시 체험</td></tr>
+        <tr><td>실패했을 때</td><td>"역시 내 분야가 아니야" 포기</td><td>"이 실패에서 무엇을 배웠나?" 다음 시도로 전환</td></tr>
+        <tr><td>주변 반응</td><td>"남들도 안 하잖아"로 위안</td><td>"내가 먼저 익혀서 남에게 전파하겠다"는 자세</td></tr>
+        <tr><td>시스템 구축</td><td>여전히 모든 것을 직접 처리</td><td>AI·자동화를 설계에 통합하여 반복 업무 제거</td></tr>
+        <tr><td>5년 후 위치</td><td>AI를 쓰는 자의 고객이 됨</td><td>AI를 설계하는 자의 고객을 확보한 설계자가 됨</td></tr>
+      </table>
+    </div>
+
     <p>내가 아들에게, 그리고 우리 교육생들에게 강조하는 인재상은 '조기 정착가(Early Adopter)'다. 새로운 기술이 나왔을 때 두려워하기보다 "이걸로 무엇을 더 편하게 만들 수 있을까?"라며 체험해보고 적응하는 자들이다.</p>
     <p>공급자의 삶이 주는 진정한 자유는 여기서 나온다. 내가 직접 용접하고 굴착기를 몰던 '육체적 노동'의 단계를 넘어, 이제는 AI라는 강력한 엔진을 내 설계도에 투입해 무한한 확장을 이루는 것이다.</p>
     <div class="highlight">
       끊임없이 체험하고, 먼저 적응하고, 끝내 발전시키는 자만이<br>초지능 시대의 주인이 된다.<br><br>
       당신의 호기심이라는 키를 잡고 전속력으로 항해를 시작하라.
     </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>호기심은 시대를 건너는 유일한 다리다 — 기술이 어떻게 바뀌든, 호기심을 갖고 먼저 체험하는 자는 항상 새로운 기회의 첫 번째 줄에 서게 된다.</li>
+        <li>공급자의 자유는 시스템과 AI가 결합될 때 완성된다 — 사람 노동에서 시스템 노동으로, 시스템 노동에서 AI 노동으로 진화할 때 진짜 자유가 온다.</li>
+        <li>얼리 어댑터는 태어나는 것이 아니라 선택하는 것이다 — 호기심 있게 달려드는 것은 재능이 아니라 습관이고 결단이다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">얼리 어댑터 마인드 실천 3단계</div>
+      <ol>
+        <li>매달 새로운 AI 도구 하나를 30분 이상 체험하라 — 완벽하게 익히려 하지 마라. "이게 무엇을 할 수 있는지"만 파악해도 당신의 가능성 지도가 계속 넓어진다.</li>
+        <li>체험한 것을 주변에 전파하라 — 남에게 설명하는 순간 당신의 이해가 깊어지고, 주변에서 "그 분야는 저 사람"이라는 평판이 쌓인다.</li>
+        <li>호기심을 시스템에 연결하라 — 단순 흥미로 끝내지 말고 "이 도구로 내 사업의 어떤 부분을 자동화할 수 있는가?"를 항상 물어라. 호기심이 수익으로 전환되는 순간이다.</li>
+      </ol>
+    </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 지침</div>
       <p>완벽한 인재는 태어나는 것이 아니라,<br>새로운 파도가 올 때 가장 먼저 서판을 들고 뛰어드는 호기심에서 완성된다.<br>당신의 호기심이 당신의 자유를 결정한다.</p>
