@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
@@ -13,7 +13,11 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #2c2c2c; color: #f0ede6; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #6dbf7a; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; }
     .category { display: inline-block; background: #edf5ee; color: #3a7050; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
+    .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
     .subtitle { font-size: 1.05rem; color: #888; font-style: italic; margin-bottom: 2rem; }
     .meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: #aaa; padding-bottom: 2rem; border-bottom: 1px solid #e8e4dc; margin-bottom: 2.5rem; }
@@ -23,9 +27,22 @@
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
     .speech-box { background: #f7f4ef; border-left: 4px solid #b0a090; padding: 1.2rem 1.5rem; margin: 2rem 0; font-style: italic; color: #4a3f30; border-radius: 0 8px 8px 0; }
     .speech-box .speaker { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.5rem; font-style: normal; }
+    .manual-box { background: #f5f5f0; border: 1px solid #dddbd4; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .manual-box .mn-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #5a5040; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .manual-box ul { padding-left: 1.2rem; margin: 0; }
+    .manual-box ul li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.4rem; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -44,36 +61,86 @@
   </div>
 </header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제3부 · 운용</div>
+    <div class="pb-title">1% 우수 교육기관의 시스템 경영</div>
+  </div>
+
   <span class="category">제3부 · 운용</span>
-  <h1>강사가 떠나도 멈추지 않는<br>매뉴얼의 힘</h1>
+    <div class="chapter-num">제 20장</div>
+<h1>강사가 떠나도 멈추지 않는<br>매뉴얼의 힘</h1>
   <p class="subtitle">― 사장의 자유는 '활자'에서 나온다</p>
+
   <div class="meta">
     <div class="avatar">진</div>
-    <span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span>
+    <span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span>
   </div>
+
   <div class="post-body">
     <div class="speech-box">
       <div class="speaker">사업하며 가장 등골 서늘한 말</div>
       "원장님, 저 오늘까지만 합니다."
     </div>
-    <p>많은 학원이 스타 강사 한 명의 기분에 휘둘려 존립이 위태로워지기도 한다. 하지만 나는 그런 경영을 단호히 거부했다.</p>
+
+    <p>많은 학원이 스타 강사 한 명의 기분에 휘둘려 존립이 위태로워지기도 한다. 굴착기 실기 교육을 10년째 담당해온 강사가 갑자기 그만둔다는 말을 들었을 때, 준비가 되지 않은 원장은 패닉에 빠진다. 나는 그런 경영을 단호히 거부했다.</p>
+
     <p>나는 우리 학원의 모든 노하우를 <strong>'활자'</strong>로 박제했다. 셔틀버스 기사님이 아침 몇 시에 시동을 걸어야 하는지부터, 강사가 굴착기 레버 조작법을 설명할 때 어떤 단어를 써야 하는지까지 모든 것을 매뉴얼화했다.</p>
+
     <div class="highlight">
-      주변에서는 "그렇게까지 빡빡하게 살아야 하느냐"고 묻는다.<br>하지만 내 답은 늘 같다.<br>"그래야 내가 자유롭다."
+      주변에서는 "그렇게까지 빡빡하게 살아야 하느냐"고 묻는다.<br>
+      하지만 내 답은 늘 같다.<br>
+      "그래야 내가 자유롭다."
     </div>
+
+    <div class="chapter-divider">· · ·</div>
+
     <p>정교한 매뉴얼이 있으면 사람이 바뀌어도 교육의 질은 1%도 흔들리지 않는다. 새로 온 강사도 매뉴얼 한 권이면 금세 베테랑처럼 가르칠 수 있다.</p>
+
+    <div class="manual-box">
+      <div class="mn-label">두산 교육 매뉴얼 구성 항목</div>
+      <ul>
+        <li>강의 매뉴얼 — 과목별 학습 목표, 시간 배분, 핵심 용어, 실기 시범 순서</li>
+        <li>장비 운영 매뉴얼 — 일일 점검 10개 항목, 이상 발생 시 즉시 보고 체계</li>
+        <li>수강생 응대 매뉴얼 — 상담 스크립트, 민원 처리 4단계, 수료식 진행 순서</li>
+        <li>행정 매뉴얼 — 고용노동부 서류 제출 기한, 직업훈련포털 입력 양식, 월별 보고 루틴</li>
+        <li>인수인계 매뉴얼 — 신임 직원이 72시간 안에 업무를 시작할 수 있는 온보딩 체크리스트</li>
+      </ul>
+    </div>
+
     <div class="highlight">
-      사장이 현장에서 삽질하고 있을 때 시스템은 멈춰 있지만,<br>사장이 시스템을 설계할 때 사업은 무한히 확장된다.<br><br>
+      사장이 현장에서 삽질하고 있을 때 시스템은 멈춰 있지만,<br>
+      사장이 시스템을 설계할 때 사업은 무한히 확장된다.<br><br>
       당신의 자유는 당신이 쓴 매뉴얼의 두께에 비례한다.
     </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>핵심 인력의 이탈은 예고 없이 온다 — 매뉴얼이 없으면 그 순간 조직은 무너진다.</li>
+        <li>사장의 자유는 노동에서 벗어날 때가 아니라, 노동을 문서화했을 때 얻어진다.</li>
+        <li>매뉴얼은 통제가 아니라 해방이다 — 잘 만든 매뉴얼은 직원도, 사장도, 고객도 편안하게 한다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">매뉴얼 경영 시작 3단계</div>
+      <ol>
+        <li>가장 자주 반복되는 업무 TOP 5를 골라라 — 그것부터 문서화하면 80%의 리스크가 사라진다.</li>
+        <li>신입 직원이 혼자 읽고 실행할 수 있는 수준으로 써라 — 알아서 이해하겠지 하는 가정은 매뉴얼의 적이다.</li>
+        <li>분기마다 매뉴얼을 현장 실행자와 함께 검토하고 업데이트하라 — 현장과 괴리된 매뉴얼은 종이 쓰레기다.</li>
+      </ol>
+    </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
       <p>지금 당신의 핵심 직원이 그만둔다면,<br>당신의 사업은 내일 아침에도 오늘과 똑같이 돌아갈 수 있는가?</p>
     </div>
+
     <div class="tag-row">
       <a href="#">자서전</a><a href="#">매뉴얼경영</a><a href="#">시스템</a><a href="#">사장의자유</a><a href="#">인사리스크</a><a href="#">인생의지름길</a>
     </div>
   </div>
+
   <div class="nav-posts">
     <a href="블로그_3부_19장.html"><div class="label">이전 글</div>제19장: 시험장은 곧 자산이다</a>
     <a href="블로그_3부_21장.html" style="text-align:right;"><div class="label">다음 글</div>제21장: 과열된 시장에서의 생존 — 보수교육이라는 구독형 지름길</a>
