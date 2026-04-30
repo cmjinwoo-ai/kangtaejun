@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #eeedf5; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #504080; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; color: #2c2c2c; }
     .category { display: inline-block; background: #eeedf5; color: #504080; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -21,9 +24,23 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .fail-box { background: #f0edf8; border: 1px solid #c8b8e8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; overflow-x: auto; }
+    .fail-box .fb-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #504080; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .fail-box table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .fail-box th { background: #504080; color: #fff; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.82rem; }
+    .fail-box td { border-bottom: 1px solid #e8e4f0; padding: 0.5rem 0.75rem; color: #2a1a4a; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .part-end { text-align: center; margin: 3rem 0; padding: 2rem; background: #eeedf5; border-radius: 10px; }
     .part-end .pe-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; color: #504080; text-transform: uppercase; margin-bottom: 0.5rem; }
     .part-end .pe-title { font-size: 1.1rem; font-weight: 800; color: #2c2c2c; }
@@ -40,28 +57,68 @@
 <body>
 <header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제4부 · 전수</div>
+    <div class="pb-title">박지성과 손흥민에게 배우는 멀티의 힘</div>
+  </div>
   <span class="category">제4부 · 전수</span>
-    <div class="chapter-num">제 35장</div>
-<h1>실패를 두려워하지 않는 자들만이<br>지름길을 소유한다</h1>
+  <div class="chapter-num">제 35장</div>
+  <h1>실패를 두려워하지 않는 자들만이<br>지름길을 소유한다</h1>
   <p class="subtitle">― 100번의 가접이 있어야 단 한 번의 완벽한 본접이 가능하다</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
   <div class="post-body">
     <p>많은 이들이 나에게 묻는다. "어떻게 그렇게 거침없이 결정하고 추진합니까? 무섭지 않습니까?" 나의 대답은 늘 같다. "실패를 대하는 관점이 다르기 때문입니다."</p>
-    <p>나에게 실패는 막다른 길이 아니라, 목적지까지 가는 길에 놓인 '수정 기회'일 뿐이다.</p>
+
+    <p>나에게 실패는 막다른 길이 아니라, 목적지까지 가는 길에 놓인 '수정 기회'일 뿐이다. 용접사가 가접을 100번 해야 완벽한 본접이 나오듯, 사업도 수많은 시행착오 끝에 견고한 시스템이 완성된다.</p>
+
     <div class="highlight">
       축구 선수가 슈팅을 10번 날려 9번을 놓쳤다고 해서 실패한 선수인가?<br><br>
       아니다. 9번의 빗나간 슈팅을 통해 발등의 각도를 조절했기에<br>마지막 10번째 결승 골이 터지는 것이다.
     </div>
-    <p>사업도 마찬가지다. 고용노동부와의 조율, 국방부와의 소송, 20여 개 경쟁 업체와의 싸움. 이 모든 과정에서 나 역시 수많은 시행착오를 겪었다.</p>
-    <p>하지만 나는 실패 앞에서 멈춰 서서 한탄하는 대신, 그 실패를 데이터로 변환했다. '이 방식은 안 되는구나'라는 데이터가 쌓일수록, '되는 방식'인 성공의 지름길은 더욱 선명해졌다.</p>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <div class="fail-box">
+      <div class="fb-label">실패 → 데이터 전환 사례</div>
+      <table>
+        <tr><th>실패 경험</th><th>얻은 데이터</th><th>이후 수정 결과</th></tr>
+        <tr><td>고용노동부 훈련과정 심사 탈락</td><td>서류 요건 미충족 항목 파악</td><td>보완 재신청 → 승인 획득</td></tr>
+        <tr><td>국방부와의 초기 협상 결렬</td><td>법적 근거 부족 확인</td><td>법률 검토 후 소송 → 유리한 조정</td></tr>
+        <tr><td>경쟁 업체 난립으로 수강생 이탈</td><td>가격 경쟁의 한계 체감</td><td>품질·합격률 차별화 전략으로 전환</td></tr>
+        <tr><td>강사 이탈로 과정 운영 위기</td><td>단일 강사 의존 구조의 위험성</td><td>강사 매뉴얼화 + 사장 자격 취득으로 대응</td></tr>
+      </table>
+    </div>
+
+    <p>사업도 마찬가지다. 고용노동부와의 조율, 국방부와의 소송, 20여 개 경쟁 업체와의 싸움. 이 모든 과정에서 나 역시 수많은 시행착오를 겪었다. 하지만 나는 실패 앞에서 멈춰 서서 한탄하는 대신, 그 실패를 데이터로 변환했다. '이 방식은 안 되는구나'라는 데이터가 쌓일수록, '되는 방식'인 성공의 지름길은 더욱 선명해졌다.</p>
+
     <div class="highlight">
       실패를 두려워하는 자는 결코 지름길을 소유할 수 없다.<br>그들은 평생 안전한 길(언덕길)만 찾다가 기회를 놓치기 때문이다.<br><br>
       지름길은 오직, 넘어져도 다시 일어나 설계도를 수정할 용기가 있는 자들에게만<br>통행증을 내어준다.
     </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>실패는 막다른 길이 아니라 수정 기회다 — 실패를 데이터로 보는 사람은 매번 더 나은 버전으로 업그레이드된다.</li>
+        <li>100번의 가접이 완벽한 본접을 만든다 — 처음부터 완벽하길 기대하지 마라. 반복이 정밀도를 만든다.</li>
+        <li>실패를 두려워하면 지름길 통행권을 얻을 수 없다 — 위험을 피하는 자는 결과도 피하게 된다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">실패를 데이터로 전환하는 3단계</div>
+      <ol>
+        <li>실패 후 24시간 안에 원인을 기록하라 — 감정이 가라앉기 전에 "무엇이 잘못됐는가"를 정확히 기록해야 데이터가 된다.</li>
+        <li>실패 원인을 '내 통제 가능 영역'과 '외부 요인'으로 분리하라 — 통제 가능한 것만 수정하면 된다. 외부 요인을 탓하는 것은 시간 낭비다.</li>
+        <li>수정된 방식으로 다시 슈팅하라 — 실패 분석에서 그치면 의미가 없다. 수정안을 들고 다시 경기장으로 나가야 한다.</li>
+      </ol>
+    </div>
+
     <div class="part-end">
       <div class="pe-label">제4부 완결</div>
       <div class="pe-title">전수 — 박지성과 손흥민에게 배우는 멀티의 힘</div>
     </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
       <p>당신은 실패를 '끝'이라고 생각하는가,<br>아니면 당신의 시스템을 더 정교하게 만들어줄 '무료 데이터'라고 생각하는가?</p>
