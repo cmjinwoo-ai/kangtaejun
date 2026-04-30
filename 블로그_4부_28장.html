@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #eeedf5; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #504080; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; color: #2c2c2c; }
     .category { display: inline-block; background: #eeedf5; color: #504080; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -21,9 +24,23 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .shoot-box { background: #f0edf8; border: 1px solid #c8b8e8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; overflow-x: auto; }
+    .shoot-box .sb-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #504080; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .shoot-box table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .shoot-box th { background: #504080; color: #fff; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.82rem; }
+    .shoot-box td { border-bottom: 1px solid #e8e4f0; padding: 0.5rem 0.75rem; color: #2a1a4a; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -37,22 +54,62 @@
 <body>
 <header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제4부 · 전수</div>
+    <div class="pb-title">박지성과 손흥민에게 배우는 멀티의 힘</div>
+  </div>
   <span class="category">제4부 · 전수</span>
-    <div class="chapter-num">제 28장</div>
-<h1>손흥민의 결정력<br>기회가 오면 주저 없이 슈팅하라</h1>
+  <div class="chapter-num">제 28장</div>
+  <h1>손흥민의 결정력<br>기회가 오면 주저 없이 슈팅하라</h1>
   <p class="subtitle">― 망설임은 수비수에게 시간을 줄 뿐이다</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
   <div class="post-body">
     <p>손흥민 선수의 경기를 보면 전율이 느껴지는 지점이 있다. 수비수 세 명 사이로 공이 흘러나오는 찰나의 순간, 그는 단 0.1초도 망설이지 않고 발등을 휘두른다. 그 '결정력'이 지금의 월드클래스 손흥민을 만들었다.</p>
-    <p>만약 그가 "각도가 안 좋은데?", "실패하면 어쩌지?"라고 고민했다면 골문은 이미 닫혔을 것이다.</p>
+
+    <p>만약 그가 "각도가 안 좋은데?", "실패하면 어쩌지?"라고 고민했다면 골문은 이미 닫혔을 것이다. 결정력은 무모함이 아니다. 수천 번의 훈련 끝에 쌓인 준비된 자의 본능적 반응이다.</p>
+
     <div class="highlight">
       코레일 부지가 눈에 들어왔을 때, 국방부와의 소송에서 승부수를 던져야 했을 때,<br>나는 손흥민처럼 슈팅했다.<br><br>
       남들이 "지금은 경기가 안 좋다", "법규가 복잡하다"며 공을 돌리고 있을 때,<br>나는 내가 준비한 데이터 기획안이라는 강력한 슈팅을 날렸다.
     </div>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <div class="shoot-box">
+      <div class="sb-label">나의 '손흥민 슈팅' 순간들</div>
+      <table>
+        <tr><th>상황</th><th>망설임의 이유</th><th>슈팅 결과</th></tr>
+        <tr><td>코레일 부지 임차 결정</td><td>"계약 조건이 까다롭다, 부지가 넓어 부담스럽다"</td><td>대규모 실습 공간 확보 → 수강 정원 2배 확대</td></tr>
+        <tr><td>국방부 소송 제기</td><td>"국가 기관과의 법적 분쟁은 무리다"</td><td>법리 준비 후 제기 → 유리한 조정 결과 확보</td></tr>
+        <tr><td>민간 국가기술자격 시험장 유치 신청</td><td>"경쟁 기관이 많다, 기준이 까다롭다"</td><td>서류 보완·실사 통과 → 단독 지정 획득</td></tr>
+        <tr><td>타워크레인 과정 교류 제안</td><td>"상대 기관이 거절하면 망신이다"</td><td>교류 성사 → 비용 0원에 기술 확보</td></tr>
+      </table>
+    </div>
+
     <p>슈팅하지 않으면 골은 절대 터지지 않는다. 성공의 지름길에 올라탄 사람은 완벽한 찬스를 기다리는 게 아니라, 찬스가 왔을 때 주저 없이 발을 뻗는 사람이다.</p>
+
     <div class="highlight">
       인생이라는 경기장에서 당신에게 주어진 시간은 짧다.<br>기회가 포착되었다면, 당신의 모든 에너지를 실어 슈팅하라.<br>골망을 흔드는 쾌감은 오직 실행하는 자의 몫이다.
     </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>결정력은 타고나는 것이 아니라 훈련된다 — 작은 결정을 빠르게 내리는 훈련이 쌓여 큰 승부에서의 결정력이 된다.</li>
+        <li>망설임에는 비용이 있다 — 기회의 창은 열린 시간이 짧다. 수비수가 따라붙기 전에 슈팅해야 한다.</li>
+        <li>슈팅의 근거는 준비된 데이터다 — 무모한 슈팅이 아니라, 분석과 준비 위에서 발사되는 확신이다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">결정력 훈련 3단계</div>
+      <ol>
+        <li>오늘 당신이 미루고 있는 결정 하나를 찾아라 — 그것이 당신의 슈팅 연습 대상이다. 24시간 안에 결정하라.</li>
+        <li>결정 기준을 미리 만들어두어라 — "이 기준 3개를 충족하면 실행한다"는 원칙이 있으면 결정이 빨라진다.</li>
+        <li>실패한 슈팅을 기록하라 — 실패 데이터가 쌓일수록 다음 슈팅의 정확도가 높아진다. 실패는 훈련이다.</li>
+      </ol>
+    </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
       <p>당신은 지금 골문 앞까지 와서 패스할 곳만 찾으며 머뭇거리고 있지는 않은가?<br>지금 바로 슈팅해야 할 당신의 '기회'는 무엇인가?</p>
