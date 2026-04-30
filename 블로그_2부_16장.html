@@ -13,6 +13,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #2c4a6e; color: #fff; border-radius: 8px; padding: 1.5rem 2rem; margin-bottom: 2rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #aac4e0; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 700; }
     .category { display: inline-block; background: #e8f0f5; color: #3a6080; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
     .subtitle { font-size: 1.05rem; color: #888; font-style: italic; margin-bottom: 2rem; }
@@ -21,6 +24,19 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .table-box { background: #f8f8f5; border: 1px solid #e0ddd5; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2rem 0; overflow-x: auto; }
+    .table-box .tb-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .table-box table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .table-box th { background: #2c2c2c; color: #fff; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.82rem; }
+    .table-box td { border-bottom: 1px solid #e8e4dc; padding: 0.5rem 0.75rem; color: #3a3020; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
@@ -43,17 +59,23 @@
   </div>
 </header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제2부 · 도전</div>
+    <div class="pb-title">무(無)에서 시스템을 구축하다</div>
+  </div>
+
   <span class="category">제2부 · 도전</span>
   <h1>노가다 사장이 아니라<br>'시스템 설계자'가 되어라</h1>
   <p class="subtitle">― 현장의 땀방울을 매뉴얼의 활자로 치환하는 법</p>
 
   <div class="meta">
     <div class="avatar">진</div>
-    <span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span>
+    <span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span>
   </div>
 
   <div class="post-body">
-    <p>나는 학원 시설물 하나, 조경수 한 그루도 내 손을 거치지 않은 것이 없다. 때로는 용접기를 들고, 때로는 굴착기를 직접 운전하며 현장을 누볐다.</p>
+    <p>나는 학원 시설물 하나, 조경수 한 그루도 내 손을 거치지 않은 것이 없다. 때로는 용접기를 들고, 때로는 굴착기를 직접 운전하며 현장을 누볐다. 컴퓨터가 고장 나면 내가 직접 분해하고 수리했다.</p>
+
     <p>주변에서는 나를 보고 "사장님이 직접 그런 노가다를 하느냐"고 묻기도 했다. 하지만 내가 현장에서 땀을 흘린 진짜 이유는 몸으로 때우기 위해서가 아니었다.</p>
 
     <div class="highlight">
@@ -66,7 +88,23 @@
 
     <div class="chapter-divider">· · ·</div>
 
-    <p>하지만 여기서 멈추면 평생 노가다만 하는 사장이 된다. 나는 현장에서 익힌 감각을 즉시 규정과 매뉴얼로 만들었다.</p>
+    <p>하지만 여기서 멈추면 평생 노가다만 하는 사장이 된다. 나는 현장에서 익힌 감각을 즉시 규정과 매뉴얼로 만들었다. 세 개의 교육기관을 동시에 운영하기 위해 내가 내린 결정은 명확했다. <strong>"사람이 아니라 시스템이 움직이게 하자."</strong></p>
+
+    <p>그 시작은 <strong>임무분장표</strong>였다. 직책별로 정확한 역할과 책임, 그리고 그에 따른 업무 흐름을 문서화한 것이다.</p>
+
+    <div class="table-box">
+      <div class="tb-label">두산 교육그룹 임무분장표 (핵심 직책)</div>
+      <table>
+        <tr><th>직책</th><th>주요 역할</th><th>비고</th></tr>
+        <tr><td>대표</td><td>전체 기획 및 대외 협력</td><td>최종 의사결정</td></tr>
+        <tr><td>행정담당자</td><td>수강생 등록, 정부지원 서류 처리</td><td>고용노동부·직업훈련포털 연계</td></tr>
+        <tr><td>직업상담사</td><td>상담 및 수요조사, 만족도 분석</td><td>입학과 취업 사이의 연결자</td></tr>
+        <tr><td>훈련교사</td><td>교과 운영, 평가 관리</td><td>국가기술자격 대응</td></tr>
+        <tr><td>외래강사</td><td>특정 실기 과목 전담</td><td>계약 기반 운영</td></tr>
+      </table>
+    </div>
+
+    <p>이렇게 만든 임무분장표는 누가 퇴사하거나 새로운 사람이 들어와도, 그 문서를 받는 즉시 업무가 재개될 수 있는 <strong>자전적 시스템</strong>이었다. 어떤 직원이 빠져도 조직이 멈추지 않는 구조 — 이것이 내가 추구한 설계자의 목표였다.</p>
 
     <div class="highlight">
       사장의 노동은 시스템을 만들기 위한 '재료'여야지,<br>
@@ -76,7 +114,23 @@
       그것이 설계자의 본분이다.
     </div>
 
-    <p>나는 오늘도 현장에서 문제를 발견하고, 내일은 그 문제를 해결할 시스템을 설계한다.</p>
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>현장을 직접 아는 사장만이 직원에게 속지 않는 시스템을 만들 수 있다.</li>
+        <li>임무분장표는 자영업을 조직으로 바꾸는 첫걸음이다 — 역할이 명확해야 책임도 명확해진다.</li>
+        <li>좋은 시스템이 있으면 누구든 들어와서 잘 해낼 수 있다 — 사람에 의존하지 말고 시스템에 투자하라.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">시스템 설계자로 전환하는 3단계</div>
+      <ol>
+        <li>사장이 직접 모든 현장 업무를 한 번씩 직접 해보라 — 현장을 모르면 시스템을 설계할 수 없다.</li>
+        <li>반복적으로 하는 업무를 모두 문서화하라 — 임무분장표, 업무 매뉴얼, 체크리스트 순으로 만들어라.</li>
+        <li>"내가 없어도 이 업무가 진행될 수 있는가?"를 매달 점검하라 — 아니라면, 아직 시스템이 아니다.</li>
+      </ol>
+    </div>
 
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
@@ -84,7 +138,7 @@
     </div>
 
     <div class="tag-row">
-      <a href="#">자서전</a><a href="#">시스템경영</a><a href="#">현장경영</a><a href="#">매뉴얼</a><a href="#">사장의역할</a><a href="#">인생의지름길</a>
+      <a href="#">자서전</a><a href="#">시스템경영</a><a href="#">현장경영</a><a href="#">임무분장표</a><a href="#">사장의역할</a><a href="#">인생의지름길</a>
     </div>
   </div>
 
