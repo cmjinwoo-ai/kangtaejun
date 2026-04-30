@@ -13,6 +13,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #2c4a6e; color: #fff; border-radius: 8px; padding: 1.5rem 2rem; margin-bottom: 2rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #aac4e0; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 700; }
     .category { display: inline-block; background: #e8f0f5; color: #3a6080; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
     .subtitle { font-size: 1.05rem; color: #888; font-style: italic; margin-bottom: 2rem; }
@@ -21,8 +24,18 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
-    .speech-box { background: #f7f4ef; border-left: 4px solid #b0a090; padding: 1.2rem 1.5rem; margin: 2rem 0; font-style: italic; color: #4a3f30; border-radius: 0 8px 8px 0; }
-    .speech-box .speaker { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.5rem; font-style: normal; }
+    .speech-box { background: #f8f8fc; border: 1px solid #d0d0e8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .speech-box .speaker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: #5050a0; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .speech-box .d-line { margin-bottom: 0.6rem; font-size: 0.97rem; }
+    .speech-box .d-line .sp { font-weight: 700; color: #3a3080; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
@@ -45,23 +58,33 @@
   </div>
 </header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제2부 · 도전</div>
+    <div class="pb-title">무(無)에서 시스템을 구축하다</div>
+  </div>
+
   <span class="category">제2부 · 도전</span>
   <h1>MOU 협약의 기술:<br>공공의 이익을 내 편으로 만들어라</h1>
   <p class="subtitle">― "나만 잘되는 사업"은 반드시 망하고, "함께 잘되는 사업"은 길이 열린다</p>
 
   <div class="meta">
     <div class="avatar">진</div>
-    <span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span>
+    <span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span>
   </div>
 
   <div class="post-body">
-    <p>코레일과의 협상은 쉽지 않았다. 공공기관은 보수적이다. 그들에게 "내가 돈 많이 벌게 해줄게"라는 말은 통하지 않는다. 그들이 움직이는 유일한 명분은 <strong>'공익'</strong>과 <strong>'안정성'</strong>이다.</p>
-    <p>나는 협상 테이블에 앉아 나를 '임차인'이 아닌 <strong>'파트너'</strong>로 포지셔닝했다.</p>
+    <p>코레일과의 협상 테이블에서 나는 담당 차장의 눈을 똑바로 바라봤다. 그는 내 사업계획서를 훑어보며 조용히 물었다. <strong>"연간 임대료가 상당한 금액인데, 감당할 수 있겠습니까?"</strong></p>
+
+    <p>솔직히 말하면, 그 숫자를 들었을 때 나는 속으로 놀랐다. 하지만 포커페이스를 유지하며 대답했다. "수익 구조가 이렇게 설계되어 있습니다. 제가 그 금액을 충분히 감당할 수 있는 이유를 설명드리겠습니다."</p>
 
     <div class="speech-box">
-      <div class="speaker">협상 테이블에서</div>
-      "이 사업은 단순히 제가 돈을 버는 일이 아닙니다. 코레일이 보유한 유휴 자원을 활용해 청년 일자리를 창출하고, 국가 자격시험장의 부족 문제를 해결하는 공익 프로젝트입니다."
+      <div class="speaker">코레일 협상 테이블 — 결정적인 순간</div>
+      <div class="d-line"><span class="sp">코레일 차장:</span> "이 부지와 크레인 사용료를 연 수억 원으로 책정했는데, 당신이 감당할 수 있겠느냐?"</div>
+      <div class="d-line"><span class="sp">나:</span> "공동 운영 방식으로 수익을 나누는 구조라면, MOU 형태로 협약을 맺고 운영해보는 것도 방법입니다. 당신이 얻는 것, 저도 명확히 계산했습니다."</div>
+      <div class="d-line"><span class="sp">코레일 차장:</span> "당신처럼 진정성 있고, 설계가 명확한 사람은 드물거든. 공동 운영으로 가봅시다."</div>
     </div>
+
+    <p>공공기관은 보수적이다. 그들에게 "내가 돈 많이 벌게 해줄게"라는 말은 통하지 않는다. 그들이 움직이는 유일한 명분은 <strong>'공익'</strong>과 <strong>'안정성'</strong>이다. 나는 협상 테이블에 앉아 나를 '임차인'이 아닌 <strong>'파트너'</strong>로 포지셔닝했다.</p>
 
     <div class="highlight">
       나 혼자 잘 먹고 잘살겠다는 기획은 상대를 경계하게 만들지만,<br>
@@ -69,14 +92,42 @@
       상대를 내 편으로 만든다.
     </div>
 
-    <p>연간 5억 원이라는 임대료는 부담이었지만, 나는 이를 역으로 이용했다. "5억 원을 낼 수 있을 만큼 확실한 수요 데이터가 여기 있습니다. 저는 이 숫자를 책임질 준비가 되어 있습니다."</p>
-    <p>상대방이 가장 두려워하는 '책임'의 문제를 내가 명확한 데이터로 해결해 주자, 굳게 닫혔던 문이 열렸다.</p>
+    <div class="chapter-divider">· · ·</div>
+
+    <p>MOU란 무엇인가? 많은 사람이 MOU를 형식적인 문서로 여긴다. 서로의 이름을 나란히 올리고, 멋진 현수막 앞에서 사진 한 장 찍는 행사 정도로 생각한다.</p>
+
+    <p>하지만 내가 경험한 MOU는 그것과 완전히 달랐다. 그것은 <strong>책임을 공유하는 약속</strong>이었다. 기회를 나누겠다는 상호 신뢰의 증거였고, 실패했을 때의 리스크까지 함께 받아들이겠다는 용기의 선언이었다.</p>
+
+    <p>나는 그 후에도 수많은 협력기관들과 MOU를 맺었다. 산업인력공단, 고용노동부 지역고용센터, 직업능력개발원, 지역 기업들. 각 기관의 담당자들이 나를 믿은 것은 내가 단지 실적이 있어서가 아니라, <strong>항상 먼저 설계도를 가져오는 실행하는 사람</strong>이라는 것을 알고 있었기 때문이다.</p>
 
     <div class="highlight">
       가장 강력한 설득은 내 이익을 주장하는 것이 아니라,<br>
       상대방이 얻게 될 이익을 증명하는 것이다.<br>
       성공의 지름길은 혼자 가는 것이 아니라,<br>
       거물급 파트너의 어깨에 올라타 함께 가는 것이다.
+    </div>
+
+    <p>나는 항상 먼저 움직였다. 먼저 문서를 만들어서 들고 갔고, 먼저 상대방의 입장에서 제안을 설계했다. 그래서 협력자들은 내게 기회를 줬고, 나는 그 기회를 결과로 증명했다.</p>
+
+    <p>천장크레인 시험장을 유치할 수 있었던 것도, 평택 두산빌딩 실습장 설계가 가능했던 것도, 인천 중장비학원을 론칭할 수 있었던 것도 — 모두 MOU로 확장한 사람 중심의 연대 시스템 덕분이었다.</p>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>MOU는 서류가 아니라 신뢰의 거래다 — 상대방의 리스크를 먼저 없애줘야 체결된다.</li>
+        <li>공공기관은 '돈'이 아니라 '명분'과 '공익'에 반응한다. 그 언어를 쓰는 사람만이 파트너가 된다.</li>
+        <li>함께 잘되는 구조를 먼저 설계하는 사람이 협상을 주도하고 더 큰 판을 얻는다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">MOU 체결 전략 4단계</div>
+      <ol>
+        <li>상대기관이 가장 두려워하는 것(리스크)을 먼저 파악하라 — 그것을 해결해 주는 것이 제안의 시작점이다.</li>
+        <li>내 수익 구조를 숨기지 말고, 상대방이 얻는 이익과 함께 투명하게 공개하라.</li>
+        <li>"내가 성공하면 당신도 성공한다"는 공동 이익 모델을 수치로 제시하라.</li>
+        <li>MOU 체결 후가 시작이다 — 약속한 결과를 반드시 데이터로 증명하라.</li>
+      </ol>
     </div>
 
     <div class="question-box">
