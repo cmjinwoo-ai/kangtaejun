@@ -13,6 +13,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #2c4a6e; color: #fff; border-radius: 8px; padding: 1.5rem 2rem; margin-bottom: 2rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #aac4e0; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 700; }
     .category { display: inline-block; background: #e8f0f5; color: #3a6080; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
     .subtitle { font-size: 1.05rem; color: #888; font-style: italic; margin-bottom: 2rem; }
@@ -21,9 +24,21 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .verdict-box { background: #f0f4e8; border: 1px solid #c0d0a0; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .verdict-box .v-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a6a20; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .verdict-box p { font-size: 1rem; color: #2a3a10; font-weight: 600; font-style: italic; margin: 0; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -42,33 +57,71 @@
   </div>
 </header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제2부 · 도전</div>
+    <div class="pb-title">무(無)에서 시스템을 구축하다</div>
+  </div>
+
   <span class="category">제2부 · 도전</span>
   <h1>입찰 무효를 뒤집은 행정소송,<br>위기를 자산으로 바꾸다</h1>
   <p class="subtitle">― 법은 지키는 자에게는 방패가 되고, 활용하는 자에게는 무기가 된다</p>
 
   <div class="meta">
     <div class="avatar">진</div>
-    <span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span>
+    <span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span>
   </div>
 
   <div class="post-body">
     <p>평택 땅을 두고 벌어진 국방부와의 싸움은 단순히 '땅을 지키느냐 마느냐'의 문제가 아니었다. 그것은 내가 설계한 시스템의 정당성을 국가로부터 공인받는 과정이었다.</p>
-    <p>입찰 무효 통보를 받았을 때, 나는 하늘이 무너지는 기분이었지만 곧바로 정신을 차렸다.</p>
+
+    <p>입찰 무효 통보를 받았을 때, 나는 하늘이 무너지는 기분이었다. 하지만 곧바로 정신을 차렸다.</p>
 
     <div class="highlight">
       "이 위기를 이겨내면,<br>
       이 땅은 그 누구도 건드릴 수 없는 난공불락의 요새가 된다."
     </div>
 
-    <p>나는 행정소송을 진행하며 단순히 변호사 뒤에 숨지 않았다. 공무원이 왜 이런 결정을 내렸는지 그들의 생리를 분석했고, 법령의 빈틈을 메울 수 있는 데이터를 직접 수집했다.</p>
-    <p>결국 승소 판결을 받아냈을 때, 나는 땅만 되찾은 것이 아니었다. 국가 기관조차 함부로 할 수 없는 <strong>'완벽한 절차적 정당성'</strong>이라는 엄청난 무형 자산을 얻었다.</p>
+    <p>나는 행정소송을 진행하며 단순히 변호사 뒤에 숨지 않았다. 공무원이 왜 이런 결정을 내렸는지 그들의 생리를 분석했다. 국방부 TMO(군용 열차 운용) 부지가 왜 공매 시스템에 잘못 등록되었는지, 내부 전산 오류의 책임 소재가 어디에 있는지를 직접 파악했다.</p>
+
+    <p>그리고 법령의 빈틈을 메울 수 있는 데이터를 수집했다. 입찰 공고문, 담보금 납부 영수증, 낙찰 통보서, 계약 진행 과정의 모든 증빙을 체계적으로 정리했다. <strong>"입찰에서 내 과실은 없다. 실수는 기관에 있다."</strong> 이것이 내 주장의 핵심이었다.</p>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <p>재판장에서 나는 감정에 호소하지 않았다. 서류로, 숫자로, 법령으로 말했다. 수 개월 간의 법정 공방 끝에 재판부는 판결을 내렸다.</p>
+
+    <div class="verdict-box">
+      <div class="v-label">법원 최종 판결</div>
+      <p>"계약상 과실은 행정기관에 있으므로, 낙찰자는 해당 부지(354㎡)를 정당하게 인도받아야 한다."</p>
+    </div>
+
+    <p>승소 판결문을 손에 쥔 날, 나는 땅만 되찾은 것이 아니었다. 국가 기관조차 함부로 할 수 없는 <strong>'완벽한 절차적 정당성'</strong>이라는 엄청난 무형 자산을 얻었다.</p>
 
     <div class="highlight">
       위기는 피하는 것이 아니라,<br>
-      밟고 올라서서 더 높은 곳을 보는 계단이다.
+      밟고 올라서서 더 높은 곳을 보는 계단이다.<br><br>
+      국방부와의 소송 덕분에 나는 행정법의 전문가가 되었고,<br>
+      이후 어떤 부지를 확보하더라도 법적 리스크를 사전에 차단하는 능력을 갖추게 되었다.
     </div>
 
-    <p>국방부와의 소송 덕분에 나는 행정법의 전문가가 되었고, 이후 어떤 부지를 확보하더라도 법적 리스크를 사전에 완벽히 차단하는 능력을 갖추게 되었다.</p>
+    <p>위기는 성공의 지름길을 가는 사람을 멈추게 하려는 게 아니다. 그 사람이 이 길을 갈 자격이 있는지를 테스트하는 과정이다. 정면으로 돌파해 이겨내면, 그 위기는 누구도 건드릴 수 없는 당신만의 독보적인 진입장벽이 된다.</p>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>위기를 겪을 때마다 더 단단해지는 것이 진짜 시스템이다 — 뒷문으로 피한 사람은 다음 위기에 무너진다.</li>
+        <li>법은 감정이 아니라 증거로 싸운다 — 절차와 서류의 완벽성이 가장 강력한 방패다.</li>
+        <li>위기에서 배운 지식은 가장 비싼 수업료로 얻은 경쟁력이다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">행정 위기 대응 3단계</div>
+      <ol>
+        <li>감정을 배제하고 즉시 증거 수집에 돌입하라 — 계약 절차상 내 과실이 없음을 입증하는 자료를 먼저 확보하라.</li>
+        <li>행정 전문 변호사와 함께 대응 전략을 수립하되, 핵심 논리는 당사자인 내가 직접 파악하라.</li>
+        <li>소송 결과가 나오면 그 경험을 매뉴얼화하라 — 다음 위기에는 더 빠르고 강하게 대응할 수 있다.</li>
+      </ol>
+    </div>
 
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
