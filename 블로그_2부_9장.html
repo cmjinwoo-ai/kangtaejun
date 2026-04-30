@@ -13,7 +13,10 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
-    .category { display: inline-block; background: #e8f0f5; color: #3a6080; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
+    .part-banner { background: #2c2c2c; color: #fff; border-radius: 8px; padding: 1.5rem 2rem; margin-bottom: 2rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #aaa; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 700; }
+    .category { display: inline-block; background: #f0ede6; color: #7a6a50; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
     .subtitle { font-size: 1.05rem; color: #888; font-style: italic; margin-bottom: 2rem; }
     .meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: #aaa; padding-bottom: 2rem; border-bottom: 1px solid #e8e4dc; margin-bottom: 2.5rem; }
@@ -21,15 +24,22 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
-    .speech-box { background: #f7f4ef; border-left: 4px solid #b0a090; padding: 1.2rem 1.5rem; margin: 2rem 0; font-style: italic; color: #4a3f30; border-radius: 0 8px 8px 0; }
-    .speech-box .speaker { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.5rem; font-style: normal; }
+    .speech-box { background: #f8f8fc; border: 1px solid #d0d0e8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .speech-box .speaker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: #5050a0; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .speech-box .d-line { margin-bottom: 0.6rem; font-size: 0.97rem; }
+    .speech-box .d-line .sp { font-weight: 700; color: #3a3080; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
-    .part-banner { background: #2c2c2c; color: #f0ede6; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
-    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #d4a843; text-transform: uppercase; margin-bottom: 0.4rem; }
-    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -59,27 +69,56 @@
 
   <div class="meta">
     <div class="avatar">진</div>
-    <span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>6분 읽기</span>
+    <span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>8분 읽기</span>
   </div>
 
   <div class="post-body">
-    <p>사업을 시작하려 할 때 가장 큰 벽은 언제나 '돈'이다. 하지만 나는 돈보다 '명분'이 먼저라고 믿었다. 용산역 뒤편, 코레일이 보유한 3,000평의 거대한 땅. 그곳은 도심의 노른자위였지만, 동시에 관리가 까다로운 유휴지였다. 나는 그 땅을 보며 단순한 임대업이 아니라 '국가적 기술 교육의 메카'를 꿈꿨다.</p>
-    <p>하지만 현실은 냉혹했다. 그 땅의 연간 임대료만 무려 5억 원. 갓 전역한 내 주머니엔 그 5분의 1도 없었다.</p>
+    <p>사업을 시작하려 할 때 가장 큰 벽은 언제나 '돈'이다. 하지만 나는 돈보다 '명분'이 먼저라고 믿었다. 용산역 뒤편, 코레일이 보유한 3,000평의 거대한 땅. 그곳은 도심의 노른자위였지만, 동시에 관리가 까다로운 유휴지였다. 나는 그 땅을 보며 단순한 임대업이 아니라 <strong>'국가적 기술 교육의 메카'</strong>를 꿈꿨다.</p>
+
+    <p>그리고 그 꿈을 현실로 바꾸기 위해 두 가지를 동시에 실행했다. 첫 번째는 국가자격시험장 유치, 두 번째는 정부 계좌제 교육 시스템 연동이었다.</p>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <p>한 수강생이 말했다. <strong>"대표님, 천장크레인 국가자격시험 보려면 대전 신탄진까지 내려가야 해요."</strong> 나는 이 말에서 강력한 힌트를 얻었다. '시험이 있는 곳에 사람이 몰리는구나.' 전국에서 단 하나뿐이던 민간 시험장인 신탄진을 분석하기 시작했다.</p>
 
     <div class="speech-box">
-      <div class="speaker">코레일 담당자 앞에서 한 말</div>
-      "이 놀고 있는 크레인과 땅을 저에게 맡겨주십시오. 제가 이곳을 대한민국 최고의 중장비 교육장으로 만들어, 여러분에게는 매년 5억 원의 확실한 수익을 안겨드리고, 국가에는 숙련된 기술 인력을 공급하겠습니다."
+      <div class="speaker">산업인력공단 방문 — 시험장 유치 제안</div>
+      <div class="d-line"><span class="sp">공단 관계자:</span> "민간에 시험장을 주는 건 쉬운 일이 아닙니다. 운영, 안전, 장비 기준 다 갖춰야 해요."</div>
+      <div class="d-line"><span class="sp">나:</span> "그래서 제가 직접 설계한 '실습장 안전 시스템'과 장비 점검 프로세스 문서를 가져왔습니다."</div>
     </div>
 
-    <p>나의 전략은 내 돈을 쓰는 게 아니라, 코레일이 가진 자산의 '잠재 가치'를 깨워 그 수익으로 임대료를 지불하는 구조를 만드는 것이었다. 이것이 바로 성공의 지름길에서 말하는 <strong>'레버리지'</strong>다.</p>
+    <p>그들은 놀랐다. 단순히 공간을 제공하겠다는 수준이 아니라, 국가기술자격시험장을 안정적으로 운영할 수 있는 구조를 이미 만들어 두었다는 점에서 신뢰를 얻은 것이다. 이렇게 서울 용산에 <strong>전국 두 번째, 수도권 최초의 민간 천장크레인 시험장</strong>이 탄생했다.</p>
 
     <div class="highlight">
-      0원으로 시작했지만,<br>
-      내 머릿속엔 이미 5억 원 이상의 가치를 만들어낼<br>
-      설계도가 완성되어 있었다.
+      시험장은 곧 사람을 부르는 자석이다.<br>
+      시험이 있는 곳에 교육생이 몰리고,<br>
+      교육생이 몰리면 수익이 따라온다.
     </div>
 
-    <p>남들이 "이 미친 짓"이라며 비웃을 때, 나는 코레일 소속 천장크레인 4대를 내 사업의 엔진으로 삼았다. 놀고 있는 자산 위에 교육 시스템을 올린 것이다. 자본이 없는 자가 자본보다 강한 '기획'으로 판을 짜는 법, 그것이 내가 터득한 첫 번째 지름길이었다.</p>
+    <div class="chapter-divider">· · ·</div>
+
+    <p>같은 시기, 2009년 정부가 실업자 계좌제(내일배움카드제)를 도입했다. 교육생 1인당 최대 200만 원의 교육비를 국가가 지원하는 이 시스템은 나에게 두 번째 날개였다. 국가자격시험장을 보유한 내 학원은 이 흐름을 가장 먼저 탑승한 곳 중 하나가 되었다.</p>
+
+    <p>교육생 수는 폭발적으로 증가했다. 연간 임대료 5억 원이 부담이었던 그 땅에서, 나는 5억을 훌쩍 넘는 수익을 만들어냈다. 자본금 0원으로 판을 짠 사람의 결과였다.</p>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>시험장은 단순한 시설이 아니라 '수요를 창출하는 시스템'이다.</li>
+        <li>정부 지원 제도를 소비자로 받는 것이 아니라, 시스템의 운영자로 연동하라.</li>
+        <li>남이 피하는 비어 있는 자산(유휴지, 유휴 장비)에서 기회를 찾아라.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">민간 자격시험장 유치 4단계</div>
+      <ol>
+        <li>시장의 불편을 먼저 분석하라 — "시험장이 멀다", "딴 곳에서 시험 본다" = 수요 분산.</li>
+        <li>기존 시험장의 위치·동선·접근성을 분석하고 차별화 요소를 찾아라.</li>
+        <li>공단 기준을 선제적으로 준비하라 — 장비 등록, 안전 계획, 교육 시나리오 포함.</li>
+        <li>'운영할 수 있는 사람'이 아닌 '운영될 수 있는 시스템'을 보여줘라.</li>
+      </ol>
+    </div>
 
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
@@ -87,7 +126,7 @@
     </div>
 
     <div class="tag-row">
-      <a href="#">자서전</a><a href="#">무자본창업</a><a href="#">레버리지</a><a href="#">코레일</a><a href="#">중장비교육</a><a href="#">인생의지름길</a>
+      <a href="#">자서전</a><a href="#">무자본창업</a><a href="#">시험장유치</a><a href="#">계좌제전략</a><a href="#">레버리지</a><a href="#">인생의지름길</a>
     </div>
   </div>
 
