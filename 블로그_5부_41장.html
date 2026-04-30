@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #f5ede8; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #803020; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; color: #2c2c2c; }
     .category { display: inline-block; background: #f5ede8; color: #803020; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -21,9 +24,23 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .mission-box { background: #fff5f0; border: 1px solid #e8c8b8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; overflow-x: auto; }
+    .mission-box .mn-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #803020; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .mission-box table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .mission-box th { background: #803020; color: #fff; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.82rem; }
+    .mission-box td { border-bottom: 1px solid #f0e0d8; padding: 0.5rem 0.75rem; color: #4a2010; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -37,22 +54,60 @@
 <body>
 <header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제5부 · 확장</div>
+    <div class="pb-title">새로운 영토를 향한 위대한 항해</div>
+  </div>
   <span class="category">제5부 · 확장</span>
-    <div class="chapter-num">제 41장</div>
-<h1>기술 이전이 아닌<br>자립 기반을 전수하는 명분</h1>
+  <div class="chapter-num">제 41장</div>
+  <h1>기술 이전이 아닌<br>자립 기반을 전수하는 명분</h1>
   <p class="subtitle">― 고기를 주는 자는 주인이 되고, 낚시법을 주는 자는 스승이 된다</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
   <div class="post-body">
     <p>성공의 지름길을 달리는 설계자에게 '명분'은 가장 강력한 연료다. 내가 베트남의 쏘나그룹을 찾아가고 해외 시장을 두드리는 이유는 단순히 돈을 더 벌기 위해서가 아니다. 나는 그들에게 '구걸하지 않아도 되는 법'을 팔러 갔다.</p>
     <div class="highlight">
       하수들은 기술을 전수할 때 핵심 노하우를 숨기며 상대를 종속시키려 한다.<br>하지만 고수는 아예 상대가 스스로 일어설 수 있는 '자립 시스템'을 통째로 이식해버린다.<br><br>
       상대가 강해져야 시장이 커지고, 시장이 커져야 내가 올라탈 파도도 높아지기 때문이다.
     </div>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <div class="mission-box">
+      <div class="mn-label">자립 전수 vs 종속 전수 — 두 가지 전략의 결과</div>
+      <table>
+        <tr><th>구분</th><th>종속 전수 전략</th><th>자립 전수 전략</th></tr>
+        <tr><td>핵심 노하우</td><td>숨기고 통제하며 의존 관계 유지</td><td>전부 이식하여 파트너가 자체 실행 가능하게</td></tr>
+        <tr><td>파트너 위치</td><td>영원한 하청업체 — 을(乙)의 구조</td><td>대등한 공급자 — 함께 시장을 키우는 파트너</td></tr>
+        <tr><td>시장 규모</td><td>내 통제 안에서 작게 유지</td><td>파트너 성장 → 시장 확대 → 내 영토 확장</td></tr>
+        <tr><td>장기 결과</td><td>파트너 이탈, 신뢰 손상, 관계 소멸</td><td>파트너 자립 → 더 큰 협력 생태계 형성</td></tr>
+        <tr><td>나의 위상</td><td>기술 공급자에 그침</td><td>시스템 설계자 — 절대적 권위 확보</td></tr>
+      </table>
+    </div>
+
     <p>나는 베트남 현지인들에게 중장비 레버 잡는 법만 가르치지 않았다. 그 레버 하나로 어떻게 가족을 먹여 살리고, 어떻게 자기 나라의 인프라를 건설하는 주역이 될 수 있는지 '자립의 철학'을 심었다.</p>
     <div class="highlight">
       당신이 누군가와 협상할 때<br>"나를 도와달라"고 하지 말고,<br>"당신이 스스로 일어설 수 있게 내 시스템을 쓰라"고 말하라.<br><br>
       상대를 주인공으로 만드는 순간, 당신은 그 세계의 절대적인 설계자가 된다.
     </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>명분이 있는 사업은 쉽게 흔들리지 않는다 — "돈을 벌기 위해"보다 "당신을 자립시키기 위해"라는 명분이 상대의 마음을 열고 더 강력한 협력을 이끌어낸다.</li>
+        <li>상대를 강하게 만드는 자가 더 강해진다 — 파트너가 성장할수록 시장이 커지고, 시장이 커질수록 내가 올라탈 파도도 높아진다.</li>
+        <li>자립 시스템을 이식하는 자가 설계자가 된다 — 기술을 빌려주면 하청업체가 되지만, 시스템을 이식하면 그 생태계의 영원한 설계자가 된다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">자립 기반 전수 시스템 구축 3단계</div>
+      <ol>
+        <li>상대의 자립을 방해하는 것이 무엇인지 파악하라 — 기술 부족인지, 자금 부족인지, 시스템 부족인지를 정확히 진단해야 진짜 해결책을 줄 수 있다.</li>
+        <li>핵심을 아낌없이 주되, 철학을 반드시 함께 심어라 — 기술만 주면 카피캣이 생기지만, 철학을 함께 심으면 당신의 분신이 만들어진다.</li>
+        <li>파트너의 성공을 나의 KPI로 삼아라 — 내 매출보다 파트너의 자립도를 성공 지표로 관리하면, 장기적으로 훨씬 더 큰 시장이 열린다.</li>
+      </ol>
+    </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 지침</div>
       <p>당신의 비즈니스는 상대를 당신에게 매달리게 만드는가,<br>아니면 상대를 당당한 파트너로 성장시키는가?<br>후자를 택할 때 당신의 영토는 무한히 확장된다.</p>
