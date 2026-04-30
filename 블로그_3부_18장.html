@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
@@ -13,7 +13,11 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #2c2c2c; color: #f0ede6; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #6dbf7a; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; }
     .category { display: inline-block; background: #edf5ee; color: #3a7050; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
+    .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
     .subtitle { font-size: 1.05rem; color: #888; font-style: italic; margin-bottom: 2rem; }
     .meta { display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; color: #aaa; padding-bottom: 2rem; border-bottom: 1px solid #e8e4dc; margin-bottom: 2.5rem; }
@@ -25,12 +29,23 @@
     .system-box .s-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #3a7050; text-transform: uppercase; margin-bottom: 0.75rem; }
     .system-box ul { padding-left: 1.2rem; }
     .system-box ul li { margin-bottom: 0.4rem; font-size: 0.97rem; color: #2a4a2a; }
+    .process-box { background: #f8f8f5; border: 1px solid #e0ddd5; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; overflow-x: auto; }
+    .process-box .p-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #5a5040; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .process-box table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .process-box th { background: #2c4a2c; color: #fff; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.82rem; }
+    .process-box td { border-bottom: 1px solid #e8e4dc; padding: 0.5rem 0.75rem; color: #3a3020; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
-    .part-banner { background: #2c2c2c; color: #f0ede6; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
-    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #6dbf7a; text-transform: uppercase; margin-bottom: 0.4rem; }
-    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -55,31 +70,82 @@
   </div>
 
   <span class="category">제3부 · 운용</span>
-  <h1>학원은 교육기관이 아니라<br>정교한 '공장'이다</h1>
+    <div class="chapter-num">제 18장</div>
+<h1>학원은 교육기관이 아니라<br>정교한 '공장'이다</h1>
   <p class="subtitle">― 감정이 아니라 데이터로 돌아가는 교육 자동화 시스템</p>
 
   <div class="meta">
     <div class="avatar">진</div>
-    <span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span>
+    <span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span>
   </div>
 
   <div class="post-body">
     <p>사람들은 학원을 '선생님이 학생을 가르치는 곳'이라고 생각한다. 하지만 지름길을 설계하는 내 관점은 다르다.</p>
-    <div class="highlight">나에게 학원은 '기술 인력을 생산해내는 정교한 공장'이다.<br>공장에는 원료가 들어오고 공정을 거쳐 완제품이 나오듯,<br>우리 학원에는 미숙련자가 들어와 '자격증을 손에 든 전문가'로 출고된다.</div>
+
+    <div class="highlight">
+      나에게 학원은 '기술 인력을 생산해내는 정교한 공장'이다.<br>
+      공장에는 원료가 들어오고 공정을 거쳐 완제품이 나오듯,<br>
+      우리 학원에는 미숙련자가 들어와 '자격증을 손에 든 전문가'로 출고된다.
+    </div>
+
     <p>이 공장이 24시간 고장 없이 돌아가게 하려면 감정에 휘둘려서는 안 된다. 강사의 기분에 따라 강의 내용이 바뀌거나, 직원의 컨디션에 따라 상담 질이 달라진다면 그것은 불량률이 높은 하급 공장이다. 나는 모든 과정을 규격화했다.</p>
+
     <div class="system-box">
-      <div class="s-label">우리 학원의 공정 시스템</div>
+      <div class="s-label">두산 교육시스템 공정 매뉴얼 (핵심 항목)</div>
       <ul>
-        <li>훈련생 등록부터 수료까지의 셔틀버스 동선</li>
-        <li>지게차와 굴착기 장비의 일일 점검 매뉴얼</li>
-        <li>민원 발생 시 즉각적으로 가동되는 대응 프로세스</li>
+        <li>훈련생 등록부터 수료까지의 셔틀버스 동선 — 픽업 시간·노선·기사 체크리스트</li>
+        <li>지게차·굴착기·천장크레인 장비 일일 점검 매뉴얼 — 각 장비별 10개 항목 점검표</li>
+        <li>민원 발생 시 즉각 가동되는 대응 프로세스 — 30분 이내 내부 보고, 2시간 이내 담당 공무원 선보고</li>
+        <li>강사 인수인계 표준화 — 신임 강사가 첫 수업 전 72시간 안에 숙지해야 할 매뉴얼 목록</li>
+        <li>수료 후 취업 연계 프로세스 — 수료생 3개월 내 취업률 집계·분석 루틴</li>
       </ul>
     </div>
-    <p>사장이 없어도, 특정 직원이 바뀌어도 교육의 품질이 일정하게 유지되는 것. 그것이 바로 교육기관을 넘어선 '시스템 공장'의 본질이다. 전국 1% 우수 교육기관이라는 타이틀은 운이 아니라, 정교하게 설계된 공정의 결과물이다.</p>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <p>이 공정이 제대로 작동하자 숫자가 증명하기 시작했다. 연간 수료생 1,000명 이상, 고용노동부 훈련과정 수료율 90% 이상, 전국 직업훈련기관 평가 최우수 등급. 이것은 누군가의 열정이나 재능 덕분이 아니라, 감정과 무관하게 돌아가는 공정(工程)의 결과물이다.</p>
+
+    <div class="process-box">
+      <div class="p-label">교육 공정 성과 지표 (연평균)</div>
+      <table>
+        <tr><th>지표</th><th>수치</th><th>비고</th></tr>
+        <tr><td>연간 수료생</td><td>1,000명 이상</td><td>3개 기관 합산</td></tr>
+        <tr><td>훈련과정 수료율</td><td>90% 이상</td><td>고용노동부 기준</td></tr>
+        <tr><td>수강생 만족도</td><td>95점 이상</td><td>직업훈련포털 집계</td></tr>
+        <tr><td>기관 평가 등급</td><td>최우수(A등급)</td><td>전국 상위 1%</td></tr>
+      </table>
+    </div>
+
+    <div class="highlight">
+      사장이 없어도, 특정 직원이 바뀌어도 교육의 품질이 일정하게 유지되는 것.<br>
+      그것이 바로 교육기관을 넘어선 '시스템 공장'의 본질이다.<br>
+      전국 1% 우수 교육기관이라는 타이틀은 운이 아니라,<br>
+      정교하게 설계된 공정의 결과물이다.
+    </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>사업을 '공장'의 눈으로 보라 — 원료(입학), 공정(교육), 완제품(수료·취업)의 흐름이 명확해야 성장한다.</li>
+        <li>불량률을 수치로 추적하라 — 수료율·취업률·만족도는 공정의 품질 지표다.</li>
+        <li>감정이 개입되는 순간 공정은 무너진다 — 사람이 아닌 시스템이 품질을 보장해야 한다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">교육 공장 시스템화 3단계</div>
+      <ol>
+        <li>모든 반복 업무를 체크리스트로 만들어라 — 아침 장비 점검부터 수료식 진행까지, 절차를 종이 한 장으로 정리할 수 없다면 아직 시스템이 아니다.</li>
+        <li>월간 성과 지표를 수치로 추적하라 — 수료율·취업률·민원 건수를 매월 집계하고, 전달과 비교하는 루틴을 만들어라.</li>
+        <li>"내가 한 달 자리를 비워도 이 공정이 돌아가는가?"를 분기마다 테스트하라 — 멈추는 지점이 개선 포인트다.</li>
+      </ol>
+    </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
       <p>당신의 사업은 사람의 노동력에 전적으로 의존하는가,<br>아니면 사람이 바뀌어도 변함없이 돌아가는 '시스템 공정'을 갖추었는가?</p>
     </div>
+
     <div class="tag-row">
       <a href="#">자서전</a><a href="#">시스템경영</a><a href="#">교육공장</a><a href="#">매뉴얼화</a><a href="#">우수교육기관</a><a href="#">인생의지름길</a>
     </div>
