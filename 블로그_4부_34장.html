@@ -26,12 +26,18 @@
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
     .speech-box { background: #f5f3f0; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2rem 0; border-left: 3px solid #8a7a60; }
     .speech-box .speaker { font-size: 0.78rem; font-weight: 700; color: #8a7a60; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
-    .speech-box p { color: #3a3020; margin: 0; }
+    .speech-box p { color: #3a3020; margin: 0 0 0.6rem; }
+    .speech-box p:last-child { margin: 0; }
     .analogy-box { background: #f0edf8; border: 1px solid #c8b8e8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; overflow-x: auto; }
     .analogy-box .an-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #504080; text-transform: uppercase; margin-bottom: 0.75rem; }
     .analogy-box table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
     .analogy-box th { background: #504080; color: #fff; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.82rem; }
     .analogy-box td { border-bottom: 1px solid #e8e4f0; padding: 0.5rem 0.75rem; color: #2a1a4a; }
+    .book-guide { background: #fef9ec; border: 1px solid #e8d8a0; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
+    .book-guide .bg-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #8a7020; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .book-guide .book-title { font-size: 1rem; font-weight: 800; color: #2c2c2c; margin-bottom: 0.4rem; }
+    .book-guide .book-quote { font-style: italic; color: #6a5a2a; font-size: 0.93rem; margin: 0.4rem 0 0.75rem; padding-left: 0.75rem; border-left: 2px solid #d4a843; }
+    .book-guide p { font-size: 0.95rem; color: #4a3f20; }
     .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
     .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
     .key-message ul { padding-left: 1.2rem; margin: 0; }
@@ -55,7 +61,7 @@
   </style>
 </head>
 <body>
-<header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
+<header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
   <div class="part-banner">
     <div class="pb-label">제4부 · 전수</div>
@@ -65,7 +71,7 @@
   <div class="chapter-num">제 34장</div>
   <h1>아들과의 대화<br>컴퓨터 조립에서 배운 논리와 설계의 기본</h1>
   <p class="subtitle">― 부품의 가격보다 중요한 것은 '호환성'과 '흐름'이다</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>9분 읽기</span></div>
   <div class="post-body">
     <p>어느 날 아들과 함께 컴퓨터를 직접 조립하기로 했다. 완제품을 사면 편하겠지만, 나는 아들이 기계의 밑바닥부터 이해하길 원했다. CPU, 메인보드, 그래픽카드가 제각각 흩어져 있을 때는 그저 비싼 부품 덩어리에 불과하다. 하지만 이것들이 하나의 '설계도' 아래 연결되는 순간, 강력한 연산 능력을 갖춘 시스템으로 탄생한다.</p>
 
@@ -88,38 +94,61 @@
       </table>
     </div>
 
-    <p>이것은 사업과도 똑같다. 뛰어난 직원 한 명, 비싼 장비 한 대가 사업을 성공시키는 게 아니다. 각 파트가 유기적으로 연결되어 막힘없이 돌아가는 '흐름'이 있어야 한다.</p>
+    <p>조립 도중 아들이 그래픽카드와 RAM을 최고 사양으로 맞추면서 전원 공급기(PSU)는 기본형으로 달겠다고 했다. 나는 그 순간을 놓치지 않았다.</p>
+
+    <div class="speech-box">
+      <div class="speaker">아버지</div>
+      <p>"아들아, 잠깐. 이 PSU가 300W짜리인데 네가 고른 CPU와 그래픽카드를 동시에 돌리면 필요한 전력이 650W야. 전원이 부족하면 아무리 좋은 부품도 제 성능을 못 내. 시스템 전체가 불안정해져서 갑자기 꺼지거나 손상될 수 있어."</p>
+      <p>"또 하나 더 — 이 시스템에서 가장 느린 부품이 전체 속도를 결정해. 이걸 '병목(Bottleneck)'이라고 해. CPU가 아무리 빠르다고 해도 저장장치(HDD)가 느리면 전체 체감 속도는 HDD 속도로 제한돼. 사업도 마찬가지야. 아무리 뛰어난 직원이 있어도 결재 프로세스가 느리면 조직 전체가 느려지는 거야."</p>
+    </div>
+
+    <p>이것은 사업과도 똑같다. 뛰어난 직원 한 명, 비싼 장비 한 대가 사업을 성공시키는 게 아니다. 각 파트가 유기적으로 연결되어 막힘없이 돌아가는 '흐름'이 있어야 한다. 그리고 어느 한 곳에서 막히면 전체가 느려진다는 병목의 법칙을 이해해야 한다.</p>
 
     <p>아들은 땀을 뻘뻘 흘리며 케이블을 정리하고 부품을 끼우면서, 비로소 무언가를 만든다는 것의 '논리적 구조'를 깨달았다. 전원을 켰을 때 팬이 힘차게 돌아가며 모니터에 불이 들어오는 순간, 아들의 눈빛이 달라졌다. 단순히 게임을 즐기는 '소비자'에서, 게임기를 만드는 '공급자'의 시각을 경험한 것이다.</p>
 
     <div class="speech-box">
       <div class="speaker">아들</div>
       <p>"아빠, 이제 알 것 같아요. 설계가 잘 되어 있으면 결과는 무조건 따라온다는 걸요."</p>
+      <p>"그리고… 가장 약한 부분을 먼저 강화해야 한다는 것도요. 아무리 강한 곳이 있어도 약한 곳 하나가 전체를 망가뜨릴 수 있으니까요."</p>
+    </div>
+
+    <div class="highlight">
+      아들은 컴퓨터를 조립하면서 조직을 배웠다.<br>
+      부품을 연결하면서 소통의 구조를 배웠다.<br>
+      전원이 꺼지는 경험을 하면서 현금 흐름의 중요성을 배웠다.<br><br>
+      가장 강력한 경영 교육은 책이 아니라 직접 만들어보는 경험에 있다.
+    </div>
+
+    <div class="book-guide">
+      <div class="bg-label">📚 이 장의 길잡이 책</div>
+      <div class="book-title">《이노베이터》 — 월터 아이작슨 (Walter Isaacson)</div>
+      <div class="book-quote">"디지털 혁명을 이끈 것은 천재 한 명이 아니라, 다양한 재능을 가진 사람들이 협력한 팀이었다."</div>
+      <p>스티브 잡스의 전기로 유명한 월터 아이작슨이 디지털 시대를 만든 진짜 혁신가들의 이야기를 엮은 책이다. 컴퓨터·인터넷·스마트폰을 만든 모든 혁신은 개별 천재가 아니라 '시스템의 협력'에서 나왔다. 아들과 컴퓨터를 조립하며 나는 이 책의 메시지를 현장에서 가르쳤다. 개별 부품(개인)이 아무리 뛰어나도 시스템(팀)이 설계되지 않으면 아무것도 만들 수 없다는 것을.</p>
     </div>
 
     <div class="key-message">
       <div class="km-label">핵심 메시지</div>
       <ul>
         <li>비싼 부품보다 호환성이 중요하다 — 사업도 탁월한 개인보다 시스템의 흐름이 성과를 결정한다.</li>
-        <li>직접 만들어봐야 원리가 보인다 — 소비자가 아닌 공급자의 시각은 체험을 통해서만 열린다.</li>
-        <li>설계가 완성되면 결과는 따라온다 — 아들이 조립한 컴퓨터처럼, 잘 설계된 사업은 저절로 돌아간다.</li>
+        <li>병목을 먼저 제거하라 — 조직에서 가장 느린 부분이 전체 속도를 결정한다. 강점을 키우기 전에 약점부터 보완해야 시스템이 안정된다.</li>
+        <li>직접 만들어봐야 공급자의 눈이 열린다 — 소비자가 아닌 공급자의 시각은 체험을 통해서만 열리며, 그 시각이 열리는 순간 세상이 달리 보인다.</li>
       </ul>
     </div>
 
     <div class="exec-tips">
       <div class="et-label">자녀와 함께하는 '설계 사고' 훈련 3단계</div>
       <ol>
-        <li>자녀와 함께 무언가를 직접 만들어라 — 컴퓨터 조립, 가구 제작, 요리 등 과정이 있는 모든 활동이 설계 교육이 된다.</li>
-        <li>만드는 과정에서 "왜 이렇게 설계됐을까?"를 함께 물어라 — 소비자가 아닌 공급자 시각이 열리는 핵심 질문이다.</li>
-        <li>실패가 생기면 원인을 함께 분석하라 — 조립 오류, 연결 실수를 찾아내는 과정이 문제 해결 능력을 키운다.</li>
+        <li>자녀와 함께 무언가를 직접 만들어라 — 컴퓨터 조립, 가구 제작, 요리 등 과정이 있는 모든 활동이 설계 교육이 된다. 결과보다 '왜 이렇게 설계됐는가'를 함께 묻는 것이 핵심이다.</li>
+        <li>병목을 찾는 습관을 가르쳐라 — "지금 우리 시스템에서 가장 느린 부분이 어디야?"라는 질문을 일상화하라. 이것이 문제 해결 능력의 출발점이다.</li>
+        <li>실패가 생기면 원인을 함께 분석하라 — 조립 오류, 연결 실수를 찾아내는 과정이 논리적 사고력과 끈기를 동시에 키운다.</li>
       </ol>
     </div>
 
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
-      <p>당신은 지금 비싼 부품(자원)을 모으는 데만 혈안이 되어 있는가,<br>아니면 그것들을 하나로 묶어줄 완벽한 '설계도'를 다듬고 있는가?</p>
+      <p>당신은 지금 비싼 부품(자원)을 모으는 데만 혈안이 되어 있는가,<br>아니면 그것들을 하나로 묶어줄 완벽한 '설계도'와<br>조직의 '병목'을 제거하는 작업을 하고 있는가?</p>
     </div>
-    <div class="tag-row"><a href="#">자서전</a><a href="#">자녀교육</a><a href="#">공급자시선</a><a href="#">시스템설계</a><a href="#">컴퓨터조립</a><a href="#">인생의지름길</a></div>
+    <div class="tag-row"><a href="#">자서전</a><a href="#">자녀교육</a><a href="#">공급자시선</a><a href="#">시스템설계</a><a href="#">병목제거</a><a href="#">컴퓨터조립</a><a href="#">인생의지름길</a></div>
   </div>
   <div class="nav-posts">
     <a href="블로그_4부_33장.html"><div class="label">이전 글</div>제33장: 복리의 지름길 — 내 생돈을 넣지 않는 재투자 시스템 설계</a>
