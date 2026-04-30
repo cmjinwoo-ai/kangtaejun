@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #f5ede8; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #803020; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; color: #2c2c2c; }
     .category { display: inline-block; background: #f5ede8; color: #803020; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -21,9 +24,23 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .trend-box { background: #fff5f0; border: 1px solid #e8c8b8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; overflow-x: auto; }
+    .trend-box .tb-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #803020; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .trend-box table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .trend-box th { background: #803020; color: #fff; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.82rem; }
+    .trend-box td { border-bottom: 1px solid #f0e0d8; padding: 0.5rem 0.75rem; color: #4a2010; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -37,22 +54,60 @@
 <body>
 <header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제5부 · 확장</div>
+    <div class="pb-title">새로운 영토를 향한 위대한 항해</div>
+  </div>
   <span class="category">제5부 · 확장</span>
-    <div class="chapter-num">제 42장</div>
-<h1>중장비 교육의 미래<br>변화하는 제도와 통계 속 전략</h1>
+  <div class="chapter-num">제 42장</div>
+  <h1>중장비 교육의 미래<br>변화하는 제도와 통계 속 전략</h1>
   <p class="subtitle">― 숫자의 파도를 타고 미래의 길목을 선점하라</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
   <div class="post-body">
     <p>성공은 다가올 미래를 향해 미리 그물을 던져놓는 게임이다. 많은 이들이 "지금 경기가 안 좋다"며 한탄할 때, 나는 정부의 법령 변화와 인구 통계라는 '숫자의 파도'를 읽는다. 지루한 통계청 자료가 나에게는 보물지도로 보이는 이유다.</p>
     <div class="highlight">
       대한민국의 건설 현장은 고령화되고 있고,<br>숙련된 기술자의 몸값은 천정부지로 치솟고 있다.<br>게다가 정부는 안전사고 방지를 위해 교육 의무화를 점점 더 강화하고 있다.<br><br>
       결론: 교육 서비스의 수요는 폭발할 수밖에 없고,<br>자격증은 이제 선택이 아닌 '생존권'이 된다.
     </div>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <div class="trend-box">
+      <div class="tb-label">중장비 교육 시장 5대 구조적 트렌드</div>
+      <table>
+        <tr><th>트렌드</th><th>현황</th><th>준비된 자의 전략</th></tr>
+        <tr><td>교육 의무화 강화</td><td>중대재해처벌법 시행 이후 기업 교육 이수 법적 의무 확대</td><td>법정 교육 과정 선제 개설 및 기업 단체 계약 선점</td></tr>
+        <tr><td>건설업 고령화</td><td>50대 이상 건설기능인 비율 급증 — 신규 인력 공급 절대 부족</td><td>젊은 세대 유입 촉진을 위한 취업 연계 커리큘럼 강화</td></tr>
+        <tr><td>숙련공 몸값 급등</td><td>굴착기 운전원 등 자격증 보유자 연봉 급상승</td><td>자격증 취득률 차별화로 고소득 취업 실적 홍보</td></tr>
+        <tr><td>스마트 건설기계 전환</td><td>IoT·자율주행 중장비 도입 확대</td><td>디지털 장비 운용 교육 과정 추가 개발 선점</td></tr>
+        <tr><td>글로벌 인력 수요</td><td>동남아·중동 건설 프로젝트 한국 기술 인력 수요 증가</td><td>DGTTC 해외 거점 확장으로 국내외 수요 동시 대응</td></tr>
+      </table>
+    </div>
+
     <p>스마트 건설기계, 자율주행 중장비 시대가 오고 있다고? 그것은 위기가 아니라 새로운 지름길의 등장이다. 기계가 똑똑해질수록 그것을 통제하는 '인증된 전문가'의 가치는 더 높아진다.</p>
     <div class="highlight">
       변화하는 제도에 투덜대지 마라.<br>제도는 당신을 가두는 벽이 아니라, 준비된 자에게만 열리는 비밀의 문이다.<br><br>
       미래는 예측하는 것이 아니라, 통계의 힘을 빌려 선점하는 것이다.
     </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>통계는 보물지도다 — 법령 개정안, 인구구조 변화, 취업 통계를 읽는 자가 3년 뒤의 시장을 미리 선점한다.</li>
+        <li>규제 강화는 준비된 자의 진입장벽이 된다 — 새 법규가 나올 때 대부분은 불평하지만, 설계자는 그 법규를 경쟁자를 차단하는 방패로 활용한다.</li>
+        <li>기계가 스마트해질수록 인증된 전문가의 가치는 더 높아진다 — AI·자율주행이 확산될수록 그것을 감독하고 인증할 '전문 자격증 보유자'의 희소성은 증가한다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">제도 변화를 기회로 전환하는 3단계</div>
+      <ol>
+        <li>매년 1월, 관련 법령 개정 사항을 스캔하라 — 고용노동부, 국토교통부, 안전보건공단의 공고를 정기적으로 모니터링하라. 법이 바뀌는 곳에 돈의 길목이 있다.</li>
+        <li>신규 법규가 생기면 48시간 안에 과정 개설을 검토하라 — 경쟁자보다 먼저 해당 과정을 개설하는 것만으로도 수개월의 선점 효과가 생긴다.</li>
+        <li>통계청·한국직업능력연구원 데이터를 분기별로 읽어라 — "어느 직종의 인력이 부족해지고 있는가"가 곧 다음 사업 방향이다.</li>
+      </ol>
+    </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 지침</div>
       <p>당신은 뉴스를 보고 한숨을 쉬는가,<br>아니면 변화하는 법규와 통계 속에서 다음번 '돈의 길목'을 찾아내고 있는가?</p>
