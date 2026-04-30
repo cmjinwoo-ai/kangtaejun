@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #eeedf5; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #504080; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; color: #2c2c2c; }
     .category { display: inline-block; background: #eeedf5; color: #504080; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -24,13 +27,26 @@
     .stat-box { background: #fff; border: 1px solid #ddd8d0; border-radius: 10px; padding: 1.5rem; margin: 2rem 0; }
     .stat-box .stat-title { font-size: 0.8rem; font-weight: 700; color: #8a7a60; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; }
     .stat-row { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0; border-bottom: 1px solid #f0ede8; }
-    .stat-row:last-child { border-bottom: none; font-weight: 700; color: #2c2c2c; }
+    .stat-row:last-child { border-bottom: none; }
     .stat-row .label { color: #666; font-size: 0.95rem; }
     .stat-row .value { font-weight: 700; color: #2c2c2c; font-size: 1rem; }
     .stat-row.total .label, .stat-row.total .value { color: #504080; font-size: 1.05rem; }
+    .armor-box { background: #f0edf8; border: 1px solid #c8b8e8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .armor-box .ab-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #504080; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .armor-box ul { padding-left: 1.2rem; margin: 0; }
+    .armor-box ul li { font-size: 0.97rem; color: #2a1a4a; margin-bottom: 0.5rem; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -44,29 +60,69 @@
 <body>
 <header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제4부 · 전수</div>
+    <div class="pb-title">박지성과 손흥민에게 배우는 멀티의 힘</div>
+  </div>
   <span class="category">제4부 · 전수</span>
-    <div class="chapter-num">제 32장</div>
-<h1>3억 원의 경제적 갑옷<br>결혼과 출산 공제를 활용한 증여 설계</h1>
+  <div class="chapter-num">제 32장</div>
+  <h1>3억 원의 경제적 갑옷<br>결혼과 출산 공제를 활용한 증여 설계</h1>
   <p class="subtitle">― 법의 테두리 안에서 자녀에게 '경제적 자유'의 날개를 달아주는 법</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
   <div class="post-body">
     <p>인생의 큰 고비마다 돈은 늘 걸림돌이 된다. 특히 결혼과 출산은 젊은 세대에게 가장 큰 경제적 부담이다. 나는 내 아들이 이런 현실의 무게에 짓눌려 성공의 언덕길에서 허덕이기를 원치 않았다. 그래서 나는 대한민국 법이 허용하는 최고의 혜택, 즉 <strong>'결혼 및 출산 증여 재산 공제'</strong>를 내 설계도에 집어넣었다.</p>
+
     <div class="stat-box">
       <div class="stat-title">증여세 공제 한도 설계</div>
       <div class="stat-row"><span class="label">기본 증여 공제 (성인 자녀, 1인 기준)</span><span class="value">5,000만 원</span></div>
-      <div class="stat-row"><span class="label">결혼 증여 공제 (혼인신고 전후 2년, 1인 기준)<br><small style="color:#aaa;font-weight:400;">또는</small><br>출산 증여 공제 (자녀 출생·입양일로부터 2년, 1인)</span><span class="value">1억 원</span></div>
+      <div class="stat-row"><span class="label">결혼 증여 공제 (혼인신고 전후 2년, 1인 기준)</span><span class="value">1억 원</span></div>
+      <div class="stat-row"><span class="label">출산 증여 공제 (자녀 출생·입양일로부터 2년, 1인)</span><span class="value">1억 원</span></div>
       <div class="stat-row total"><span class="label">신랑·신부 합산 최대 (세금 없이 이전 가능)</span><span class="value">최대 3억 원</span></div>
     </div>
+
+    <div class="chapter-divider">· · ·</div>
+
     <p>이것은 단순한 돈 전달이 아니다. 자녀가 사회생활을 시작할 때, 거대한 빚더미(대출) 대신 든든한 '경제적 갑옷'을 입고 출발하게 만드는 부모의 치밀한 전략이다.</p>
+
+    <div class="armor-box">
+      <div class="ab-label">3억 원 경제적 갑옷의 활용 원칙</div>
+      <ul>
+        <li><strong>안전판 역할</strong> — 결혼 초기 전세자금·주거비 부담을 대출 없이 해결, 이자 비용 절감</li>
+        <li><strong>사업 시드머니</strong> — 창업 또는 투자의 종잣돈으로 활용, 빚 없이 도전할 수 있는 기반 마련</li>
+        <li><strong>추가 복리 운용</strong> — 즉시 소비하지 않고 자산 계좌로 편입, 복리 엔진에 추가 연료 공급</li>
+        <li><strong>심리적 여유</strong> — 경제적 압박 없이 결혼·출산의 기쁨에 집중할 수 있는 여건 확보</li>
+      </ul>
+    </div>
+
     <div class="highlight">
       "법을 모르면 손해를 보고, 법을 알면 지름길이 보인다."<br><br>
       나는 아들에게 이 설계도를 보여주며 강조한다.<br>
       아버지가 준비한 이 3억 원은 흥청망청 쓰라고 있는 것이 아니라,<br>
       네가 더 큰 사업을 기획하거나 투자할 때 든든한 '안전판'이 되어줄 것이라고.
     </div>
+
     <p>부모가 설계한 이 시스템을 통해 자녀는 남들보다 10년은 앞서 나갈 수 있는 기회를 얻는다. 진정한 사랑은 감상적인 눈물이 아니라, 자녀의 미래를 보호할 수 있는 정교한 <strong>'세무 설계도'</strong>에서 증명된다.</p>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>세법 변화를 뉴스가 아닌 기회로 읽어라 — 결혼·출산 공제는 활용하는 사람과 모르는 사람 사이에 3억 원의 차이를 만든다.</li>
+        <li>경제적 갑옷이 자녀의 도전을 가능하게 한다 — 빚 없이 시작하는 자녀는 더 대담하게 도전할 수 있다.</li>
+        <li>부모의 세무 설계가 자녀의 출발선을 바꾼다 — 상속보다 증여가 유리하고, 증여는 빠를수록 유리하다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">결혼·출산 공제 활용 3단계</div>
+      <ol>
+        <li>공제 적용 요건과 기간을 정확히 파악하라 — 혼인신고 전후 2년, 출생·입양 후 2년 이내의 기간을 놓치면 혜택이 사라진다.</li>
+        <li>세무사와 함께 증여 시점을 설계하라 — 타이밍에 따라 절세 효과가 크게 달라지므로 전문가 조언이 필수다.</li>
+        <li>자녀에게 설계도를 공개하라 — 자녀가 이 시스템의 의미와 운용 원칙을 이해해야 돈을 올바르게 쓸 수 있다.</li>
+      </ol>
+    </div>
+
     <div class="question-box">
-      <div class="q-label">💡 성공의 지름길을 위한 질문</div>
+      <div class="q-label">오늘의 질문</div>
       <p>당신은 세법의 변화를 그저 뉴스로만 보는가,<br>아니면 그것을 당신 가족의 자산을 지키는 '방패'로 즉시 전환하는가?</p>
     </div>
     <div class="tag-row"><a href="#">자서전</a><a href="#">증여설계</a><a href="#">결혼공제</a><a href="#">출산공제</a><a href="#">3억원갑옷</a><a href="#">인생의지름길</a></div>
