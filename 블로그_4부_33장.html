@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #eeedf5; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #504080; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; color: #2c2c2c; }
     .category { display: inline-block; background: #eeedf5; color: #504080; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -24,9 +27,22 @@
     .speech-box { background: #f5f3f0; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2rem 0; border-left: 3px solid #8a7a60; }
     .speech-box .speaker { font-size: 0.78rem; font-weight: 700; color: #8a7a60; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
     .speech-box p { color: #3a3020; margin: 0; }
+    .compound-box { background: #f0edf8; border: 1px solid #c8b8e8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .compound-box .cb-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #504080; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .compound-box ul { padding-left: 1.2rem; margin: 0; }
+    .compound-box ul li { font-size: 0.97rem; color: #2a1a4a; margin-bottom: 0.5rem; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -40,25 +56,66 @@
 <body>
 <header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제4부 · 전수</div>
+    <div class="pb-title">박지성과 손흥민에게 배우는 멀티의 힘</div>
+  </div>
   <span class="category">제4부 · 전수</span>
-    <div class="chapter-num">제 33장</div>
-<h1>복리의 지름길<br>내 생돈을 넣지 않는 재투자 시스템 설계</h1>
+  <div class="chapter-num">제 33장</div>
+  <h1>복리의 지름길<br>내 생돈을 넣지 않는 재투자 시스템 설계</h1>
   <p class="subtitle">― 돈이 스스로 자식(이자)을 낳아 기르게 만드는 법</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
   <div class="post-body">
     <p>많은 사람이 돈을 모으기 위해 자신의 노동력을 쥐어짠다. 월급에서 아끼고 아껴 저축하는 방식은 성실해 보이지만, 사실 성공의 언덕길에서 가장 느리게 걷는 방법이다.</p>
+
     <p>내가 설계한 성공의 지름길은 다르다. 처음에는 내 노동력이 들어가지만, 일정 궤도에 오르면 '내 생돈'은 단 한 푼도 더 넣지 않고 자산이 스스로 자가 증식하게 만드는 것이다.</p>
+
     <div class="highlight">
       나는 아들의 증여 계좌를 운용할 때도 이 원칙을 철저히 지켰다.<br>초기에 넣어준 시드머니가 배당을 낳고,<br>그 배당금이 다시 주식을 사는 '재투자 시스템'을 구축했다.
     </div>
+
+    <div class="chapter-divider">· · ·</div>
+
     <div class="speech-box">
       <div class="speaker">아버지 → 아들</div>
       <p>"아들아, 네가 잠을 자고 있을 때도 이 계좌의 돈들은 쉬지 않고 일해서 동생들을 데려온단다. 이것이 바로 생돈을 넣지 않고도 자산이 불어나는 복리의 마법이다."</p>
     </div>
+
+    <div class="compound-box">
+      <div class="cb-label">내 생돈 없이 자산을 키우는 재투자 시스템 원칙</div>
+      <ul>
+        <li><strong>시드머니 최초 1회 투입</strong> — 증여 자금 또는 종잣돈을 배당 우량주·ETF에 1회 투입</li>
+        <li><strong>배당금 100% 재투자</strong> — 배당 수익을 인출하지 않고 즉시 동일 자산 추가 매수에 활용</li>
+        <li><strong>추가 생돈 투입 금지 원칙</strong> — 자산이 스스로 자라는 구조가 형성될 때까지 외부 자금 투입 없이 유지</li>
+        <li><strong>인내력 — 열매가 열리기 전 나무를 베지 마라</strong> — 초기 5~10년은 수익이 작아 보이지만, 이 시기가 복리 가속의 기반이 된다</li>
+        <li><strong>아들과 함께 기록</strong> — 분기별로 아들과 함께 계좌 잔액을 확인하고, 복리의 작동 원리를 체감하게 한다</li>
+      </ul>
+    </div>
+
     <p>이 시스템의 핵심은 '인내'와 '설계'다. 열매가 열리기도 전에 나무를 베어버리는 어리석음을 범하지 않고, 시스템이 스스로 굴러갈 때까지 기다려주는 뚝심.</p>
+
     <div class="highlight">
       자본주의라는 바다에서 표류하지 않으려면,<br>당신의 배에 스스로 돌아가는 엔진을 달아주어야 한다.
     </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>복리는 시간과 인내심이 핵심 재료다 — 시스템을 설계하고 건드리지 않는 것이 가장 강력한 투자 전략이다.</li>
+        <li>배당금을 쓰는 순간 복리가 깨진다 — 수익을 재투자해야 자산이 기하급수적으로 성장한다.</li>
+        <li>자녀에게 복리를 경험시켜라 — 눈으로 불어나는 숫자를 보는 것이 최고의 경제 교육이다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">재투자 시스템 구축 3단계</div>
+      <ol>
+        <li>배당 우량주 또는 배당 ETF로 시작하라 — 자동 배당이 발생하는 자산부터 재투자 시스템의 씨앗으로 삼아라.</li>
+        <li>배당금 재투자를 자동화하라 — 인간의 의지력은 유혹에 약하다. 증권사의 배당 재투자 자동 설정 기능을 활용해 인출 유혹을 차단하라.</li>
+        <li>10년 후의 잔액을 계산해서 붙여두어라 — 복리 계산기로 목표 금액을 구체적으로 설정하면 인내심이 생긴다.</li>
+      </ol>
+    </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
       <p>당신은 매달 당신의 노동력을 갈아 넣어 자산을 불리고 있는가,<br>아니면 이미 수익이 수익을 낳는 '무한 동력 시스템'을 가동 중인가?</p>
