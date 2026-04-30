@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #f5ede8; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #803020; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; color: #2c2c2c; }
     .category { display: inline-block; background: #f5ede8; color: #803020; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -21,9 +24,23 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .mou-box { background: #fff5f0; border: 1px solid #e8c8b8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .mou-box .mb-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #803020; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .mou-box ol { padding-left: 1.4rem; margin: 0; }
+    .mou-box ol li { font-size: 0.97rem; color: #4a2010; margin-bottom: 0.6rem; }
+    .mou-box ol li strong { color: #803020; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -37,21 +54,58 @@
 <body>
 <header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제5부 · 확장</div>
+    <div class="pb-title">새로운 영토를 향한 위대한 항해</div>
+  </div>
   <span class="category">제5부 · 확장</span>
-    <div class="chapter-num">제 40장</div>
-<h1>쏘나그룹과의 MOU<br>발로 뛰어 얻어낸 세계로의 발판</h1>
+  <div class="chapter-num">제 40장</div>
+  <h1>쏘나그룹과의 MOU<br>발로 뛰어 얻어낸 세계로의 발판</h1>
   <p class="subtitle">― 무작정 찾아가 문을 두드리는 자에게만 영토는 허락된다</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
   <div class="post-body">
     <p>베트남 정부의 해외 인력 송출을 담당하는 거대 기업, 쏘나(SONA)그룹. 그들의 직업학교와 손을 잡는 것은 결코 쉬운 일이 아니었다. 아무런 배경도 없는 외국인 사장이 그 거대한 조직의 문을 여는 방법은 오직 하나, '진심'과 '실력'을 직접 보여주는 것뿐이었다.</p>
     <p>나는 쏘나그룹 관계자들을 만나기 위해 몇 번이고 현지를 방문했다. 권위 있는 자리에 앉아 대접받기를 기다리는 대신, 그들의 직업학교 현장을 돌며 개선점을 제안했다.</p>
     <div class="highlight">
       화려한 프리젠테이션보다 강력했던 것은,<br>사장인 내가 직접 장비 밑으로 들어가 기계를 점검하고<br>교육 과정을 설계하는 '야성적인 실행력'이었다.
     </div>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <div class="mou-box">
+      <div class="mb-label">MOU까지 — 신뢰를 쌓은 5단계 과정</div>
+      <ol>
+        <li><strong>사전 조사 — 현지를 눈으로 확인</strong>: 브로커 없이 직접 베트남 직업학교, 건설 현장, 교육 기관을 방문하며 현지 노동력 수요와 교육 공백을 파악했다.</li>
+        <li><strong>첫 방문 — 명함보다 실력을 먼저</strong>: 공식 미팅 전 현장을 직접 둘러보며 문제점을 짚어냈다. "당신 시스템에 이런 구멍이 있다"는 말 한마디가 신뢰의 출발점이 됐다.</li>
+        <li><strong>현장 시연 — 사장이 직접 장비를 잡다</strong>: 고급 정장을 입고 회의실에 앉는 대신, 작업복으로 갈아입고 직접 장비를 조작하며 한국형 교육 수준을 몸으로 보여주었다.</li>
+        <li><strong>신뢰 구축 — 여러 차례 방문과 제안</strong>: 한 번에 계약을 따내려 하지 않았다. 반복 방문을 통해 "이 사람은 단기 장사꾼이 아니다"라는 확신을 심었다.</li>
+        <li><strong>MOU 체결 — 화약고에 불씨를 붙이다</strong>: 인적 교류를 중심으로 기초를 다지는 협약 체결. 이것은 멈춤이 아니라 언제든 폭발할 수 있는 거대한 가능성의 시작이다.</li>
+      </ol>
+    </div>
+
     <p>결국 쏘나그룹과의 MOU 체결이라는 결실을 맺었다. 비록 지금은 인적 교류를 중심으로 기초를 다지며 잠시 숨을 고르고 있는 단계이지만, 이것은 단순한 멈춤이 아니다. 언제든 폭발할 수 있는 '거대한 화약고'에 불씨를 붙여놓은 것과 같다.</p>
     <div class="highlight">
       남이 차려준 밥상에 숟가락을 얹는 것은 누구나 할 수 있다.<br>하지만 황무지에 직접 깃발을 꽂고 길을 내는 것은<br>오직 설계자의 심장을 가진 자만이 할 수 있는 특권이다.
     </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>신뢰는 명함이 아니라 땀으로 쌓인다 — 아무리 화려한 프레젠테이션도 사장이 직접 장비를 잡고 실력을 보여주는 한 장면을 이기지 못한다.</li>
+        <li>MOU는 끝이 아닌 화약고다 — 작은 협약도 그 안에 폭발력 있는 가능성을 품고 있다. 중요한 것은 그 불씨를 꺼뜨리지 않는 지속적인 실행이다.</li>
+        <li>황무지에 깃발을 꽂는 자가 그 땅의 주인이 된다 — 누군가 이미 만들어놓은 시장에 들어가는 것이 아니라, 아직 아무도 개척하지 않은 곳에 먼저 들어가야 표준이 될 수 있다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">거대 조직의 문을 두드리는 3단계</div>
+      <ol>
+        <li>상대방의 문제를 먼저 파악하라 — "우리와 협력하면 좋겠습니다"가 아니라 "당신의 이 문제를 내가 해결할 수 있습니다"로 접근해야 문이 열린다.</li>
+        <li>작은 것을 먼저 보여줘라 — 큰 계약보다 작은 성공 사례 하나를 먼저 만들어라. 현장에서 기계를 직접 잡는 행동 하나가 천 마디 말보다 강력하다.</li>
+        <li>거절을 방문 횟수로 극복하라 — 처음 만남에서 계약을 기대하지 마라. 3번, 5번 찾아가는 것 자체가 당신의 진심을 증명한다. 지구력이 설득력을 만든다.</li>
+      </ol>
+    </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
       <p>당신은 누군가 길을 열어주기를 기다리는가,<br>아니면 맨손으로 거대한 조직의 문을 두드려 스스로 길을 만드는가?</p>
