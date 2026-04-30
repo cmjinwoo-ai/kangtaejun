@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #f5ede8; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #803020; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; color: #2c2c2c; }
     .category { display: inline-block; background: #f5ede8; color: #803020; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -21,12 +24,23 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .compare-box { background: #fff5f0; border: 1px solid #e8c8b8; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; overflow-x: auto; }
+    .compare-box .cp-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #803020; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .compare-box table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .compare-box th { background: #803020; color: #fff; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.82rem; }
+    .compare-box td { border-bottom: 1px solid #f0e0d8; padding: 0.5rem 0.75rem; color: #4a2010; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
-    .part-banner { background: #f5ede8; border-radius: 10px; padding: 2rem; margin-bottom: 2.5rem; text-align: center; }
-    .part-banner .pb-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; color: #803020; text-transform: uppercase; margin-bottom: 0.5rem; }
-    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; color: #2c2c2c; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -41,24 +55,61 @@
 <header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
   <div class="part-banner">
-    <div class="pb-label">제5부 시작</div>
-    <div class="pb-title">확장 — 새로운 영토를 향한 위대한 항해</div>
+    <div class="pb-label">제5부 · 확장</div>
+    <div class="pb-title">새로운 영토를 향한 위대한 항해</div>
   </div>
   <span class="category">제5부 · 확장</span>
-    <div class="chapter-num">제 36장</div>
-<h1>지금 나는 이순신 장군의 나이에<br>서 있다</h1>
+  <div class="chapter-num">제 36장</div>
+  <h1>지금 나는 이순신 장군의 나이에<br>서 있다</h1>
   <p class="subtitle">― 나이는 숫자에 불과하다는 말은 설계자에게만 허용된다</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
   <div class="post-body">
     <p>이순신 장군이 명량해전에서 불가능에 가까운 승리를 거두었을 때, 그의 나이는 쉰을 넘긴 중년이었다. 나는 가끔 거울을 보며 스스로 묻는다. "나는 지금 안주하고 있는가, 아니면 새로운 전장으로 나갈 준비를 마쳤는가?"</p>
+
     <p>지금의 내 나이는 단순히 은퇴를 고민할 시기가 아니다. 지난 수십 년간 현장에서 갈고닦은 기술, 법규를 꿰뚫는 안목, 그리고 사람을 움직이는 시스템 설계 능력이 '최고조'에 달한 황금기다.</p>
+
     <div class="highlight">
       이순신 장군에게 12척의 배가 있었다면,<br>나에게는 1% 우수 교육기관이라는 검증된 시스템과<br>두산빌딩이라는 든든한 거점이 있다.
     </div>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <div class="compare-box">
+      <div class="cp-label">이순신 장군의 명량해전 vs 강태준의 현재</div>
+      <table>
+        <tr><th>항목</th><th>이순신 장군 (명량해전)</th><th>강태준 (현재)</th></tr>
+        <tr><td>나이</td><td>쉰을 넘긴 중년</td><td>인생의 황금기 — 경험이 최고조에 달한 시기</td></tr>
+        <tr><td>보유 자원</td><td>12척의 판옥선</td><td>검증된 교육 시스템 + 두산빌딩 거점</td></tr>
+        <tr><td>적의 규모</td><td>330척의 왜군</td><td>20여 개 경쟁 업체 + 시장 포화</td></tr>
+        <tr><td>전략</td><td>울돌목의 물살을 이용한 지형 전술</td><td>법규·제도·타이밍을 이용한 시장 선점</td></tr>
+        <tr><td>결과</td><td>전멸에 가까운 역전승</td><td>글로벌 확장 — DGTTC 베트남 항해 시작</td></tr>
+      </table>
+    </div>
+
     <p>이제 나는 국내 시장에서의 성공에 만족하지 않는다. 나의 시선은 더 먼 곳, 바다 건너 글로벌 시장을 향하고 있다. 대한민국 중장비 교육의 표준을 전 세계에 심겠다는 거대한 야망이 나를 다시 뛰게 만든다.</p>
+
     <div class="highlight">
       '나이'라는 변명 뒤에 숨어 성공의 언덕길로 내려가는 대신,<br>나는 이순신 장군이 거북선을 띄웠던 그 비장한 각오로<br>새로운 영토를 향한 닻을 올린다. 항해는 이제부터 시작이다.
     </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>나이는 경험의 누적이지 한계가 아니다 — 황금기는 20대가 아니라, 기술·안목·시스템이 융합되는 시점에 찾아온다.</li>
+        <li>12척으로도 이길 수 있다 — 자원의 많고 적음이 아니라 전략의 정밀함이 승패를 결정한다.</li>
+        <li>지금이 항해를 시작해야 할 순간이다 — 최적의 타이밍을 기다리다가는 파도를 놓친다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">나이를 무기로 만드는 3단계</div>
+      <ol>
+        <li>지금까지 쌓아온 경험의 목록을 만들어라 — 기술, 인맥, 법규 지식, 시스템 — 그것들이 당신의 '판옥선 12척'이다.</li>
+        <li>안주의 신호를 포착하라 — "이 정도면 됐다"는 생각이 드는 순간, 그것은 은퇴가 아닌 쇠퇴의 시작이다.</li>
+        <li>다음 전장의 지형을 파악하라 — 글로벌 시장, AI 전환, 제도 변화 중 당신의 경험이 가장 빛날 전장은 어디인가?</li>
+      </ol>
+    </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
       <p>당신은 나이를 핑계로 열정의 엔진을 끄고 있는가,<br>아니면 당신이 쌓아온 경험치를 무기 삼아 더 큰 바다로 나갈 준비를 하고 있는가?</p>
