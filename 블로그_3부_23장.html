@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #2c2c2c; color: #f0ede6; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #6dbf7a; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; }
     .category { display: inline-block; background: #edf5ee; color: #3a7050; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -21,9 +24,22 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .saving-box { background: #f8f8f5; border: 1px solid #e0ddd5; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .saving-box .sv-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #5a5040; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .saving-box ul { padding-left: 1.2rem; margin: 0; }
+    .saving-box ul li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.4rem; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -37,28 +53,78 @@
 <body>
 <header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제3부 · 운용</div>
+    <div class="pb-title">1% 우수 교육기관의 시스템 경영</div>
+  </div>
+
   <span class="category">제3부 · 운용</span>
-    <div class="chapter-num">제 23장</div>
-<h1>아끼는 습관이<br>조직의 체력을 만든다</h1>
+  <div class="chapter-num">제 23장</div>
+  <h1>아끼는 습관이<br>조직의 체력을 만든다</h1>
   <p class="subtitle">― 10원 한 장의 무게를 아는 조직은 결코 무너지지 않는다</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
+
   <div class="post-body">
     <p>많은 사장이 사업이 조금만 궤도에 오르면 '품위 유지'를 찾는다. 비싼 차를 빌리고, 사무실 집기를 최고급으로 바꾸며 성공의 기분을 만끽한다. 하지만 나는 반대로 행동했다.</p>
+
     <div class="highlight">
-      나에게 진정한 품격은 화려한 겉모습이 아니라,<br>어떤 위기에도 흔들리지 않는 조직의 '맷집'에서 나온다.
+      나에게 진정한 품격은 화려한 겉모습이 아니라,<br>
+      어떤 위기에도 흔들리지 않는 조직의 '맷집'에서 나온다.
     </div>
+
     <p>나는 학원의 전등 하나, 종이 한 장 아끼는 것을 부끄러워하지 않았다. 내가 직접 시설물을 수리하고 조경수를 가꾸는 모습을 보며 누군가는 "돈도 많이 버시는데 사람 좀 쓰시죠"라고 말한다.</p>
-    <p>하지만 내가 아끼는 것은 단순히 '돈'이 아니라, 우리 조직의 <strong>'정신력'</strong>이다. 사장이 10원 한 장의 가치를 소중히 여기면, 직원들도 함부로 비품을 낭비하지 않는다.</p>
-    <div class="highlight">
-      아끼는 습관은 궁색함이 아니라,<br>더 큰 승리를 위해 화력을 비축하는 전략적 인내다.<br><br>
-      성공의 언덕길을 걷는 이들이 과시를 위해 돈을 쓸 때,<br>나는 내실을 다지기 위해 허리띠를 졸라맸다.
+
+    <p>하지만 내가 아끼는 것은 단순히 '돈'이 아니라, 우리 조직의 <strong>'정신력'</strong>이다. 사장이 10원 한 장의 가치를 소중히 여기면, 직원들도 함부로 비품을 낭비하지 않는다. 이 정신이 조직 전체로 전파될 때 비로소 '맷집 있는 조직'이 만들어진다.</p>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <p>코로나19가 왔을 때, 학원업계 전체가 흔들렸다. 하지만 우리는 버텼다. 수년에 걸쳐 비축해온 조직의 체력이 그 시기를 견디게 해주었다. 화려하게 쓴 돈은 위기 앞에서 아무것도 지켜주지 못하지만, 아껴두었던 체력은 조직을 살린다.</p>
+
+    <div class="saving-box">
+      <div class="sv-label">두산 교육그룹 비용 절감 원칙 (실천 사례)</div>
+      <ul>
+        <li>소모품 직접 구매 — 문구류·청소용품·소형 부품을 도매상에서 직접 구매하여 마진 제거</li>
+        <li>시설 자체 수리 — 사장이 직접 배운 기술(용접·배관·전기)로 소규모 수리 자체 처리, A/S 비용 연 수백만 원 절약</li>
+        <li>조경 직접 관리 — 외주 조경업체 대신 직원들과 함께 화단 관리, 비용 절감 + 공동체 의식 강화</li>
+        <li>에너지 절약 습관 — 퇴근 시 소등 점검표 운영, 냉난방 설정 온도 기준 명문화</li>
+        <li>구매 품의제 — 일정 금액 이상의 지출은 반드시 3곳 이상 견적 비교 후 결재</li>
+      </ul>
     </div>
+
+    <div class="highlight">
+      아끼는 습관은 궁색함이 아니라,<br>
+      더 큰 승리를 위해 화력을 비축하는 전략적 인내다.<br><br>
+      성공의 언덕길을 걷는 이들이 과시를 위해 돈을 쓸 때,<br>
+      나는 내실을 다지기 위해 허리띠를 졸라맸다.
+    </div>
+
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>사장의 절약 습관은 직원에게 전파된다 — 조직의 비용 의식은 사장이 설정한다.</li>
+        <li>위기는 예고 없이 온다 — 좋을 때 아껴둔 체력이 나쁠 때 조직을 살린다.</li>
+        <li>절약은 성장을 위한 재원 마련이다 — 아낀 돈은 다음 투자의 종잣돈이 된다.</li>
+      </ul>
+    </div>
+
+    <div class="exec-tips">
+      <div class="et-label">조직 체력 강화 3단계</div>
+      <ol>
+        <li>월별 고정비 항목을 모두 나열하고, 각각에 "이게 꼭 필요한가?"를 물어보라 — 10%만 줄여도 연간 수백만 원이 남는다.</li>
+        <li>비용 절감 성과를 직원들과 공유하라 — 줄인 비용이 어디에 쓰이는지 알게 되면 직원들도 적극적으로 참여한다.</li>
+        <li>사장이 직접 배울 수 있는 기술은 직접 배워라 — 외주 비용을 줄이는 동시에 현장 장악력이 높아진다.</li>
+      </ol>
+    </div>
+
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
       <p>당신은 수익이 나면 '쓸 궁리'부터 하는가,<br>아니면 조직의 체력을 기르기 위해 '아낄 구멍'부터 찾는가?</p>
     </div>
+
     <div class="tag-row"><a href="#">자서전</a><a href="#">절약경영</a><a href="#">조직체력</a><a href="#">내실경영</a><a href="#">사장의품격</a><a href="#">인생의지름길</a></div>
   </div>
+
   <div class="nav-posts">
     <a href="블로그_3부_22장.html"><div class="label">이전 글</div>제22장: 중고로 시작해도 철학은 신품보다 날카로워야 한다</a>
     <a href="블로그_3부_24장.html" style="text-align:right;"><div class="label">다음 글</div>제24장: 사장이 컴퓨터 수리와 용접을 직접 배워야 하는 이유</a>
