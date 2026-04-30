@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,9 @@
     nav a { margin-left: 1.5rem; text-decoration: none; color: #888; font-size: 0.88rem; }
     nav a:hover { color: #2c2c2c; }
     .post-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .part-banner { background: #2c2c2c; color: #f0ede6; border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .part-banner .pb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; color: #6dbf7a; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .part-banner .pb-title { font-size: 1.1rem; font-weight: 800; }
     .category { display: inline-block; background: #edf5ee; color: #3a7050; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1.5rem; }
     .chapter-num { display: block; font-size: 0.88rem; font-weight: 700; color: #777; margin-bottom: 0.2rem; letter-spacing: 0.04em; }
     h1 { font-size: 2rem; font-weight: 800; line-height: 1.35; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: #1a1a1a; }
@@ -21,9 +24,23 @@
     .post-body { font-size: 1.05rem; }
     .post-body p { margin-bottom: 1.6rem; }
     .highlight { background: #fdf6e3; border-left: 3px solid #d4a843; padding: 1rem 1.25rem; margin: 2rem 0; font-style: italic; color: #5a4a2a; border-radius: 0 4px 4px 0; }
+    .skill-box { background: #f5f5f0; border: 1px solid #dddbd4; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; overflow-x: auto; }
+    .skill-box .sk-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #5a5040; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .skill-box table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .skill-box th { background: #2c4a2c; color: #fff; padding: 0.5rem 0.75rem; text-align: left; font-size: 0.82rem; }
+    .skill-box td { border-bottom: 1px solid #e8e4dc; padding: 0.5rem 0.75rem; color: #3a3020; }
+    .key-message { background: #f0f8ec; border: 1px solid #b8d8a0; border-radius: 8px; padding: 1.5rem 1.5rem 1rem; margin: 2.5rem 0; }
+    .key-message .km-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #4a7a2a; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .key-message ul { padding-left: 1.2rem; margin: 0; }
+    .key-message ul li { font-size: 0.97rem; color: #2a4a1a; margin-bottom: 0.5rem; font-weight: 600; }
+    .exec-tips { background: #fff; border: 1px solid #e8e4dc; border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+    .exec-tips .et-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #7a6a50; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .exec-tips ol { padding-left: 1.4rem; margin: 0; }
+    .exec-tips ol li { font-size: 0.97rem; color: #3a3020; margin-bottom: 0.5rem; }
     .question-box { background: #f7f4ef; border: 1px solid #e0d8cc; border-radius: 8px; padding: 1.5rem; margin: 2.5rem 0; }
     .question-box .q-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: #a0907a; text-transform: uppercase; margin-bottom: 0.75rem; }
     .question-box p { font-size: 1rem; color: #4a3f30; font-weight: 600; margin: 0; }
+    .chapter-divider { text-align: center; margin: 3rem 0; color: #ccc; font-size: 1.2rem; letter-spacing: 0.5rem; }
     .tag-row { margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag-row a { background: #f0ede6; color: #7a6a50; padding: 0.3rem 0.75rem; border-radius: 999px; font-size: 0.8rem; text-decoration: none; }
     .tag-row a:hover { background: #2c2c2c; color: #fff; }
@@ -37,59 +54,81 @@
 <body>
 <header><div class="header-inner"><a class="logo" href="블로그_메인.html">인생의 지름길을 설계하는 법</a><nav><a href="블로그_메인.html">홈</a><a href="블로그_메인.html#memoir">연재 목록</a><a href="https://www.youtube.com/@jinwoopark6666" target="_blank">유튜브</a><a href="블로그_메인.html#author">저자 소개</a></nav></div></header>
 <div class="post-wrap">
+  <div class="part-banner">
+    <div class="pb-label">제3부 · 운용</div>
+    <div class="pb-title">1% 우수 교육기관의 시스템 경영</div>
+  </div>
+
   <span class="category">제3부 · 운용</span>
-    <div class="chapter-num">제 24장</div>
-<h1>사장이 컴퓨터 수리와<br>용접을 직접 배워야 하는 이유</h1>
+  <div class="chapter-num">제 24장</div>
+  <h1>사장이 컴퓨터 수리와<br>용접을 직접 배워야 하는 이유</h1>
   <p class="subtitle">― 기술의 밑바닥을 모르는 사장은 눈먼 선장과 같다</p>
-  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>5분 읽기</span></div>
+
+  <div class="meta"><div class="avatar">진</div><span>저자 직접 연재</span><span>·</span><span>2026년 4월</span><span>·</span><span>7분 읽기</span></div>
+
   <div class="post-body">
     <p>우리 학원의 행정 컴퓨터가 고장 나거나 교육용 장비의 용접 부위가 떨어졌을 때, 직원들이 가장 먼저 찾는 사람은 수리 업체가 아니라 바로 나다. 나는 웬만한 컴퓨터 수리는 물론, 거친 현장의 용접까지 직접 해낸다.</p>
+
     <p>사장이 왜 이런 잡다한 기술까지 배워야 할까? 단순히 수리비를 아끼기 위해서가 아니다. 진짜 이유는 <strong>'현장 장악력'</strong> 때문이다.</p>
+
     <div class="highlight">
-      사장이 컴퓨터 구조를 모르면 업체가 부르는 대로 비용을 지불해야 하고,<br>용접의 원리를 모르면 장비 유지보수의 골든타임을 놓치게 된다.<br><br>
-      내가 직접 할 줄 알면,<br>어떤 문제가 발생했을 때 그것이 '진짜 문제'인지<br>'직원의 핑계'인지 단박에 꿰뚫어 볼 수 있다.
+      사장이 컴퓨터 구조를 모르면 업체가 부르는 대로 비용을 지불해야 하고,<br>
+      용접의 원리를 모르면 장비 유지보수의 골든타임을 놓치게 된다.<br><br>
+      내가 직접 할 줄 알면,<br>
+      어떤 문제가 발생했을 때 그것이 '진짜 문제'인지<br>
+      '직원의 핑계'인지 단박에 꿰뚫어 볼 수 있다.
     </div>
-    <p>사장이 밑바닥 기술을 장악하고 있으면 조직에는 팽팽한 긴장감이 흐른다. "우리 사장님은 다 알고 있다"는 사실만으로도 시스템의 누수는 막힌다.</p>
+
+    <div class="chapter-divider">· · ·</div>
+
+    <p>나에게 자격증 취득은 단순한 스펙 쌓기가 아니었다. 그것은 새로운 사업 영토를 개척하기 위한 <strong>'선행 정찰'</strong>이었다. 시작은 천장크레인이었다. 자격을 취득하자마자 사업을 궤도에 올렸고, 그 동력으로 지게차에 도전했다. 이어 굴착기, 기중기로 나아가는 과정은 퍼즐 조각이 맞춰지며 거대한 그림이 완성되는 경험이었다.</p>
+
+    <div class="skill-box">
+      <div class="sk-label">사장이 직접 습득한 기술과 사업 확장 연결고리</div>
+      <table>
+        <tr><th>습득 기술/자격</th><th>현장 효과</th><th>사업 확장 결과</th></tr>
+        <tr><td>컴퓨터 수리</td><td>행정 다운타임 제로, 외주비 절감</td><td>디지털 행정 시스템 내재화</td></tr>
+        <tr><td>용접</td><td>장비 수리 즉시 대응, 야간 고장 처리</td><td>시설 유지비 연 수백만 원 절감</td></tr>
+        <tr><td>천장크레인 자격</td><td>교육 현장 완벽 이해</td><td>천장크레인 과정 최초 개설</td></tr>
+        <tr><td>지게차·굴착기·기중기 자격</td><td>커리큘럼 직접 검증</td><td>종합 중장비 교육센터 완성</td></tr>
+        <tr><td>타워크레인 교육 교류</td><td>비용 0원 기술 습득</td><td>타워크레인 과정 역량 확보</td></tr>
+      </table>
+    </div>
+
+    <p>진정한 설계자의 묘수는 그다음 단계에서 발휘되었다. 나는 타 지역의 타워크레인 교육기관과 손을 잡았다. 돈을 주고 기술을 사 오는 대신, <strong>'교육 교류 시스템'</strong>이라는 카드를 던졌다. 우리가 가진 천장크레인 교육 노하우를 전수해주고, 대신 우리 직원들은 그들로부터 타워크레인 기술을 배우게 했다. 비용은 '0원'이었지만, 결과는 '동반 성장'이었다.</p>
+
     <div class="highlight">
-      성공의 지름길은 화려한 경영 이론이 아니라,<br>사장의 손끝에 묻은 기름때와 투박한 기술에서 시작된다.<br>내가 직접 고칠 수 있을 때, 비로소 나는 내 사업의 진정한 주인이 된다.
+      성공의 지름길은 화려한 경영 이론이 아니라,<br>
+      사장의 손끝에 묻은 기름때와 투박한 기술에서 시작된다.<br>
+      내가 직접 고칠 수 있을 때, 비로소 나는 내 사업의 진정한 주인이 된다.
     </div>
 
-    <p>
-      나에게 자격증 취득은 단순한 스펙 쌓기가 아니었다.
-      그것은 새로운 사업 영토를 개척하기 위한 <strong>'선행 정찰'</strong>이었다.
-      시작은 천장크레인이었다. 자격을 취득하자마자 사업을 궤도에 올렸고,
-      그 동력으로 지게차에 도전했다. 이어 굴착기, 기중기로 나아가는 과정은
-      마치 퍼즐 조각이 하나씩 맞춰지며 거대한 그림이 완성되는 신비로운 경험이었다.
-    </p>
+    <div class="key-message">
+      <div class="km-label">핵심 메시지</div>
+      <ul>
+        <li>사장이 밑바닥 기술을 장악하면 조직에 팽팽한 긴장감이 흐른다 — "우리 사장은 다 안다"는 사실 하나가 시스템의 누수를 막는다.</li>
+        <li>자격증은 스펙이 아니라 사업 영토다 — 내가 배운 기술 하나가 새로운 교육 과정으로 연결된다.</li>
+        <li>교류는 돈 없이도 기술을 얻는 가장 영리한 방법이다 — 내가 가진 것을 나누면 더 큰 것이 돌아온다.</li>
+      </ul>
+    </div>
 
-    <p>
-      내가 직접 레버를 잡고 기름을 묻히며 자격을 취득할 때마다,
-      우리 교육기관의 커리큘럼은 한 단계씩 확장되었다.
-      <strong>사장이 모르는 기술은 시스템으로 만들 수 없다</strong>는 것이 나의 지론이었다.
-      내가 배우는 즐거움에 빠져들수록, 사업의 외연은 무섭게 넓어졌다.
-    </p>
-
-    <p>
-      진정한 설계자의 묘수는 그다음 단계에서 발휘되었다.
-      나는 타 지역의 타워크레인 교육기관과 손을 잡았다.
-      돈을 주고 기술을 사 오는 대신, <strong>'교육 교류 시스템'</strong>이라는 카드를 던졌다.
-      우리가 가진 천장크레인 교육 노하우를 그들에게 전수해주고,
-      대신 우리 직원들은 그들로부터 타워크레인 기술을 배우게 했다.
-      비용은 '0원'이었지만, 결과는 '동반 성장'이었다.
-    </p>
-
-    <p>
-      직원들은 새로운 전문성을 갖추게 되었고, 우리 기관은 단숨에 타워크레인 교육 역량까지 확보했다.
-      배우는 즐거움이 사업 확장의 신비로움으로 치환되는 경험,
-      이것이야말로 지름길을 걷는 자만이 누리는 특권이다.
-    </p>
+    <div class="exec-tips">
+      <div class="et-label">사장 기술 장악 3단계</div>
+      <ol>
+        <li>사업에서 가장 자주 고장 나거나 외주를 주는 업무 TOP3를 찾아라 — 그것 하나씩 직접 배워나가라.</li>
+        <li>자격증이 있는 기술이라면 직접 취득하라 — 자격증을 따는 과정에서 교육 상품 아이디어가 나온다.</li>
+        <li>내가 모르는 분야는 교류로 해결하라 — 내가 가진 노하우와 상대방의 노하우를 맞바꾸면 비용이 0이 된다.</li>
+      </ol>
+    </div>
 
     <div class="question-box">
       <div class="q-label">오늘의 질문</div>
       <p>당신은 직원이 없으면 아무것도 할 줄 모르는 '무능한 주인'인가,<br>아니면 언제든 현장에 뛰어들어 문제를 해결할 '전천후 설계자'인가?</p>
     </div>
+
     <div class="tag-row"><a href="#">자서전</a><a href="#">현장장악력</a><a href="#">자격증전략</a><a href="#">타워크레인</a><a href="#">교육교류</a><a href="#">인생의지름길</a></div>
   </div>
+
   <div class="nav-posts">
     <a href="블로그_3부_23장.html"><div class="label">이전 글</div>제23장: 아끼는 습관이 조직의 체력을 만든다</a>
     <a href="블로그_3부_25장.html" style="text-align:right;"><div class="label">다음 글</div>제25장: 소비자에서 공급자로, 시점을 전환하는 벤치마킹</a>
